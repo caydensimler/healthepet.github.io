@@ -13,7 +13,6 @@ class VetTableSeeder extends Seeder {
 			$vet->name = $faker->company;
 			$vet->email = $faker->companyEmail;
 			$vet->address = $faker->address;
-			$vet->age = rand(2000, 2017);
 			$vet->phoneNumber = $faker->phoneNumber;
 			$vet->save();
 		}

@@ -9,7 +9,7 @@ class PetTableSeeder extends Seeder {
 
 		for($i = 0; $i <= 10; $i++) { 
 			$pet = new \App\Pet();
-			$pet->name = $faker->firstName($gender = null|'male'|'female');
+			$pet->petName = $faker->firstName($gender = null|'male'|'female');
 			$pet->species = 'dog';
 			$pet->sex = 'male';
 			$pet->breed = 'Bulldog';
