@@ -1,0 +1,21 @@
+<?php
+
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
+
+class UserTableSeeder extends Seeder {
+	public function run() {
+		$faker = Faker\Factory::create();
+
+		for($i = 0; $i <= 10; $i++) { 
+			$user = new \App\User();
+			$user->email = $faker->email;
+			$user->password = 'password';
+			$user->firstName = $faker->firstName($gender = null|'male'|'female');
+			$user->lastName = $faker->lastName;
+			$user->address = $faker->address;
+			$user->phoneNumber = $faker->phoneNumber;
+			$user->save();
+		}
+	}
+}
