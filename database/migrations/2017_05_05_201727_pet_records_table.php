@@ -5,23 +5,20 @@ use Illuminate\Database\Migrations\Migration;
 
 class PetRecordsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
-        //
+        // Schema::create('petRecords', function (Blueprint $table) {
+        //     $table->increments('id');
+        //     $table->integer('petId')->unsigned();
+        //     $table->foreign('petId')->references('id')->on('pets');
+        });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
-        //
+        // Schema::drop('petRecords');
     }
 }
+
+
