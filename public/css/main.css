@@ -51,6 +51,7 @@
 		background-color: #7A6F64;
 		opacity: .9;
 		margin-top: 10%;
+		margin-bottom: 10%;
 	}
 
 	.introductionHeaderHome {
@@ -130,12 +131,12 @@
 		background-color: #52916D;
 		outline: none;
 		border: 0px;
-		border-bottom: 2px solid #EFEFEF;
+		border-bottom: .1vw solid #EFEFEF;
 		color: #EFEFEF;
 	}
 
 	.formInput:focus {
-		border-bottom: 2px solid #CECECE;
+		border-bottom: .1vw solid #AFAFAF;
 	}
 
 	.formLabel {
@@ -164,6 +165,7 @@
 	:-ms-input-placeholder { /* Internet Explorer 10-11 */
 	   color: #CECECE;
 	}
+
 
 
 
