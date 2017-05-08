@@ -14,6 +14,7 @@
 		color: #EFEFEF;
 		font-size: 5vw;
 		text-align: center;
+		padding: 1%;
 	}
 
 	.petOwnerBodyHome {
@@ -22,7 +23,6 @@
 
 	.vetClinicBodyHome{
 		border: .1vw solid #EFEFEF;
-		border-left: 0px;
 	}
 
 	.petOwnerBodyBackground {
@@ -39,7 +39,6 @@
 		background-color: #7A6F64;
 		opacity: .9;
 		margin-top: 10%;
-		padding-bottom: 50%;
 	}
 
 	.introductionHeaderHome {
@@ -47,3 +46,31 @@
 		text-align: center;
 		color: #EFEFEF;
 	}
+
+	.introductionList {
+		color: #EFEFEF;
+		font-size: 2vw;
+		padding-bottom: 4%;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
