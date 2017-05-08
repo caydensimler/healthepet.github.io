@@ -12,6 +12,7 @@ class CatFormTableSeeder extends Seeder
 		$cat->breed = "British Shorthair";
 		$cat->sex = "Male";
 		$cat->age = 2;
+		$cat->phoneNumber = 5806954454;
 		$cat->panleukopenia = true;
 		$cat->rhinotracheitis = true;
 		$cat->calicivirus = true;

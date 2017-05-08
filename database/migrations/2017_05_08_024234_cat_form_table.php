@@ -14,6 +14,7 @@ class CatFormTable extends Migration
             $table->string('breed');
             $table->string('sex');
             $table->integer('age');
+            $table->integer('phoneNumber');
             $table->boolean('panleukopenia')->default(false);
             $table->boolean('rhinotracheitis')->default(false);
             $table->boolean('calicivirus')->default(false);
