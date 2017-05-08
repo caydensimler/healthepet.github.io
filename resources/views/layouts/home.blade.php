@@ -79,7 +79,8 @@
 	<!-- Pet Owner Login Form -->
 	<div class="petOwnerLoginForm" style="display: none;">
 		<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
-			<form action="" method="POST">
+			<form action="{{action('Auth\AuthController@postLogin')}}" method="POST">
+				{!! csrf_field() !!}
 				<div class="col-xs-12 closeButton">
 					<div class="col-xs-8">Pet Owner Login</div>
 					<i class="fa fa-window-close" aria-hidden="true"></i>
@@ -107,7 +108,8 @@
 	<!-- Pet Owner Registration Form -->
 	<div class="petOwnerRegisterForm" style="display: none;">
 		<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
-			<form action="" method="POST">
+			<form action="{{action('UsersController@store')}}" method="POST">
+				{!! csrf_field() !!}
 				<div class="col-xs-12 closeButton">
 					<div class="col-xs-8">Pet Owner Registration</div>
 					<i class="fa fa-window-close" aria-hidden="true"></i>
@@ -116,50 +118,50 @@
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">First Name</div>
 					<div class="col-xs-12">
-						<input type="text" name="petOwnerRegisterFirstName" id="petOwnerRegisterFirstName" class="formInput">
+						<input type="text" name="firstName" id="firstName" class="formInput">
 					</div>
 				</div>
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Last Name</div>
 					<div class="col-xs-12">
-						<input type="text" name="petOwnerRegisterLastName" id="petOwnerRegisterLastName" class="formInput">
+						<input type="text" name="lastName" id="lastName" class="formInput">
 					</div>	
 				</div>					
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Email Address</div>
 					<div class="col-xs-12">
-						<input type="text" name="petOwnerRegisterEmail" id="petOwnerRegisterEmail" class="formInput">
+						<input type="text" name="email" id="email" class="formInput">
 					</div>	
 				</div>						
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Phone Number</div>
 					<div class="col-xs-12">
-						<input type="text" name="petOwnerRegisterPhone" id="petOwnerRegisterPhone" class="formInput">
+						<input type="text" name="phoneNumber" id="phoneNumber" class="formInput">
 					</div>
 				</div>	
 
 				<div class="col-xs-12 formLabel">Physical Address</div>
 				<div class="col-xs-12">
-					<input type="text" name="petOwnerRegisterAddress" id="petOwnerRegisterAddress" placeholder="123 Pet Owner St, Paradise City, Texas, 12345" class="formInput">
+					<input type="text" name="address" id="address" placeholder="123 Pet Owner St, Paradise City, Texas, 12345" class="formInput">
 				</div>						
 
 				
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Password</div>
 					<div class="col-xs-12">
-						<input type="password" name="petOwnerRegisterPassword" id="petOwnerRegisterPassword" class="formInput">
+						<input type="password" name="password" id="password" class="formInput">
 					</div>
 				</div>
 
-				<div class="col-xs-6">
+<!-- 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Confirm Password</div>
 					<div class="col-xs-12">
 						<input type="password" name="petOwnerRegisterConfirmPassword" id="petOwnerRegisterConfirmPassword" class="formInput">
 					</div>
-				</div>
+				</div> -->
 
 				<div class="col-xs-12 loginRegisterButtonBody">
 					<button type="submit" class="petOwnerRegisterButton btn btn-default loginRegisterButton">Register</button>

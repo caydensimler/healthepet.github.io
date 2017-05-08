@@ -12,6 +12,7 @@ class DogFormTableSeeder extends Seeder
 		$dog->breed = "Chihuahua";
 		$dog->sex = "Male";
 		$dog->age = 2;
+		$dog->phoneNumber = 5806954454;
 		$dog->canine_distemper = true;
 		$dog->measles = true;
 		$dog->parvovirus = true;
