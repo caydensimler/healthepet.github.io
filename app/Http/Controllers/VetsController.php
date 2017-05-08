@@ -37,7 +37,17 @@ class VetsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $vet = new Vet();
+        $vet->name = $request->name;
+        $vet->email = $request->email;
+        $vet->address = $request->address;
+        $vet->phoneNumber = $request->phoneNumber;
+        $vet->password = $request->password;
+        $vet->save();
+
+        $request->session()->flash('successMessage', 'Veterinarian registration successful');
+
+        return redirect('vetLogin');
     }
 
     /**

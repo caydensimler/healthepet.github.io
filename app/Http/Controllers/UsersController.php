@@ -37,7 +37,18 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User();
+        $user->firstName = $request->firstName;
+        $user->lastName = $request->lastName;
+        $user->email = $request->email;
+        $user->address = $request->address;
+        $user->phoneNumber = $request->phoneNumber;
+        $user->password = $request->password;
+        $user->save();
+
+        $request->session()->flash('successMessage', 'User registration successful');
+
+        return redirect('userLogin');
     }
 
     /**
