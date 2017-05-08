@@ -10,10 +10,11 @@ class VetsTable extends Migration
     {
         Schema::create('vets', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('clinicId');
-            $table->string('email');
+            $table->string('name');
+            $table->string('email')->unique();
             $table->string('address');
-            $table->tinyInteger('phoneNumber');
+            $table->integer('phoneNumber');
+            $table->string('password', 60);
             $table->timestamps();
         });
     }
