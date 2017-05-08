@@ -18,7 +18,7 @@
 			<div class="col-xs-12 introductionList">
 				<i class="fa fa-paw" aria-hidden="true"></i> Localized records from all clinic visits.
 				<br>
-				<i class="fa fa-paw" aria-hidden="true"></i> Ability to switch vets easily without having to request records from previous vet clinics.
+				<i class="fa fa-paw" aria-hidden="true"></i> Switch vets easily without having to request records from previous vet clinics.
 				<br>
 				<i class="fa fa-paw" aria-hidden="true"></i> No hastle of keeping folders and receipts of all treatments to your pet(s).
 				<br>
@@ -118,41 +118,42 @@
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">First Name</div>
 					<div class="col-xs-12">
-						<input type="text" name="firstName" id="firstName" class="formInput">
+						<input type="text" name="firstName" id="firstName" class="formInput" required>
 					</div>
 				</div>
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Last Name</div>
 					<div class="col-xs-12">
-						<input type="text" name="lastName" id="lastName" class="formInput">
+						<input type="text" name="lastName" id="lastName" class="formInput" required>
 					</div>	
 				</div>					
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Email Address</div>
 					<div class="col-xs-12">
-						<input type="text" name="email" id="email" class="formInput">
+						<input type="text" name="email" id="email" class="formInput" required>
 					</div>	
 				</div>						
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Phone Number</div>
 					<div class="col-xs-12">
-						<input type="text" name="phoneNumber" id="phoneNumber" class="formInput">
+						<input type="text" name="phoneNumber" id="phoneNumber" class="formInput" required>
 					</div>
 				</div>	
 
-				<div class="col-xs-12 formLabel">Physical Address</div>
 				<div class="col-xs-12">
-					<input type="text" name="address" id="address" placeholder="123 Pet Owner St, Paradise City, Texas, 12345" class="formInput">
-				</div>						
+					<div class="col-xs-12 formLabel">Physical Address</div>
+					<div class="col-xs-12">
+						<input type="text" name="address" id="address" placeholder="123 Pet Owner St, Paradise City, Texas, 12345" class="formInput" required>
+					</div>	
+				</div>					
 
-				
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Password</div>
 					<div class="col-xs-12">
-						<input type="password" name="password" id="password" class="formInput">
+						<input type="password" name="password" id="password" class="formInput" required>
 					</div>
 				</div>
 
@@ -211,10 +212,12 @@
 					<i class="fa fa-window-close" aria-hidden="true"></i>
 				</div>
 
-				<div class="col-xs-12 formLabel">Clinic Name</div>
 				<div class="col-xs-12">
-					<input type="text" name="vetClinicName" id="vetClinicName"class="formInput" required>
-				</div>	
+					<div class="col-xs-12 formLabel">Clinic Name</div>
+					<div class="col-xs-12">
+						<input type="text" name="vetClinicName" id="vetClinicName"class="formInput" required>
+					</div>	
+				</div>
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Email Address</div>
@@ -230,9 +233,11 @@
 					</div>
 				</div>	
 
-				<div class="col-xs-12 formLabel">Physical Address</div>
 				<div class="col-xs-12">
-					<input type="text" name="vetClinicRegisterAddress" id="vetClinicRegisterAddress" placeholder="123 Pet Owner St, Paradise City, Texas, 12345" class="formInput" required>
+					<div class="col-xs-12 formLabel">Physical Address</div>
+					<div class="col-xs-12">
+						<input type="text" name="vetClinicRegisterAddress" id="vetClinicRegisterAddress" placeholder="123 Pet Owner St, Paradise City, Texas, 12345" class="formInput" required>
+					</div>
 				</div>
 
 				<div class="col-xs-6">
