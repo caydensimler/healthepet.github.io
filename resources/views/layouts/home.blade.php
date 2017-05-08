@@ -2,7 +2,7 @@
 
 
 @section('content')
-
+	<h1> <?php var_dump(\Auth::check()) ?> </h1>
 	<div class="allContent">
 
 	<!-- Welcome Header -->
@@ -88,12 +88,12 @@
 
 				<div class="col-xs-offset-3 col-xs-6 formLabel">Email</div>
 				<div class="col-xs-offset-3 col-xs-6">
-					<input type="text" name="petOwnerLoginEmail" id="petOwnerLoginEmail" class="formInput">
+					<input type="text" name="email" id="email" class="formInput">
 				</div>				
 
 				<div class="col-xs-offset-3 col-xs-6 formLabel">Password</div>
 				<div class="col-xs-offset-3 col-xs-6">
-					<input type="password" name="petOwnerLoginPassword" id="petOwnerLoginPassword" class="formInput">
+					<input type="password" name="password" id="password" class="formInput">
 				</div>
 
 				<div class="col-xs-12 loginRegisterButtonBody">
@@ -184,12 +184,12 @@
 
 				<div class="col-xs-offset-3 col-xs-6 formLabel">Email</div>
 				<div class="col-xs-offset-3 col-xs-6">
-					<input type="text" name="vetClinicLoginEmail" id="vetClinicLoginEmail" class="formInput">
+					<input type="text" name="email" id="email" class="formInput">
 				</div>				
 
 				<div class="col-xs-offset-3 col-xs-6 formLabel">Password</div>
 				<div class="col-xs-offset-3 col-xs-6">
-					<input type="password" name="vetClinicLoginPassword" id="vetClinicLoginPassword" class="formInput">
+					<input type="password" name="password" id="password" class="formInput">
 				</div>
 
 				<div class="col-xs-12 loginRegisterButtonBody">

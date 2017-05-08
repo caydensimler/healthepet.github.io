@@ -10,7 +10,6 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
-        protected $redirectPath = '/ownerHome';
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
@@ -24,6 +23,7 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
+    protected $redirectPath = '/ownerHome';
     /**
      * Create a new authentication controller instance.
      *

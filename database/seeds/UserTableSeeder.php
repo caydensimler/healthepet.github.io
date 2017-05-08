@@ -18,12 +18,12 @@ class UserTableSeeder extends Seeder {
 		// 	$user->save();
 		// }
 	    $user = new \App\User();
-        $user->firstName = "Thomas";
-        $user->lastName = "Hayes";
+        $user->name = "Thomas";
         $user->email = "thayes@gmail.com";
         $user->password = ('password');
         $user->address = "123 Street San Antonio, TX 78201";
         $user->phoneNumber = 5806954454;
+        $user->user_type = "owner";
         $user->save();
 	}
 

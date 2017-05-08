@@ -17,7 +17,6 @@
     <body>
 
 
-
     @yield('content')
 
     <!-- jQuery CDN -->
