@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Pet extends Model
+class CatForm extends Model
 {
-	protected $table = 'pets';
+    protected $table = 'cats';
 }
