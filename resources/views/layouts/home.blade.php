@@ -102,7 +102,7 @@
 			</form>
 		</div>
 	</div>
-	
+
 
 	<!-- Pet Owner Registration Form -->
 	<div class="petOwnerRegisterForm" style="display: none;">
@@ -113,40 +113,53 @@
 					<i class="fa fa-window-close" aria-hidden="true"></i>
 				</div>
 
-				<div class="col-xs-offset-3 col-xs-6 formLabel">First Name</div>
-				<div class="col-xs-offset-3 col-xs-6">
-					<input type="text" name="petOwnerRegisterFirstName" id="petOwnerRegisterFirstName" class="formInput">
+				<div class="col-xs-6">
+					<div class="col-xs-12 formLabel">First Name</div>
+					<div class="col-xs-12">
+						<input type="text" name="petOwnerRegisterFirstName" id="petOwnerRegisterFirstName" class="formInput">
+					</div>
 				</div>
 
-				<div class="col-xs-offset-3 col-xs-6 formLabel">Last Name</div>
-				<div class="col-xs-offset-3 col-xs-6">
-					<input type="text" name="petOwnerRegisterLastName" id="petOwnerRegisterLastName" class="formInput">
+				<div class="col-xs-6">
+					<div class="col-xs-12 formLabel">Last Name</div>
+					<div class="col-xs-12">
+						<input type="text" name="petOwnerRegisterLastName" id="petOwnerRegisterLastName" class="formInput">
+					</div>	
+				</div>					
+
+				<div class="col-xs-6">
+					<div class="col-xs-12 formLabel">Email Address</div>
+					<div class="col-xs-12">
+						<input type="text" name="petOwnerRegisterEmail" id="petOwnerRegisterEmail" class="formInput">
+					</div>	
 				</div>						
 
-				<div class="col-xs-offset-3 col-xs-6 formLabel">Email</div>
-				<div class="col-xs-offset-3 col-xs-6">
-					<input type="text" name="petOwnerRegisterEmail" id="petOwnerRegisterEmail" class="formInput">
-				</div>							
+				<div class="col-xs-6">
+					<div class="col-xs-12 formLabel">Phone Number</div>
+					<div class="col-xs-12">
+						<input type="text" name="petOwnerRegisterPhone" id="petOwnerRegisterPhone" class="formInput">
+					</div>
+				</div>	
 
-				<div class="col-xs-offset-3 col-xs-6 formLabel">Address</div>
-				<div class="col-xs-offset-3 col-xs-6">
-					<input type="text" name="petOwnerRegisterAddress" id="petOwnerRegisterAddress" class="formInput">
+				<div class="col-xs-12 formLabel">Physical Address</div>
+				<div class="col-xs-12">
+					<input type="text" name="petOwnerRegisterAddress" id="petOwnerRegisterAddress" placeholder="123 Pet Owner St, Paradise City, Texas, 12345" class="formInput">
 				</div>						
 
-				<div class="col-xs-offset-3 col-xs-6 formLabel">Phone Number</div>
-				<div class="col-xs-offset-3 col-xs-6">
-					<input type="text" name="petOwnerRegisterPhone" id="petOwnerRegisterPhone" class="formInput">
-				</div>						
-
-				<div class="col-xs-offset-3 col-xs-6 formLabel">Password</div>
-				<div class="col-xs-offset-3 col-xs-6">
-					<input type="password" name="petOwnerRegisterPassword" id="petOwnerRegisterPassword" class="formInput">
+				
+				<div class="col-xs-6">
+					<div class="col-xs-12 formLabel">Password</div>
+					<div class="col-xs-12">
+						<input type="password" name="petOwnerRegisterPassword" id="petOwnerRegisterPassword" class="formInput">
+					</div>
 				</div>
 
-<!-- 				<div class="col-xs-offset-3 col-xs-6 formLabel">Confirm Password</div>
-				<div class="col-xs-offset-3 col-xs-6">
-					<input type="password" name="petOwnerRegisterConfirmPassword" id="petOwnerRegisterConfirmPassword" class="formInput">
-				</div> -->
+				<div class="col-xs-6">
+					<div class="col-xs-12 formLabel">Confirm Password</div>
+					<div class="col-xs-12">
+						<input type="password" name="petOwnerRegisterConfirmPassword" id="petOwnerRegisterConfirmPassword" class="formInput">
+					</div>
+				</div>
 
 				<div class="col-xs-offset-3 col-xs-6 formSubmit">
 					<button type="submit" class="petOwnerLoginButton">Register</button>
