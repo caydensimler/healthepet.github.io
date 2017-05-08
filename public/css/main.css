@@ -1,0 +1,49 @@
+/* Universal Settings */
+
+	body {
+	    font-family: 'Open Sans Condensed', sans-serif;
+	    background-color: #EFEFEF;
+	}
+
+
+
+/* Home Page */
+
+	.welcomeHeader {
+		background-color: #7A6F64;
+		color: #EFEFEF;
+		font-size: 5vw;
+		text-align: center;
+	}
+
+	.petOwnerBodyHome {
+		border: .1vw solid #EFEFEF;
+	}
+
+	.vetClinicBodyHome{
+		border: .1vw solid #EFEFEF;
+		border-left: 0px;
+	}
+
+	.petOwnerBodyBackground {
+		background-image: url('/img/dog-with-person.jpg');
+		background-size: cover;
+	}
+
+	.vetClinicBodyBackground {
+		background-image: url('/img/cat-with-vet.jpg');
+		background-size: cover;
+	}
+
+	.introductionContentHeader {
+		background-color: #7A6F64;
+		opacity: .9;
+		margin-top: 10%;
+		padding-bottom: 50%;
+	}
+
+	.introductionHeaderHome {
+		font-size: 4vw;
+		text-align: center;
+		color: #EFEFEF;
+	}
