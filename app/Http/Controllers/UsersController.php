@@ -48,7 +48,7 @@ class UsersController extends Controller
 
         $request->session()->flash('successMessage', 'User registration successful');
 
-        return redirect('/');
+        return redirect('/ownerHome');
     }
 
     /**
@@ -57,12 +57,11 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
-    }
-
-    /**
+        // $users = User::findOrFail($id);
+        return view('layouts.ownerHome');
+    }    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
