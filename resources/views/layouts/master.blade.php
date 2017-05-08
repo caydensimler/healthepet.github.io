@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
 		<!-- Personalized Stylesheet -->
-        <link rel="stylesheet" href="/css/main.php">
+        <link rel="stylesheet" href="/css/main.css">
 
     </head>
     <body>
