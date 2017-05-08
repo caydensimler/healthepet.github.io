@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('layouts.home');
 });
 
+Route::resource('users', 'UsersController');
+
 // Authentication routes...
 Route::get('auth/userLogin', 'Auth\AuthController@getLogin');
 Route::post('auth/userLogin', 'Auth\AuthController@postLogin');

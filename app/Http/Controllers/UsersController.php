@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -48,7 +48,7 @@ class UsersController extends Controller
 
         $request->session()->flash('successMessage', 'User registration successful');
 
-        return redirect('userLogin');
+        return redirect('/');
     }
 
     /**
