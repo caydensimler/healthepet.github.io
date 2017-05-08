@@ -36,6 +36,11 @@ $(document).ready(function(){
 		$('.allContent').toggleClass('blur', 10000);
 	});
 
+	$('body > div.vetClinicLoginForm > div > form > div.col-xs-12.closeButton > i').click(function(){
+		$('.allContent').toggleClass('blur', 10000);
+
+		$('.vetClinicLoginForm').fadeToggle(500);
+	})
 
 
 	$('.vetClinicRegister').click(function(){
@@ -44,6 +49,11 @@ $(document).ready(function(){
 		$('.allContent').toggleClass('blur', 10000);
 	});
 
+	$('body > div.vetClinicRegisterForm > div > form > div.col-xs-12.closeButton > i').click(function(){
+		$('.allContent').toggleClass('blur', 10000);
+
+		$('.vetClinicRegisterForm').fadeToggle(500);
+	})
 
 
 

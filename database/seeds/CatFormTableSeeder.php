@@ -23,6 +23,8 @@ class CatFormTableSeeder extends Seeder
 		$cat->bordetella = true;
 		$cat->giardia = true;
 		$cat->feline_immunodeficiency_virus = true;
+		$cat->user_id = \App\User::all()->random()->id;
+		$cat->vet_id = \App\Vet::all()->random()->id;
 		$cat->save();
     }
 }

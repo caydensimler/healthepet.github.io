@@ -24,6 +24,8 @@ class DogFormTableSeeder extends Seeder
 		$dog->leptospirosis = true;
 		$dog->coronavirus = true;
 		$dog->lyme = true;
+		$dog->user_id = \App\User::all()->random()->id;
+		$dog->vet_id = \App\Vet::all()->random()->id;
 		$dog->save();
     }
 }
