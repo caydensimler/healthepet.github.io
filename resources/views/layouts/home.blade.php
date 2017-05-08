@@ -87,12 +87,12 @@
 
 				<div class="col-xs-offset-3 col-xs-6 formLabel">Email</div>
 				<div class="col-xs-offset-3 col-xs-6">
-					<input type="text" name="petOwnerLoginEmail" id="petOwnerLoginEmail" class="formInput">
+					<input type="text" name="petOwnerLoginEmail" id="petOwnerLoginEmail" class="formInput" required>
 				</div>				
 
 				<div class="col-xs-offset-3 col-xs-6 formLabel">Password</div>
 				<div class="col-xs-offset-3 col-xs-6">
-					<input type="password" name="petOwnerLoginPassword" id="petOwnerLoginPassword" class="formInput">
+					<input type="password" name="petOwnerLoginPassword" id="petOwnerLoginPassword" class="formInput" required>
 				</div>
 
 				<div class="col-xs-12 loginRegisterButtonBody">
@@ -116,48 +116,48 @@
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">First Name</div>
 					<div class="col-xs-12">
-						<input type="text" name="petOwnerRegisterFirstName" id="petOwnerRegisterFirstName" class="formInput">
+						<input type="text" name="petOwnerRegisterFirstName" id="petOwnerRegisterFirstName" class="formInput" required>
 					</div>
 				</div>
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Last Name</div>
 					<div class="col-xs-12">
-						<input type="text" name="petOwnerRegisterLastName" id="petOwnerRegisterLastName" class="formInput">
+						<input type="text" name="petOwnerRegisterLastName" id="petOwnerRegisterLastName" class="formInput" required>
 					</div>	
 				</div>					
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Email Address</div>
 					<div class="col-xs-12">
-						<input type="text" name="petOwnerRegisterEmail" id="petOwnerRegisterEmail" class="formInput">
+						<input type="text" name="petOwnerRegisterEmail" id="petOwnerRegisterEmail" class="formInput" required>
 					</div>	
 				</div>						
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Phone Number</div>
 					<div class="col-xs-12">
-						<input type="text" name="petOwnerRegisterPhone" id="petOwnerRegisterPhone" class="formInput">
+						<input type="text" name="petOwnerRegisterPhone" id="petOwnerRegisterPhone" class="formInput" required>
 					</div>
 				</div>	
 
 				<div class="col-xs-12 formLabel">Physical Address</div>
 				<div class="col-xs-12">
-					<input type="text" name="petOwnerRegisterAddress" id="petOwnerRegisterAddress" placeholder="123 Pet Owner St, Paradise City, Texas, 12345" class="formInput">
+					<input type="text" name="petOwnerRegisterAddress" id="petOwnerRegisterAddress" placeholder="123 Pet Owner St, Paradise City, Texas, 12345" class="formInput" required>
 				</div>						
 
 				
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Password</div>
 					<div class="col-xs-12">
-						<input type="password" name="petOwnerRegisterPassword" id="petOwnerRegisterPassword" class="formInput">
+						<input type="password" name="petOwnerRegisterPassword" id="petOwnerRegisterPassword" class="formInput" required>
 					</div>
 				</div>
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Confirm Password</div>
 					<div class="col-xs-12">
-						<input type="password" name="petOwnerRegisterConfirmPassword" id="petOwnerRegisterConfirmPassword" class="formInput">
+						<input type="password" name="petOwnerRegisterConfirmPassword" id="petOwnerRegisterConfirmPassword" class="formInput" required>
 					</div>
 				</div>
 
@@ -182,12 +182,12 @@
 
 				<div class="col-xs-offset-3 col-xs-6 formLabel">Email</div>
 				<div class="col-xs-offset-3 col-xs-6">
-					<input type="text" name="vetClinicLoginEmail" id="vetClinicLoginEmail" class="formInput">
+					<input type="text" name="vetClinicLoginEmail" id="vetClinicLoginEmail" class="formInput" required>
 				</div>				
 
 				<div class="col-xs-offset-3 col-xs-6 formLabel">Password</div>
 				<div class="col-xs-offset-3 col-xs-6">
-					<input type="password" name="vetClinicLoginPassword" id="vetClinicLoginPassword" class="formInput">
+					<input type="password" name="vetClinicLoginPassword" id="vetClinicLoginPassword" class="formInput" required>
 				</div>
 
 				<div class="col-xs-12 loginRegisterButtonBody">
@@ -211,39 +211,39 @@
 
 				<div class="col-xs-12 formLabel">Clinic Name</div>
 				<div class="col-xs-12">
-					<input type="text" name="vetClinicName" id="vetClinicName"class="formInput">
+					<input type="text" name="vetClinicName" id="vetClinicName"class="formInput" required>
 				</div>	
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Email Address</div>
 					<div class="col-xs-12">
-						<input type="text" name="vetClinicRegisterEmail" id="vetClinicRegisterEmail" class="formInput">
+						<input type="text" name="vetClinicRegisterEmail" id="vetClinicRegisterEmail" class="formInput" required>
 					</div>	
 				</div>						
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Phone Number</div>
 					<div class="col-xs-12">
-						<input type="text" name="vetClinicRegisterPhone" id="petOwnerRegisterPhone" class="formInput">
+						<input type="text" name="vetClinicRegisterPhone" id="petOwnerRegisterPhone" class="formInput" required>
 					</div>
 				</div>	
 
 				<div class="col-xs-12 formLabel">Physical Address</div>
 				<div class="col-xs-12">
-					<input type="text" name="vetClinicRegisterAddress" id="vetClinicRegisterAddress" placeholder="123 Pet Owner St, Paradise City, Texas, 12345" class="formInput">
+					<input type="text" name="vetClinicRegisterAddress" id="vetClinicRegisterAddress" placeholder="123 Pet Owner St, Paradise City, Texas, 12345" class="formInput" required>
 				</div>
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Password</div>
 					<div class="col-xs-12">
-						<input type="password" name="vetClinicRegisterPassword" id="vetClinicRegisterPassword" class="formInput">
+						<input type="password" name="vetClinicRegisterPassword" id="vetClinicRegisterPassword" class="formInput" required>
 					</div>
 				</div>
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Confirm Password</div>
 					<div class="col-xs-12">
-						<input type="password" name="vetClinicRegisterConfirmPassword" id="vetClinicRegisterConfirmPassword" class="formInput">
+						<input type="password" name="vetClinicRegisterConfirmPassword" id="vetClinicRegisterConfirmPassword" class="formInput" required>
 					</div>
 				</div>
 
