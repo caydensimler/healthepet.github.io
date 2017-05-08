@@ -25,6 +25,10 @@ class DogFormTable extends Migration
             $table->boolean('leptospirosis')->default(false);
             $table->boolean('coronavirus')->default(false);
             $table->boolean('lyme')->default(false);
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('vet_id')->unsigned();
+            $table->foreign('vet_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

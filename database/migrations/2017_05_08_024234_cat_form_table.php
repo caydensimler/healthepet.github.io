@@ -24,6 +24,10 @@ class CatFormTable extends Migration
             $table->boolean('bordetella')->default(false);
             $table->boolean('giardia')->default(false);
             $table->boolean('feline_immunodeficiency_virus')->default(false);
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('vet_id')->unsigned();
+            $table->foreign('vet_id')->references('id')->on('vets');
             $table->timestamps();
 
         });
