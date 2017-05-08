@@ -3,26 +3,24 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class VetsTable extends Migration
 {
 
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('vets', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('firstName');
-            $table->string('lastName');
+            $table->string('name');
             $table->string('email')->unique();
             $table->string('address');
-            $table->string('phoneNumber');
+            $table->integer('phoneNumber');
             $table->string('password', 60);
-            $table->rememberToken();
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::drop('users');
+        Schema::drop('vets');
     }
 }
