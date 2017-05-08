@@ -14,6 +14,7 @@ class DogFormTable extends Migration
             $table->string('breed');
             $table->string('sex');
             $table->integer('age');
+            $table->integer('phoneNumber');
             $table->boolean('canine_distemper')->default(false);
             $table->boolean('measles')->default(false);
             $table->boolean('parvovirus')->default(false);

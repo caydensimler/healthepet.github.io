@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('layouts.home');
 });
+
+// Authentication routes...
+Route::get('auth/userLogin', 'Auth\AuthController@getLogin');
+Route::post('auth/userLogin', 'Auth\AuthController@postLogin');
+Route::get('auth/userLogout', 'Auth\AuthController@getLogout');
+Route::get('auth/vetLogin', 'Auth\AuthController@getLogin');
+Route::post('auth/vetLogin', 'Auth\AuthController@postLogin');
+Route::get('auth/vetLogout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/userRegister', 'Auth\AuthController@getRegister');
+Route::post('auth/userRegister', 'Auth\AuthController@postRegister');
+Route::get('auth/vetRegister', 'Auth\AuthController@getRegister');
+Route::post('auth/vetRegister', 'Auth\AuthController@postRegister');
