@@ -2,7 +2,18 @@ $(document).ready(function(){
 
 	"use strict";
 
+
+	function HideAll(){
+		$('.allContent').removeClass('blur');
+
+		$('.petOwnerLoginForm').hide();
+		$('.petOwnerRegisterForm').hide();
+		$('.vetClinicLoginForm').hide();
+		$('.vetClinicRegisterForm').hide();
+	}
+
 	$('.petOwnerLogin').click(function(){
+		HideAll();
 		$('.petOwnerLoginForm').fadeToggle(500);
 
 		$('.allContent').toggleClass('blur', 10000);
@@ -17,6 +28,7 @@ $(document).ready(function(){
 
 
 	$('.petOwnerRegister').click(function(){
+		HideAll();
 		$('.petOwnerRegisterForm').fadeToggle(500);
 
 		$('.allContent').toggleClass('blur', 10000);
@@ -31,6 +43,7 @@ $(document).ready(function(){
 
 
 	$('.vetClinicLogin').click(function(){
+		HideAll();
 		$('.vetClinicLoginForm').fadeToggle(500);
 
 		$('.allContent').toggleClass('blur', 10000);
@@ -44,6 +57,7 @@ $(document).ready(function(){
 
 
 	$('.vetClinicRegister').click(function(){
+		HideAll();
 		$('.vetClinicRegisterForm').fadeToggle(500);
 
 		$('.allContent').toggleClass('blur', 10000);
