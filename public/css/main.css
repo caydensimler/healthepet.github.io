@@ -5,16 +5,29 @@
 	    background-color: #EFEFEF;
 	}
 
+	.blur {
+		-webkit-filter: blur(1.5px);
+		-moz-filter: blur(1.5px);
+		-o-filter: blur(1.5px);
+		-ms-filter: blur(1.5px);
+		filter: blur(1.5px);
+	}
+
 
 
 /* Home Page */
+
+	/* Header Text */
 
 	.welcomeHeader {
 		background-color: #7A6F64;
 		color: #EFEFEF;
 		font-size: 5vw;
 		text-align: center;
+		padding: 1%;
 	}
+
+	/* Pet Owner Content */
 
 	.petOwnerBodyHome {
 		border: .1vw solid #EFEFEF;
@@ -22,7 +35,6 @@
 
 	.vetClinicBodyHome{
 		border: .1vw solid #EFEFEF;
-		border-left: 0px;
 	}
 
 	.petOwnerBodyBackground {
@@ -39,7 +51,6 @@
 		background-color: #7A6F64;
 		opacity: .9;
 		margin-top: 10%;
-		padding-bottom: 50%;
 	}
 
 	.introductionHeaderHome {
@@ -47,3 +58,132 @@
 		text-align: center;
 		color: #EFEFEF;
 	}
+
+	.introductionList {
+		color: #EFEFEF;
+		font-size: 2vw;
+		padding-bottom: 4%;
+	}
+
+	.loginRegisterButtonBody {
+		text-align: center;
+		margin-bottom: 3%;
+	}
+
+	.loginRegisterButton {
+		font-size: 1.5vw;
+		background-color: #638DA5;
+		color: #EFEFEF;
+		padding-top: 1vw;
+		padding-bottom: 1vw;
+		padding-left: 2vw;
+		padding-right: 2vw;
+		border: 1px solid #EFEFEF;
+	}
+
+	.loginRegisterButton:hover {
+		background-color: #577C91;
+		color: #EFEFEF;
+	}
+
+	.loginRegisterButton:focus {
+		background-color: #7A6F64;
+		color: #EFEFEF;
+		outline: none;
+	}
+
+	.loginRegisterButton:active {
+		outline: none !important;
+		color: #EFEFEF !important;
+		background-color: #7A6F64 !important;
+	}
+
+	/* Forms */
+
+	.formBackground {
+		background-color: #52916D;
+		border-radius: 2%;
+		position: fixed;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: .95;
+	}
+
+	.closeButton {
+		text-align: right;
+		color: #EFEFEF;
+		padding: 5%;
+		font-size: 2vw;
+		font-weight: bold;
+	}
+
+	.fa-window-close:hover {
+		color: #CECECE;
+	}
+
+	.formInput {
+		width: 100%;
+		height: 2.5vw;
+		font-size: 1.5vw;
+		text-align: center;
+		margin-bottom: 2vw;
+		background-color: #52916D;
+		outline: none;
+		border: 0px;
+		border-bottom: 2px solid #EFEFEF;
+		color: #EFEFEF;
+	}
+
+	.formInput:focus {
+		border-bottom: 2px solid #CECECE;
+	}
+
+	.formLabel {
+		color: #EFEFEF;
+		font-size: 2vw;
+	}
+
+	.petOwnerLoginButton {
+		text-align: center;
+	}
+
+	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    	color: #CECECE;
+	}
+
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	   color: #CECECE;
+	   opacity:  1;
+	}
+
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	   color: #CECECE;
+	   opacity:  1;
+	}
+
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	   color: #CECECE;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
