@@ -13,15 +13,17 @@ class PetsTableSeeder extends Seeder
     {
 	    $pet = new \App\Pet();
         $pet->name = "Wally";
+        $pet->species = "Dog";
         $pet->breed = "Mutt";
         $pet->sex = "Male";
         $pet->age = 2;
-        $pet->owner_id = 1;
+        $pet->owner_id = 2;
         $pet->vet_id = 1;
         $pet->save();
 
         $pet = new \App\Pet();
         $pet->name = "Riley";
+        $pet->species = "Dog";
         $pet->breed = "Mutt";
         $pet->sex = "Male";
         $pet->age = 5;
