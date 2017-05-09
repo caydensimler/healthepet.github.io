@@ -12,7 +12,7 @@
 
 		<div class="col-xs-offset-1 col-xs-10">
 			<button class="btn btn-default addPetButton"><i class="fa fa-plus-square" aria-hidden="true"></i> Add New Pet</button>
-		</div>
+		</div>		
 
 		<div class="col-xs-12 petInformation">
 
@@ -92,12 +92,57 @@
 					</div>					
 
 					<div class="col-xs-12 petSubHeader">
-						Year of Birth: 2013
+						Year of Birth: 2012
 					</div>
 				</div>
 
 				<div class="col-xs-12 viewRecordsLink">
 					<i class="fa fa-file-text-o" aria-hidden="true"></i> Click here to view Dutchess's records. 
+				</div>
+
+			</div>
+
+		</div>		
+
+		<div class="col-xs-12 petInformation">
+
+			<div class="col-xs-3 petHeaderPicture sampleDogPictureThree"></div>
+
+			<div class="col-xs-offset-1 col-xs-8 petDescriptionBody">
+				<div class="col-xs-12">
+					<span class="petName">Milo</span>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="col-xs-12 petSubHeader">
+						Species: Dog
+					</div>					
+
+					<div class="col-xs-12 petSubHeader">
+						Breed: Unknown
+					</div>					
+
+					<div class="col-xs-12 petSubHeader">
+						Gender: Male
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="col-xs-12 petSubHeader">
+						Weight: 15lbs
+					</div>					
+
+					<div class="col-xs-12 petSubHeader">
+						Color(s): Brown/White/Black
+					</div>					
+
+					<div class="col-xs-12 petSubHeader">
+						Year of Birth: 2014
+					</div>
+				</div>
+
+				<div class="col-xs-12 viewRecordsLink">
+					<i class="fa fa-file-text-o" aria-hidden="true"></i> Click here to view Milo's records. 
 				</div>
 
 			</div>

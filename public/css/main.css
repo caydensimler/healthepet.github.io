@@ -232,7 +232,12 @@
 			-o-transform: scale(1.5); /* Opera */
 		}
 
-		input[type=checkbox] {
+		.forgotPassword {
+			text-align: center;
+			font-style: italic;
+			color: #EFEFEF;
+			font-size: 1.5vw;
+			padding-bottom: 3%;
 		}
 
 /* Owner Account Page */
@@ -245,6 +250,10 @@
 
 		.sampleDogPictureTwo {
 			background-image: url('/img/sampleDogPicture2.jpg');
+		}		
+
+		.sampleDogPictureThree {
+			background-image: url('/img/sampleDogPicture3.jpg');
 		}
 
 		.petInformation {
@@ -317,6 +326,7 @@
 			background-color: #638DA5;
 			border: 1px solid #EFEFEF;
 		}
+
 
 	/* Add Pet Form */
 
