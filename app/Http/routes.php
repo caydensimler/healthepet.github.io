@@ -14,26 +14,26 @@
 Route::get('/', function(){
 	return view('layouts.home');
 });
-Route::get('/ownerHome', 'UsersController@show');
 
-Route::get('/ownerHome', 'VetsController@show');
+Route::get('/ownerHome', 'UsersController@show');
 
 Route::resource('users', 'UsersController');
 
-Route::resource('vets', 'VetsController');
-
 // Authentication routes...
-Route::get('auth/userLogin', 'Auth\AuthController@getLogin');
-Route::post('auth/userLogin', 'Auth\AuthController@postLogin');
-Route::get('auth/userLogout', 'Auth\AuthController@getLogout');
-
-Route::get('auth/vetLogin', 'Auth\AuthController@getLogin');
-Route::post('auth/vetLogin', 'Auth\AuthController@postLogin');
-Route::get('auth/vetLogout', 'Auth\AuthController@getLogout');
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 // Registration routes...
-Route::get('auth/userRegister', 'Auth\AuthController@getRegister');
-Route::post('auth/userRegister', 'Auth\AuthController@postRegister');
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
 
-Route::get('auth/vetRegister', 'Auth\AuthController@getRegister');
-Route::post('auth/vetRegister', 'Auth\AuthController@postRegister');
+// // Authentication routes...
+// Route::get('auth/userLogin', 'Auth\AuthController@getLogin');
+// Route::post('auth/login', 'Auth\AuthController@postLogin');
+// Route::get('auth/userLogout', 'Auth\AuthController@getLogout');
+
+
+// // Registration routes...
+// Route::get('auth/userRegister', 'Auth\AuthController@getRegister');
+// Route::post('auth/userRegister', 'Auth\AuthController@postRegister');

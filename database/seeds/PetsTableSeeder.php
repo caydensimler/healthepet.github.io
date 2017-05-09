@@ -16,7 +16,7 @@ class PetsTableSeeder extends Seeder
         $pet->breed = "Mutt";
         $pet->sex = "Male";
         $pet->age = 2;
-        $pet->owner_id = 1;
+        $pet->owner_id = 2;
         $pet->vet_id = 1;
         $pet->save();
 
