@@ -90,14 +90,14 @@
 				<div class="col-xs-12">
 					<div class="col-xs-offset-1 col-xs-10 formLabel">Email</div>
 					<div class="col-xs-offset-1 col-xs-10">
-						<input type="text" name="petOwnerLoginEmail" id="petOwnerLoginEmail" class="formInput" required>
+						<input type="text" name="email" id="email" class="formInput" required>
 					</div>
 				</div>				
 
 				<div class="col-xs-12">
 					<div class="col-xs-offset-1 col-xs-10 formLabel">Password</div>
 					<div class="col-xs-offset-1 col-xs-10">
-						<input type="password" name="petOwnerLoginPassword" id="petOwnerLoginPassword" class="formInput" required>
+						<input type="password" name="password" id="password" class="formInput" required>
 					</div>
 				</div>
 
