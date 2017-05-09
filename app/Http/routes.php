@@ -19,6 +19,10 @@ Route::get('/ownerHome', 'UsersController@show');
 
 Route::resource('users', 'UsersController');
 
+Route::resource('vets', 'VetsController');
+
+Route::resource('pets', 'PetsController');
+
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
