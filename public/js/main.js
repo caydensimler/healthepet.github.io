@@ -28,9 +28,9 @@ $(document).ready(function(){
 		});
 
 
-	/////////////////////////
-	// Pet Owner Registration
-	/////////////////////////
+	///////////////
+	// Registration
+	///////////////
 		$('.register').click(function(){
 			HideAll();
 			$('.registerForm').fadeToggle(500);
@@ -38,7 +38,7 @@ $(document).ready(function(){
 			$('.allContent').toggleClass('blur', 10000);
 		});
 
-		$('body > div.registerForm > div > form > div.col-xs-12.closeButton > i').click(function(){
+		$('body > div.registerForm > div > form > div.col-xs-4.closeButton > i').click(function(){
 			$('.allContent').toggleClass('blur', 10000);
 
 			$('.registerForm').fadeToggle(500);
