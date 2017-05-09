@@ -14,6 +14,96 @@
 			<button class="btn btn-default addPetButton"><i class="fa fa-plus-square" aria-hidden="true"></i> Add New Pet</button>
 		</div>
 
+		<div class="col-xs-12 petInformation">
+
+			<div class="col-xs-3 petHeaderPicture sampleDogPicture"></div>
+
+			<div class="col-xs-offset-1 col-xs-8 petDescriptionBody">
+				<div class="col-xs-12">
+					<span class="petName">Loca</span>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="col-xs-12 petSubHeader">
+						Species: Dog
+					</div>					
+
+					<div class="col-xs-12 petSubHeader">
+						Breed: Black Lab/Great Dane
+					</div>					
+
+					<div class="col-xs-12 petSubHeader">
+						Gender: Female
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="col-xs-12 petSubHeader">
+						Weight: 70lbs
+					</div>					
+
+					<div class="col-xs-12 petSubHeader">
+						Color(s): Black/White
+					</div>					
+
+					<div class="col-xs-12 petSubHeader">
+						Year of Birth: 2016
+					</div>
+				</div>
+
+				<div class="col-xs-12 viewRecordsLink">
+					<i class="fa fa-file-text-o" aria-hidden="true"></i> Click here to view Loca's records.
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="col-xs-12 petInformation">
+
+			<div class="col-xs-3 petHeaderPicture sampleDogPictureTwo"></div>
+
+			<div class="col-xs-offset-1 col-xs-8 petDescriptionBody">
+				<div class="col-xs-12">
+					<span class="petName">Dutchess</span>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="col-xs-12 petSubHeader">
+						Species: Dog
+					</div>					
+
+					<div class="col-xs-12 petSubHeader">
+						Breed: Unknown
+					</div>					
+
+					<div class="col-xs-12 petSubHeader">
+						Gender: Female
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="col-xs-12 petSubHeader">
+						Weight: 50lbs
+					</div>					
+
+					<div class="col-xs-12 petSubHeader">
+						Color(s): Brown/White
+					</div>					
+
+					<div class="col-xs-12 petSubHeader">
+						Year of Birth: 2013
+					</div>
+				</div>
+
+				<div class="col-xs-12 viewRecordsLink">
+					<i class="fa fa-file-text-o" aria-hidden="true"></i> Click here to view Dutchess's records. 
+				</div>
+
+			</div>
+
+		</div>
+
 	</div>
 
 
