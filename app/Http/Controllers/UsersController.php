@@ -59,8 +59,11 @@ class UsersController extends Controller
      */
     public function show()
     {
-        // $users = User::findOrFail($id);
-        return view('layouts.ownerHome');
+        if (\Auth::check()) {
+            return view('layouts.ownerHome');
+        } else {
+            return redirect('/');
+        }
     }    /**
      * Show the form for editing the specified resource.
      *
