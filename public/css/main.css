@@ -19,6 +19,16 @@
 		filter: blur(2px);
 	}
 
+	body > div.allContent > div > div > div.col-xs-12.introductionList> .fa-paw {
+		font-size: 50%;
+		text-align: center;
+	    position: relative;
+	    top: 50%;
+	    -ms-transform: translateY(-50%);
+	    -webkit-transform: translateY(-50%);
+	    transform: translateY(-50%);
+	}
+
 	/* Navbar */
 
 		.navbar {
@@ -162,7 +172,6 @@
 			color: #EFEFEF;
 			padding: 5%;
 			font-size: 2vw;
-			font-weight: bold;
 		}
 
 		.fa-window-close:hover {

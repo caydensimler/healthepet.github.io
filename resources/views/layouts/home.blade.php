@@ -56,7 +56,7 @@
 				<div class="col-xs-12 introductionList">
 					<i class="fa fa-paw" aria-hidden="true"></i> Ability to pull in new patient's records from other clinics.
 					<br>
-					<i class="fa fa-paw" aria-hidden="true"></i> Fully structured list of all patients in your personal database.
+					<i class="fa fa-paw" aria-hidden="true"></i> Fully structured list of all patients in your personal directory.
 					<br>
 					<i class="fa fa-paw" aria-hidden="true"></i> Backed up files stored in our database.
 					<br>
