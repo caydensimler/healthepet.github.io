@@ -16,6 +16,28 @@
     </head>
     <body>
 
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+        
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-paw" aria-hidden="true"> Menu </i>
+                </button>
+                <a class="navbar-brand" href="/">HealthEPet</a>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                @if ($_SERVER['REQUEST_URI'] === '/ownerHome')
+                    <li class="active"><a href="">Account</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                @endif
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 
     @yield('content')
 
