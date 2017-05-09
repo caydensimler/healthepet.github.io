@@ -1,15 +1,15 @@
+
+	<div class="allContent">
 @extends('layouts.master')
 
 
 @section('content')
 
-	<div class="allContent">
-
 	<!-- Welcome Header -->
 	<div class="col-xs-12 welcomeHeader">
 		<div class="col-xs-7">What can HealthEPet do for you?</div>
 		<div class="col-xs-5">
-			<div class="col-xs-12">
+			<div class="col-xs-12 loginRegisterButtonHeader">
 				<div class="col-xs-6">
 					<button class="btn btn-default loginRegisterButton login">Login</button>
 				</div>

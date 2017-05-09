@@ -1,7 +1,3 @@
-@extends('layouts.master')
-
-
-@section('content')
 
 
 
@@ -10,6 +6,10 @@
 
 
 	<div class="allContent">
+@extends('layouts.master')
+
+
+@section('content')
 
 		<div class="welcomeHeader">
 			Welcome to your account page, $user->firstName.

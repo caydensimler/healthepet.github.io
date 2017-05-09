@@ -16,8 +16,6 @@ Route::get('/', function(){
 });
 Route::get('/ownerHome', 'UsersController@show');
 
-Route::get('/ownerHome', 'VetsController@show');
-
 Route::resource('users', 'UsersController');
 
 Route::resource('vets', 'VetsController');
