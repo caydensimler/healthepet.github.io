@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function(){
-	return view('layouts.home');
+    if (\Auth::check()) {
+        return view('layouts.ownerHome');
+    } else {
+        return redirect('/');
+    }
 });
 
 Route::get('/ownerHome', 'UsersController@show');
