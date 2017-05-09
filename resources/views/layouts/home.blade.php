@@ -1,15 +1,15 @@
+
+	<div class="allContent">
 @extends('layouts.master')
 
 
 @section('content')
 
-	<div class="allContent">
-
 	<!-- Welcome Header -->
 	<div class="col-xs-12 welcomeHeader">
 		<div class="col-xs-7">What can HealthEPet do for you?</div>
 		<div class="col-xs-5">
-			<div class="col-xs-12">
+			<div class="col-xs-12 loginRegisterButtonHeader">
 				<div class="col-xs-6">
 					<button class="btn btn-default loginRegisterButton login">Login</button>
 				</div>
@@ -35,6 +35,8 @@
 			<div class="col-xs-12 introductionList">
 				<i class="fa fa-paw" aria-hidden="true"></i> Localized records from all clinic visits.
 				<br>
+				<i class="fa fa-paw" aria-hidden="true"></i> Keep track of all your pet's shot records all in one place.
+				<br>
 				<i class="fa fa-paw" aria-hidden="true"></i> No hastle of keeping physical copies of all treatments to your pet(s).
 				<br>
 				<i class="fa fa-paw" aria-hidden="true"></i> Completely paperless.
@@ -54,7 +56,7 @@
 				<div class="col-xs-12 introductionList">
 					<i class="fa fa-paw" aria-hidden="true"></i> Ability to pull in new patient's records from other clinics.
 					<br>
-					<i class="fa fa-paw" aria-hidden="true"></i> Fully structured list of all patients in your personal database.
+					<i class="fa fa-paw" aria-hidden="true"></i> Fully structured list of all patients in your personal directory.
 					<br>
 					<i class="fa fa-paw" aria-hidden="true"></i> Backed up files stored in our database.
 					<br>
@@ -80,19 +82,29 @@
 		<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
 			<form action="{{action('Auth\AuthController@postLogin')}}" method="POST">
 				{!! csrf_field() !!}
-				<div class="col-xs-12 closeButton">
-					<div class="col-xs-8">Pet Owner Login</div>
+				<div class="col-xs-8 formHeader">Login with an existing account.</div>
+				<div class="col-xs-4 closeButton">
 					<i class="fa fa-window-close" aria-hidden="true"></i>
 				</div>
 
-				<div class="col-xs-offset-3 col-xs-6 formLabel">Email</div>
-				<div class="col-xs-offset-3 col-xs-6">
-					<input type="text" name="petOwnerLoginEmail" id="petOwnerLoginEmail" class="formInput" required>
+				<div class="col-xs-12">
+					<div class="col-xs-offset-1 col-xs-10 formLabel">Email</div>
+					<div class="col-xs-offset-1 col-xs-10">
+						<input type="text" name="petOwnerLoginEmail" id="petOwnerLoginEmail" class="formInput" required>
+					</div>
 				</div>				
 
-				<div class="col-xs-offset-3 col-xs-6 formLabel">Password</div>
-				<div class="col-xs-offset-3 col-xs-6">
-					<input type="password" name="petOwnerLoginPassword" id="petOwnerLoginPassword" class="formInput" required>
+				<div class="col-xs-12">
+					<div class="col-xs-offset-1 col-xs-10 formLabel">Password</div>
+					<div class="col-xs-offset-1 col-xs-10">
+						<input type="password" name="petOwnerLoginPassword" id="petOwnerLoginPassword" class="formInput" required>
+					</div>
+				</div>
+
+				<div class="col-xs-12 rememberMeCheckbox">
+					<div class="col-xs-12">
+						<input type="checkbox" checked> Remember Me
+					</div>
 				</div>
 
 				<div class="col-xs-12 loginRegisterButtonBody">
@@ -109,8 +121,8 @@
 		<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
 			<form action="{{action('UsersController@store')}}" method="POST">
 				{!! csrf_field() !!}
-				<div class="col-xs-12 closeButton">
-					<div class="col-xs-8">Pet Owner Registration</div>
+				<div class="col-xs-8 formHeader">Register a new account.</div>
+				<div class="col-xs-4 closeButton">
 					<i class="fa fa-window-close" aria-hidden="true"></i>
 				</div>
 
@@ -135,7 +147,6 @@
 					</div>
 				</div>	
 
-				<div class="col-xs-12 formLabel">Physical Address</div>
 				<div class="col-xs-12">
 					<div class="col-xs-12 formLabel">Physical Address</div>
 					<div class="col-xs-12">
@@ -167,9 +178,6 @@
 		</div>
 	</div>
 
-
-
-<<<<<<< HEAD
 	<!-- Vet Clinic Login Form -->
 	<div class="vetClinicLoginForm" style="display: none;">
 		<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
@@ -279,11 +287,8 @@
 
 			</form>
 		</div>
-=======
-	
->>>>>>> master
-	</div>
 
+	</div>
 
 @stop
 

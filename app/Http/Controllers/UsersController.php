@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Hash;
 use Illuminate\Http\Request;
 use App\User;
 use App\Http\Requests;
@@ -38,12 +39,11 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         $user = new User();
-        $user->firstName = $request->firstName;
-        $user->lastName = $request->lastName;
+        $user->name = $request->name;
         $user->email = $request->email;
         $user->address = $request->address;
         $user->phoneNumber = $request->phoneNumber;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
         $user->save();
 
         $request->session()->flash('successMessage', 'User registration successful');
