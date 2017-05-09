@@ -15,7 +15,7 @@ Route::get('/', function(){
     if (\Auth::check()) {
         return view('layouts.ownerHome');
     } else {
-        return redirect('/');
+        return view('layouts.home');
     }
 });
 

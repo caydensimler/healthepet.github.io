@@ -7,8 +7,6 @@
 
 	body {
 	    font-family: 'Open Sans Condensed', sans-serif;
-	    padding-top: 50px;
-	    margin-bottom: 50px;
 	}
 
 	.blur {
@@ -70,6 +68,16 @@
 		text-align: center;
 		padding: 1%;
 		position: relative;
+	}
+
+	.welcomeHeaderAccountPage {
+		background-color: #7A6F64;
+		color: #EFEFEF;
+		font-size: 4.7vw;
+		text-align: center;
+		padding: 1%;
+		position: relative;
+	    padding-top: 50px;
 	}
 
 	.introductionContent {
