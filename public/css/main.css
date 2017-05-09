@@ -35,6 +35,15 @@
 			color: #EFEFEF;
 		}
 
+		#navbar > ul > li:nth-child(2) > a {
+			color: white;
+		}
+
+		#navbar > ul > li.active > a {
+			color: #7594A5;
+			background-color: #EFEFEF;
+		}
+
 	.allContent {
 		background-color: #EFEFEF;
 	}
@@ -63,7 +72,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		height: 35vw;
-		box-shadow: 5px 5px 7px #888888;
+		box-shadow: 8px 8px 7px #888888;
 	}
 
 	.petOwnerPicture {
@@ -140,6 +149,12 @@
 			top: 50%;
 			transform: translateY(-50%);
 			opacity: .95;
+		}
+
+		.formHeader {
+			color: #EFEFEF;
+			padding: 5%;
+			font-size: 2vw;
 		}
 
 		.closeButton {
