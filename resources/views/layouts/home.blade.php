@@ -135,6 +135,7 @@
 					</div>
 				</div>	
 
+				<div class="col-xs-12 formLabel">Physical Address</div>
 				<div class="col-xs-12">
 					<div class="col-xs-12 formLabel">Physical Address</div>
 					<div class="col-xs-12">
@@ -142,32 +143,21 @@
 					</div>	
 				</div>		
 
+
+				
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Password</div>
 					<div class="col-xs-12">
-						<input type="password" name="password" id="password" class="formInput" required>
+						<input type="password" name="password" id="password" class="formInput">
 					</div>
 				</div>
 
-				<div class="col-xs-6">
+<!-- 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Confirm Password</div>
 					<div class="col-xs-12">
 						<input type="password" name="petOwnerRegisterConfirmPassword" id="petOwnerRegisterConfirmPassword" class="formInput" required>
 					</div>
-				</div>
-
-				<div class="col-xs-12">
-					<div class="col-xs-12 radioForm">
-						<div class="col-xs-12">
-							<div class="col-xs-6 formRadioInput">
-								<input type="radio" name="registerType" value="petOwner" class="formRadioInput" required checked> Register as pet owner.
-							</div>
-							<div class="col-xs-6 formRadioInput">
-								<input type="radio" name="registerType" value="vetClinic" class="formRadioInput"> Register as vet clinic.
-							</div>
-						</div>
-					</div>
-				</div>									
+				</div> -->
 
 				<div class="col-xs-12 loginRegisterButtonBody">
 					<button type="submit" class="petOwnerRegisterButton btn btn-default loginRegisterButton">Register</button>
@@ -175,6 +165,11 @@
 
 			</form>
 		</div>
+	</div>
+
+
+
+	
 	</div>
 
 
