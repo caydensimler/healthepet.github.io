@@ -176,7 +176,8 @@
 	<!-- Vet Clinic Login Form -->
 	<div class="vetClinicLoginForm" style="display: none;">
 		<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
-			<form action="" method="POST">
+			<form method="POST" action="{{ action('Auth\AuthController@postLogin') }}">
+			{!! csrf_field() !!}
 				<div class="col-xs-12 closeButton">
 					<div class="col-xs-8">Vet Clinic Login</div>
 					<i class="fa fa-window-close" aria-hidden="true"></i>
@@ -184,12 +185,12 @@
 
 				<div class="col-xs-offset-3 col-xs-6 formLabel">Email</div>
 				<div class="col-xs-offset-3 col-xs-6">
-					<input type="text" name="vetClinicLoginEmail" id="vetClinicLoginEmail" class="formInput" required>
+					<input type="text" name="vetClinicLoginEmail" id="vetClinicLoginEmail" class="formInput">
 				</div>				
 
 				<div class="col-xs-offset-3 col-xs-6 formLabel">Password</div>
 				<div class="col-xs-offset-3 col-xs-6">
-					<input type="password" name="vetClinicLoginPassword" id="vetClinicLoginPassword" class="formInput" required>
+					<input type="password" name="vetClinicLoginPassword" id="vetClinicLoginPassword" class="formInput">
 				</div>
 
 				<div class="col-xs-12 loginRegisterButtonBody">
@@ -205,7 +206,8 @@
 	<div class="vetClinicRegisterForm" style="display: none;">
 		<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
 
-			<form action="" method="POST">
+			<form action="{{ action('VetsController@store') }}" method="POST">
+				{!! csrf_field() !!}
 				<div class="col-xs-12 closeButton">
 					<div class="col-xs-8">Vet Clinic Registration</div>
 					<i class="fa fa-window-close" aria-hidden="true"></i>
@@ -213,41 +215,41 @@
 
 				<div class="col-xs-12 formLabel">Clinic Name</div>
 				<div class="col-xs-12">
-					<input type="text" name="vetClinicName" id="vetClinicName"class="formInput" required>
+					<input type="text" name="name" id="name"class="formInput">
 				</div>	
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Email Address</div>
 					<div class="col-xs-12">
-						<input type="text" name="vetClinicRegisterEmail" id="vetClinicRegisterEmail" class="formInput" required>
+						<input type="text" name="email" id="email" class="formInput">
 					</div>	
 				</div>						
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Phone Number</div>
 					<div class="col-xs-12">
-						<input type="text" name="vetClinicRegisterPhone" id="petOwnerRegisterPhone" class="formInput" required>
+						<input type="text" name="phoneNumber" id="phoneNumber" class="formInput">
 					</div>
 				</div>	
 
 				<div class="col-xs-12 formLabel">Physical Address</div>
 				<div class="col-xs-12">
-					<input type="text" name="vetClinicRegisterAddress" id="vetClinicRegisterAddress" placeholder="123 Pet Owner St, Paradise City, Texas, 12345" class="formInput" required>
+					<input type="text" name="address" id="address" placeholder="123 Vet Clinic St, Paradise City, Texas, 12345" class="formInput">
 				</div>
 
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Password</div>
 					<div class="col-xs-12">
-						<input type="password" name="vetClinicRegisterPassword" id="vetClinicRegisterPassword" class="formInput" required>
+						<input type="password" name="password" id="password" class="formInput">
 					</div>
 				</div>
 
-				<div class="col-xs-6">
+<!-- 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Confirm Password</div>
 					<div class="col-xs-12">
-						<input type="password" name="vetClinicRegisterConfirmPassword" id="vetClinicRegisterConfirmPassword" class="formInput" required>
+						<input type="password" name="vetClinicRegisterConfirmPassword" id="vetClinicRegisterConfirmPassword" class="formInput">
 					</div>
-				</div>
+				</div> -->
 
 				<div class="col-xs-12 loginRegisterButtonBody">
 					<button type="submit" class="vetClinicRegisterButton btn btn-default loginRegisterButton">Register</button>
