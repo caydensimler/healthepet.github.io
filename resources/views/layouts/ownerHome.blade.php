@@ -6,8 +6,8 @@
 
 	<div class="allContent">
 
-		<div class="welcomeHeader">
-			Welcome to your account page, $user->firstName.
+		<div class="welcomeHeaderAccountPage">
+			Welcome to your account page, {{ Auth::user()->name }}.
 		</div>
 
 		<div class="col-xs-offset-1 col-xs-10">
