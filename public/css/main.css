@@ -12,11 +12,11 @@
 	}
 
 	.blur {
-		-webkit-filter: blur(1.5px);
-		-moz-filter: blur(1.5px);
-		-o-filter: blur(1.5px);
-		-ms-filter: blur(1.5px);
-		filter: blur(1.5px);
+		-webkit-filter: blur(2px);
+		-moz-filter: blur(2px);
+		-o-filter: blur(2px);
+		-ms-filter: blur(2px);
+		filter: blur(2px);
 	}
 
 	/* Navbar */
@@ -209,6 +209,22 @@
 			:-ms-input-placeholder { /* Internet Explorer 10-11 */
 			   color: #AFAFAF;
 			}
+
+		.rememberMeCheckbox {
+			color: #EFEFEF;
+			font-size: 1vw;
+			text-align: center;
+			padding-bottom: 2%;
+			padding-left: 2%;
+			/* Double-sized Checkboxes */
+			-ms-transform: scale(1.5); /* IE */
+			-moz-transform: scale(1.5); /* FF */
+			-webkit-transform: scale(1.5); /* Safari and Chrome */
+			-o-transform: scale(1.5); /* Opera */
+		}
+
+		input[type=checkbox] {
+		}
 
 /* Owner Account Page */
 

@@ -87,17 +87,23 @@
 					<i class="fa fa-window-close" aria-hidden="true"></i>
 				</div>
 
-				<div class="col-xs-6">
-					<div class="col-xs-12 formLabel">Email</div>
-					<div class="col-xs-12">
+				<div class="col-xs-12">
+					<div class="col-xs-offset-1 col-xs-10 formLabel">Email</div>
+					<div class="col-xs-offset-1 col-xs-10">
 						<input type="text" name="petOwnerLoginEmail" id="petOwnerLoginEmail" class="formInput" required>
 					</div>
 				</div>				
 
-				<div class="col-xs-6">
-					<div class="col-xs-12 formLabel">Password</div>
-					<div class="col-xs-12">
+				<div class="col-xs-12">
+					<div class="col-xs-offset-1 col-xs-10 formLabel">Password</div>
+					<div class="col-xs-offset-1 col-xs-10">
 						<input type="password" name="petOwnerLoginPassword" id="petOwnerLoginPassword" class="formInput" required>
+					</div>
+				</div>
+
+				<div class="col-xs-12 rememberMeCheckbox">
+					<div class="col-xs-12">
+						<input type="checkbox" checked> Remember Me
 					</div>
 				</div>
 
