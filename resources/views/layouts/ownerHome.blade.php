@@ -1,7 +1,3 @@
-@extends('layouts.master')
-
-
-@section('content')
 
 
 
@@ -10,6 +6,10 @@
 
 
 	<div class="allContent">
+@extends('layouts.master')
+
+
+@section('content')
 
 		<div class="welcomeHeader">
 			Welcome to your account page, $user->firstName.
@@ -28,28 +28,28 @@
 			{!! csrf_field() !!}
 
 				<div class="col-xs-12 closeButton">
-					<div class="col-xs-8">Add New Pet</div>
+					<div class="col-xs-8">Add a new pet.</div>
 					<i class="fa fa-window-close" aria-hidden="true"></i>
 				</div>
 
-				<div class="col-xs-4">
+				<div class="col-xs-12 col-sm-4">
 					<div class="col-xs-12 formLabel">Name</div>
 					<div class="col-xs-12">
 						<input type="text" name="name" id="name" class="formInput" required>
 					</div>
 				</div>				
 
-				<div class="col-xs-4">
-					<div class="col-xs-12 formLabel">Breed</div>
+				<div class="col-xs-6 col-sm-4">
+					<div class="col-xs-12 formLabel">Weight</div>
 					<div class="col-xs-12">
-						<input type="text" name="breed" id="breed" class="formInput" required>
+						<input type="text" name="weight" id="weight" class="formInput" placeholder="pounds" required>
 					</div>
 				</div>				
 
-				<div class="col-xs-4">
+				<div class="col-xs-6 col-sm-4">
 					<div class="col-xs-12 formLabel">Color(s)</div>
 					<div class="col-xs-12">
-						<input type="text" name="color" id="color" class="formInput" required>
+						<input type="text" name="color" id="color" class="formInput" required placeholder="Black/White">
 					</div>
 				</div>
 
@@ -78,9 +78,9 @@
 				</div>	
 
 				<div class="col-xs-6">
-					<div class="col-xs-12 formLabel">Weight (pounds)</div>
+					<div class="col-xs-12 formLabel">Breed</div>
 					<div class="col-xs-12">
-						<input type="text" name="weight" id="weight" class="formInput" required>
+						<input type="text" name="breed" id="breed" class="formInput" placeholder="Black Lab/Great Dane" required>
 					</div>
 				</div>						
 
@@ -103,6 +103,10 @@
 							<option value="2011">2011</option>
 							<option value="2012">2012</option>
 							<option value="2013">2013</option>
+							<option value="2014">2014</option>
+							<option value="2015">2015</option>
+							<option value="2016">2016</option>
+							<option value="2017">2017</option>
 						</select>
 					</div>
 				</div>						
