@@ -31,7 +31,7 @@
                 <ul class="nav navbar-nav">
                 @if ($_SERVER['REQUEST_URI'] === '/ownerHome')
                     <li class="active"><a href="">Account</a></li>
-                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/auth/logout">Logout</a></li>
                 @endif
                 </ul>
             </div>
