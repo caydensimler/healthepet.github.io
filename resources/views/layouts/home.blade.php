@@ -225,14 +225,12 @@
 					</div>	
 				</div>		
 
-
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Password</div>
 					<div class="col-xs-12">
 
-						<input type="password" name="password" id="password" class="formInput">
 
-						<input type="password" name="password" id="password" class="formInput" required>
+						<input type="password" name="password" id="password" class="formInput">
 
 					</div>
 				</div>
@@ -242,12 +240,9 @@
 					<div class="col-xs-12">
 
 						<input type="password" name="vetClinicRegisterConfirmPassword" id="vetClinicRegisterConfirmPassword" class="formInput">
+
 					</div>
 				</div> -->
-
-						<input type="password" name="petOwnerRegisterConfirmPassword" id="petOwnerRegisterConfirmPassword" class="formInput" required>
-					</div>
-				</div>
 				
 				<div class="col-xs-12">
 					<div class="col-xs-12 radioForm">
@@ -261,7 +256,6 @@
 						</div>
 					</div>
 				</div>									
-
 
 				<div class="col-xs-12 loginRegisterButtonBody">
 					<button type="submit" class="petOwnerRegisterButton btn btn-default loginRegisterButton">Register</button>
