@@ -230,11 +230,11 @@
 				<i class="fa fa-square-o" aria-hidden="true"></i> Lyme
 			</div>
 
-			<div class="col-xs-12 dateAdmin shotDate">
+			<div class="col-xs-12 shotDate">
 				Date Administered: <span class="dateAdministered"></span>
 			</div>
 
-			<div class="col-xs-12 dateRenewal shotDate">
+			<div class="col-xs-12 shotDate">
 				Renewal Date: <span class="dateRenewal"></span>
 			</div>
 
@@ -242,7 +242,7 @@
 				Comments: 
 			</div>
 
-			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="lyme" value="rabies" checked	>
+			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="lyme" value="rabies">
 
 		</label>
 
