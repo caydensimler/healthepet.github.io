@@ -22,8 +22,6 @@
     </div>
 
     <div class="col-xs-12 invisible invisibleOne">filler text for space</div>
-
-
     
     <!-- Pet Owner Introduction -->
 
@@ -159,6 +157,7 @@
                         <input type="text" name="address" id="address" placeholder="123 Pet St, Bark City, Meow, 54321" class="formInput" required>
                     </div>  
                 </div>  
+                
 
                 <div class="col-xs-12">
                     <div class="col-xs-12 radioForm">
@@ -179,11 +178,11 @@
                         <input type="password" name="password" id="password" class="formInput">
                     </div>
                 </div>
-
+ 
                 <div class="col-xs-6">
                     <div class="col-xs-12 formLabel">Confirm Password</div>
                     <div class="col-xs-12">
-                        <input type="password" name="petOwnerRegisterConfirmPassword" id="petOwnerRegisterConfirmPassword" class="formInput" required>
+                        <input type="password" name="confirmPassword" id="confirmPassword" class="formInput" required>
                     </div>
                 </div>
 
@@ -193,8 +192,6 @@
 
             </form>
         </div>
-    </div>
-
     </div>
 
 @stop
