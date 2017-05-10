@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use Hash;
+use Session;
 use Illuminate\Http\Request;
 use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
 
 class UsersController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
 
     public function index()
     {
@@ -30,16 +35,13 @@ class UsersController extends Controller
         $user->phoneNumber = $request->phoneNumber;
         $user->password = Hash::make($request->password);
         $user->save();
-
-        $request->session()->flash('successMessage', 'User registration successful');
-
         return redirect('pets');
     }
 
     public function show()
     {
         // if (\Auth::check()) {
-        //     return view('pets');
+        //     return view('/pets');
         // } else {
         //     return redirect('/');
         // }

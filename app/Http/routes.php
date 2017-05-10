@@ -12,9 +12,11 @@
 */
 
 Route::get('/', function(){
-  
-    return view('welcome');
- 
+    if (\Auth::check()) {
+    	return redirect('/pets');
+    } else {
+        return view('welcome');
+    }
 });
 
 // Route::get('/ownerHome', 'UsersController@show');
@@ -26,7 +28,9 @@ Route::resource('vets', 'VetsController');
 Route::resource('pets', 'PetsController');
 
 // Authentication routes...
-Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::get('auth/login', function(){
+	return redirect('/');
+});
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
