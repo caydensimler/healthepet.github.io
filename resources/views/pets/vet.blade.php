@@ -28,7 +28,7 @@
 			@endforeach
 		</table>
 
-			{!! $posts->render() !!}
+			{!! $pets->render() !!}
 	</div>
 
 @stop
