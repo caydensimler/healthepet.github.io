@@ -14,6 +14,8 @@ class PetsTable extends Migration
             $table->string('species');
             $table->string('breed');
             $table->string('sex');
+            $table->integer('weight');
+            $table->string('color');
             $table->integer('age');
             $table->integer('owner_id')->unsigned();
             $table->foreign('owner_id')->references('id')->on('users');
