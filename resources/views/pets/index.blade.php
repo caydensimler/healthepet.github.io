@@ -43,11 +43,11 @@
 
 					<div class="col-xs-6">
 						<div class="col-xs-12 petSubHeader">
-							Weight: 70lbs
+							Weight: {{ $pet->weight }}
 						</div>					
 
 						<div class="col-xs-12 petSubHeader">
-							Color(s): Black/White
+							Color(s): {{ $pet->color }}
 						</div>					
 
 						<div class="col-xs-12 petSubHeader">
