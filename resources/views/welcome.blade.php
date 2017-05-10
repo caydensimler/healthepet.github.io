@@ -163,10 +163,10 @@
                     <div class="col-xs-12 radioForm">
                         <div class="col-xs-12">
                             <div class="col-xs-6 formRadioInput">
-                                <input type="radio" name="accounType" value="petOwner" class="formRadioInput" required> I am a pet owner.
+                                <input type="radio" name="accountType" value="owner" class="formRadioInput" required> I am a pet owner.
                             </div>
                             <div class="col-xs-6 formRadioInput">
-                                <input type="radio" name="accountType" value="vetClinic" class="formRadioInput"> I am a vet clinic.
+                                <input type="radio" name="accountType" value="vet" class="formRadioInput"> I am a vet clinic.
                             </div>
                         </div>
                     </div>  
