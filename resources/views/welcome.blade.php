@@ -20,14 +20,16 @@
             </div>
         </div>
     </div>
+
+    <div class="col-xs-12 invisible invisibleOne">filler text for space</div>
     
     <!-- Pet Owner Introduction -->
 
     <div class="col-xs-12 introductionContent">
 
-        <div class="col-xs-6 introductionPicture petOwnerPicture"></div>
+        <div class="col-xs-offset-3 col-xs-6 col-sm-offset-1 col-sm-4 introductionPicture petOwnerPicture"></div>
 
-        <div class="col-xs-6">
+        <div class="col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-5">
             <div class="col-xs-12 introductionHeader">
                 <i class="fa fa-user" aria-hidden="true"></i> Pet Owners</div>
             <div class="col-xs-12 introductionList">
@@ -47,7 +49,7 @@
     <!-- Vet Clinic Introduction -->
     <div class="col-xs-12 introductionContent">
 
-        <div class="col-xs-6">
+        <div class="col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-5">
             <div class="col-xs-12 introductionHeader">
                 <i class="fa fa-user-md" aria-hidden="true"></i> Vet Clinics
             </div>
@@ -62,11 +64,11 @@
                 </div>
         </div>
 
-        <div class="col-xs-6 introductionPicture vetClinicPicture"></div>
+        <div class="col-xs-offset-3 col-xs-6 col-sm-offset-1 col-sm-4 introductionPicture vetClinicPicture"></div>
 
     </div>
 
-
+    <div class="col-xs-12 invisible invisibleOne">filler text for space</div>
 
     </div>
 
@@ -186,34 +188,6 @@
 
                 <div class="col-xs-12 loginRegisterButtonBody">
                     <button type="submit" class="petOwnerRegisterButton btn btn-default loginRegisterButton">Register</button>
-                </div>
-
-            </form>
-        </div>
-    </div>
-
-    <!-- Vet Clinic Login Form -->
-    <div class="vetClinicLoginForm" style="display: none;">
-        <div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
-            <form method="POST" action="{{ action('Auth\AuthController@postLogin') }}">
-            {!! csrf_field() !!}
-                <div class="col-xs-12 closeButton">
-                    <div class="col-xs-8">Vet Clinic Login</div>
-                    <i class="fa fa-window-close" aria-hidden="true"></i>
-                </div>
-
-                <div class="col-xs-offset-3 col-xs-6 formLabel">Email</div>
-                <div class="col-xs-offset-3 col-xs-6">
-                    <input type="text" name="vetClinicLoginEmail" id="vetClinicLoginEmail" class="formInput">
-                </div>              
-
-                <div class="col-xs-offset-3 col-xs-6 formLabel">Password</div>
-                <div class="col-xs-offset-3 col-xs-6">
-                    <input type="password" name="vetClinicLoginPassword" id="vetClinicLoginPassword" class="formInput">
-                </div>
-
-                <div class="col-xs-12 loginRegisterButtonBody">
-                    <button type="submit" class="vetClinicLoginButton btn btn-default loginRegisterButton">Login</button>
                 </div>
 
             </form>

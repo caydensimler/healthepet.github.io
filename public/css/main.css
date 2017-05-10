@@ -27,6 +27,10 @@
 	    transform: translateY(-50%);
 	}
 
+	.invisibleOne {
+		font-size: 5vw;
+	}
+
 	/* Navbar */
 
 		.navbar {
@@ -34,8 +38,12 @@
 			color: #EFEFEF;
 		}
 
-		body > div.allContent > nav > div > div.navbar-header > a {
+		#navbar > ul > li:nth-child(3) > a {
 			color: #EFEFEF;
+		}
+
+		#navbar > ul > li:nth-child(3) > a:hover {
+			color: #7A6F64;
 		}
 
 		.navbar > .container > #navbar > ul {
@@ -50,6 +58,11 @@
 		#navbar > ul > li.active > a {
 			color: #7594A5;
 			background-color: #EFEFEF;
+		}
+
+		.siteName {
+			padding-top: 15px;
+			padding-right: 10px;
 		}
 
 	.allContent {
@@ -89,7 +102,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
-		height: 35vw;
+		height: 25vw;
 		box-shadow: 8px 8px 7px #888888;
 	}
 
@@ -104,15 +117,15 @@
 
 	.introductionHeader {
 		opacity: .9;
-		margin-top: 10%;
-		font-size: 4vw;
+		font-size: 3vw;
 		text-align: center;
+		margin-top: 2%;
 		color: #7A6F64; 
 	}
 
 	.introductionList {
 		color: #7A6F64;
-		font-size: 2.5vw;
+		font-size: 2.2vw;
 		padding-bottom: 4%;
 	}
 

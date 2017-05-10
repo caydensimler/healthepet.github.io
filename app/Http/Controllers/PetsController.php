@@ -23,12 +23,20 @@ class PetsController extends Controller
         // $pets = Pet::with('user')->where('owner_id', '=', \Auth::id())->paginate(4);
         // TODO: remove this, hardcoded id for now
 
-        $pets = Pet::with('user')->where('owner_id', '=', \Auth::id())->paginate(4);
-        $data = [];
-        $data['pets'] = $pets;
-        return view('pets.index')->with($data); 
-    }
+        if(\Auth::User()->user_type == 'owner') {
+            $pets = Pet::with('user')->where('owner_id', '=', \Auth::id())->paginate(4);
+            $data = [];
+            $data['pets'] = $pets;
+            return view('pets.index')->with($data);  
+        } elseif (\Auth::User()->user_type == 'vet') {
+            $pets = Pet::with('user')->where('vet_id', '=', \Auth::id())->paginate(4);
+            $data = [];
+            $data['pets'] = $pets;
+            return view('pets.index')->with($data);
+            
+        }
 
+    }
 
     public function create(Request $request)
     {
