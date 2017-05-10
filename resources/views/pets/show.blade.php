@@ -24,10 +24,6 @@
 				Renewal Date: <span class="dateRenewal"></span>
 			</div>
 
-			<div class="col-xs-12 shotComments">
-				Comments: 
-			</div>
-
 			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="rabies" value="rabies">
 	
 		</label>
@@ -43,10 +39,6 @@
 
 			<div class="col-xs-12 shotDate">
 				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<div class="col-xs-12 shotComments">
-				Comments: 
 			</div>
 
 			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="bordetella" value="rabies">
@@ -72,10 +64,6 @@
 				Renewal Date: <span class="dateRenewal"></span>
 			</div>
 
-			<div class="col-xs-12 shotComments">
-				Comments: 
-			</div>
-
 			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="canine_distemper" value="rabies">
 
 		</label>		
@@ -91,10 +79,6 @@
 
 			<div class="col-xs-12 shotDate">
 				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<div class="col-xs-12 shotComments">
-				Comments: 
 			</div>
 
 			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="measles" value="rabies">
@@ -114,10 +98,6 @@
 				Renewal Date: <span class="dateRenewal"></span>
 			</div>
 
-			<div class="col-xs-12 shotComments">
-				Comments: 
-			</div>
-
 			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="parvo" value="rabies">
 
 		</label>
@@ -133,10 +113,6 @@
 
 			<div class="col-xs-12 shotDate">
 				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<div class="col-xs-12 shotComments">
-				Comments: 
 			</div>
 
 			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="hepatitis" value="rabies">
@@ -155,10 +131,6 @@
 			<div class="col-xs-12 shotDate">
 				Renewal Date: <span class="dateRenewal"></span>
 			</div>
-
-			<div class="col-xs-12 shotComments">
-				Comments: 
-			</div>
 			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="cav2" value="rabies">
 		</label>		
 
@@ -173,10 +145,6 @@
 
 			<div class="col-xs-12 shotDate">
 				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<div class="col-xs-12 shotComments">
-				Comments: 
 			</div>
 
 			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="para" value="rabies">
@@ -196,10 +164,6 @@
 				Renewal Date: <span class="dateRenewal"></span>
 			</div>
 
-			<div class="col-xs-12 shotComments">
-				Comments: 
-			</div>
-
 			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="lepto" value="rabies">
 
 		</label>		
@@ -217,10 +181,6 @@
 				Renewal Date: <span class="dateRenewal"></span>
 			</div>
 
-			<div class="col-xs-12 shotComments">
-				Comments: 
-			</div>
-
 			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="corona" value="rabies">
 
 		</label>		
@@ -236,10 +196,6 @@
 
 			<div class="col-xs-12 shotDate">
 				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<div class="col-xs-12 shotComments">
-				Comments: 
 			</div>
 
 			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="lyme" value="rabies">
