@@ -23,11 +23,12 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
-    protected $redirectPath = '/pets';
+    protected $redirectPath;
 
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
+        $this->redirectPath = action("PetsController@index");
     }
 
     protected function validator(array $data)

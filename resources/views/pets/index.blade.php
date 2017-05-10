@@ -10,11 +10,13 @@
 		<div class="welcomeHeaderAccountPage">
 			Welcome to your account page, {{ Auth::user()->name }}.
 		</div>
-
-		<div class="col-xs-offset-1 col-xs-10">
-			<button class="btn btn-default addPetButton"><i class="fa fa-plus-square" aria-hidden="true"></i> Add New Pet</button>
-		</div>		
-		
+        
+        @if(\Auth::User()->user_type == 'vet')
+    		<div class="col-xs-offset-1 col-xs-10">
+    			<button class="btn btn-default addPetButton"><i class="fa fa-plus-square" aria-hidden="true"></i> Add New Pet</button>
+    		</div>		
+		@endif
+        
 		@foreach($pets as $pet)
 
 			<div class="col-xs-12 petInformation">
@@ -56,7 +58,7 @@
 					</div>
 
 					<div class="col-xs-12 viewRecordsLink">
-						<i class="fa fa-file-text-o" aria-hidden="true"></i><a href="{{ action('PetsController@show')}}">Click here to view {{ $pet->name}} records.</a>
+						<i class="fa fa-file-text-o" aria-hidden="true"></i><a href="{{ action('PetsController@show', $pet->id)}}">Click here to view {{ $pet->name}} records.</a>
 					</div>
 
 				</div>

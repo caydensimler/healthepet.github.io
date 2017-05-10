@@ -14,21 +14,26 @@ class PetsController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth', ['except' =>  ['index', 'show']]);
+        $this->middleware('auth');
     }
 
     public function index()
     {
-        // TODO: uncomment when auth is implemented
-        // $pets = Pet::with('user')->where('owner_id', '=', \Auth::id())->paginate(4);
-        // TODO: remove this, hardcoded id for now
 
-        $pets = Pet::with('user')->where('owner_id', '=', \Auth::id())->paginate(4);
-        $data = [];
-        $data['pets'] = $pets;
-        return view('pets.index')->with($data); 
+        if(\Auth::user()->user_type == 'owner') {
+            $pets = Pet::with('user')->where('owner_id', '=', \Auth::id())->paginate(4);
+            $data = [];
+            $data['pets'] = $pets;
+            return view('pets.index')->with($data);  
+        } elseif (\Auth::user()->user_type == 'vet') {
+            $pets = Pet::with('user')->where('vet_id', '=', \Auth::id())->paginate(4);
+            $data = [];
+            $data['pets'] = $pets;
+            return view('pets.vet')->with($data);
+            
+        }
+
     }
-
 
     public function create(Request $request)
     {

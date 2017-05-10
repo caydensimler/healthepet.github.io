@@ -52,6 +52,8 @@
     <!-- Personalized Scripts -->
     <script src="/js/main.js"></script>
 
+    <script type="text/javascript" src="/js/passtest.js"></script>
+
     </body>
 </html>
 

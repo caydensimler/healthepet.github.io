@@ -18,7 +18,7 @@ class UserTableSeeder extends Seeder {
 		// 	$user->save();
 		// }
 	    $user = new \App\User();
-        $user->name = "Thomas Hayes";
+        $user->name = "Clinic 1";
         $user->email = "thayes@gmail.com";
         $user->password = Hash::make("password");;
         $user->address = "123 Street San Antonio, TX 78201";
@@ -34,6 +34,24 @@ class UserTableSeeder extends Seeder {
         $user1->phoneNumber = 5806954454;
         $user1->user_type  = "owner";
         $user1->save();
+
+        $user2 = new \App\User();
+        $user2->name = "Katie Bain";
+        $user2->email = "kbain@gmail.com";
+        $user2->password = Hash::make("password");;
+        $user2->address = "580 Street San Antonio, TX 78201";
+        $user2->phoneNumber = 5806954454;
+        $user2->user_type  = "owner";
+        $user2->save();
+
+        $user3 = new \App\User();
+        $user3->name = "Clinic 2";
+        $user3->email = "clinic2@gmail.com";
+        $user3->password = Hash::make("password");;
+        $user3->address = "123 Street San Antonio, TX 78201";
+        $user3->phoneNumber = 5806954454;
+        $user3->user_type = "vet";
+        $user3->save();
 	}
 
 }
