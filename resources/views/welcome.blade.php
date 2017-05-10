@@ -21,15 +21,17 @@
         </div>
     </div>
 
+    <div class="col-xs-12 invisible invisibleOne">filler text for space</div>
+
 
     
     <!-- Pet Owner Introduction -->
 
     <div class="col-xs-12 introductionContent">
 
-        <div class="col-xs-6 introductionPicture petOwnerPicture"></div>
+        <div class="col-xs-offset-3 col-xs-6 col-sm-offset-1 col-sm-4 introductionPicture petOwnerPicture"></div>
 
-        <div class="col-xs-6">
+        <div class="col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-5">
             <div class="col-xs-12 introductionHeader">
                 <i class="fa fa-user" aria-hidden="true"></i> Pet Owners</div>
             <div class="col-xs-12 introductionList">
@@ -49,7 +51,7 @@
     <!-- Vet Clinic Introduction -->
     <div class="col-xs-12 introductionContent">
 
-        <div class="col-xs-6">
+        <div class="col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-5">
             <div class="col-xs-12 introductionHeader">
                 <i class="fa fa-user-md" aria-hidden="true"></i> Vet Clinics
             </div>
@@ -64,7 +66,7 @@
                 </div>
         </div>
 
-        <div class="col-xs-6 introductionPicture vetClinicPicture"></div>
+        <div class="col-xs-offset-3 col-xs-6 col-sm-offset-1 col-sm-4 introductionPicture vetClinicPicture"></div>
 
     </div>
 
