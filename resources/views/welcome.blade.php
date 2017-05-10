@@ -20,8 +20,6 @@
             </div>
         </div>
     </div>
-
-
     
     <!-- Pet Owner Introduction -->
 
@@ -157,6 +155,7 @@
                         <input type="text" name="address" id="address" placeholder="123 Pet St, Bark City, Meow, 54321" class="formInput" required>
                     </div>  
                 </div>  
+                
 
                 <div class="col-xs-12">
                     <div class="col-xs-12 radioForm">
@@ -170,8 +169,6 @@
                         </div>
                     </div>  
                 </div>  
-
-
                 
                 <div class="col-xs-6">
                     <div class="col-xs-12 formLabel">Password</div>
@@ -179,11 +176,11 @@
                         <input type="password" name="password" id="password" class="formInput">
                     </div>
                 </div>
-
+ 
                 <div class="col-xs-6">
                     <div class="col-xs-12 formLabel">Confirm Password</div>
                     <div class="col-xs-12">
-                        <input type="password" name="petOwnerRegisterConfirmPassword" id="petOwnerRegisterConfirmPassword" class="formInput" required>
+                        <input type="password" name="confirmPassword" id="confirmPassword" class="formInput" required>
                     </div>
                 </div>
 
@@ -221,90 +218,6 @@
 
             </form>
         </div>
-    </div>
-
-
-    <!-- Vet Clinic Registration Form -->
-    <div class="vetClinicRegisterForm" style="display: none;">
-        <div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
-
-            <form action="{{ action('VetsController@store') }}" method="POST">
-                {!! csrf_field() !!}
-                <div class="col-xs-12 closeButton">
-                    <div class="col-xs-8">Vet Clinic Registration</div>
-                    <i class="fa fa-window-close" aria-hidden="true"></i>
-                </div>
-
-                <div class="col-xs-12 formLabel">Clinic Name</div>
-                <div class="col-xs-12">
-                    <input type="text" name="name" id="name"class="formInput">
-                </div>  
-
-                <div class="col-xs-6">
-                    <div class="col-xs-12 formLabel">Email Address</div>
-                    <div class="col-xs-12">
-                        <input type="text" name="email" id="email" class="formInput">
-                    </div>  
-                </div>                      
-
-                <div class="col-xs-6">
-                    <div class="col-xs-12 formLabel">Phone Number</div>
-                    <div class="col-xs-12">
-                        <input type="text" name="phoneNumber" id="phoneNumber" class="formInput">
-                    </div>
-                </div>  
-
-                <div class="col-xs-12 formLabel">Physical Address</div>
-                <div class="col-xs-12">
-                    <input type="text" name="address" id="address" placeholder="123 Vet Clinic St, Paradise City, Texas, 12345" class="formInput">
-                </div>
-
-                <div class="col-xs-12">
-                    <div class="col-xs-12 formLabel">Physical Address</div>
-                    <div class="col-xs-12">
-                        <input type="text" name="address" id="address" placeholder="123 Pet Owner St, Paradise City, Texas, 12345" class="formInput" required>
-                    </div>  
-                </div>      
-
-                <div class="col-xs-6">
-                    <div class="col-xs-12 formLabel">Password</div>
-                    <div class="col-xs-12">
-
-
-                        <input type="password" name="password" id="password" class="formInput">
-
-                    </div>
-                </div>
-
-<!--                <div class="col-xs-6">
-                    <div class="col-xs-12 formLabel">Confirm Password</div>
-                    <div class="col-xs-12">
-
-                        <input type="password" name="vetClinicRegisterConfirmPassword" id="vetClinicRegisterConfirmPassword" class="formInput">
-
-                    </div>
-                </div> -->
-                
-                <div class="col-xs-12">
-                    <div class="col-xs-12 radioForm">
-                        <div class="col-xs-12">
-                            <div class="col-xs-6 formRadioInput">
-                                <input type="radio" name="registerType" value="petOwner" class="formRadioInput" required checked> Register as pet owner.
-                            </div>
-                            <div class="col-xs-6 formRadioInput">
-                                <input type="radio" name="registerType" value="vetClinic" class="formRadioInput"> Register as vet clinic.
-                            </div>
-                        </div>
-                    </div>
-                </div>                                  
-
-                <div class="col-xs-12 loginRegisterButtonBody">
-                    <button type="submit" class="petOwnerRegisterButton btn btn-default loginRegisterButton">Register</button>
-                </div>
-
-            </form>
-        </div>
-
     </div>
 
 @stop
