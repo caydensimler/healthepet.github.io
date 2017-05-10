@@ -33,6 +33,7 @@ class UsersController extends Controller
         $user->password = Hash::make($request->password);
         $user->user_type = $request->accountType;
         $user->save();
+        \Auth::login($user);
         return redirect('pets');
     }
 
