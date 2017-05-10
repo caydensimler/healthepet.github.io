@@ -33,13 +33,3 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 // Registration routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
-
-// // Authentication routes...
-// Route::get('auth/userLogin', 'Auth\AuthController@getLogin');
-// Route::post('auth/login', 'Auth\AuthController@postLogin');
-// Route::get('auth/userLogout', 'Auth\AuthController@getLogout');
-
-
-// // Registration routes...
-// Route::get('auth/userRegister', 'Auth\AuthController@getRegister');
-// Route::post('auth/userRegister', 'Auth\AuthController@postRegister');
