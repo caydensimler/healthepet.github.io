@@ -60,6 +60,40 @@ $(document).ready(function(){
 			$('.addPetForm').fadeToggle(500);
 		});
 
+		$(":checkbox").on('click', function(){
+
+	            var dateAdminister = new Date();
+	            var datetimeAdminister = 
+	            	(dateAdminister.getMonth()+1) + 
+	            	'/' +
+	            	dateAdminister.getUTCDate() +
+	            	'/' +
+	            	(dateAdminister.getFullYear());
+
+
+	            var dateRenewal = new Date();
+	            var datetimeRenewal = 
+	            	(dateRenewal.getMonth()+1) + 
+	            	'/' +
+	            	dateRenewal.getUTCDate() +
+	            	'/' +
+	            	(dateRenewal.getFullYear()+1);
+
+			if ($(this).is(':checked')) {
+
+	    		$(this).prev().prev().prev().prev().children().removeClass('fa-square-o').addClass('fa-check-square-o');
+	    		$(this).prev().prev().prev().children().html(datetimeAdminister);
+	    		$(this).prev().prev().children().html(datetimeRenewal);
+		    	$(this).parent().toggleClass('shotRecordBodyChecked');
+			} else {
+
+	    		$(this).prev().prev().prev().prev().children().removeClass('fa-check-square-o').addClass('fa-square-o');
+	    		$(this).prev().prev().prev().children().html('');
+	    		$(this).prev().prev().children().html('');
+				$(this).parent().toggleClass('shotRecordBodyChecked');
+			}
+		});
+
 
 
 

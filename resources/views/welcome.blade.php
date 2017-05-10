@@ -164,6 +164,7 @@
                         <div class="col-xs-12">
                             <div class="col-xs-6 formRadioInput">
                                 <input type="radio" name="user_type" value="owner" class="formRadioInput" required> I am a pet owner.
+
                             </div>
                             <div class="col-xs-6 formRadioInput">
                                 <input type="radio" name="user_type" value="vet" class="formRadioInput"> I am a vet clinic.
@@ -192,6 +193,7 @@
 
             </form>
         </div>
+    </div>
     </div>
 
 @stop

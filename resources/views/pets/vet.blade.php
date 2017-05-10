@@ -11,6 +11,10 @@
 				<th class="col-sm-1">Gender:</th>
 				<th class="col-sm-1">Weight:</th>
 				<th class="col-sm-1">Color:</th>
+				<th class="col-sm-1">Age:</th>
+				<th class="col-sm-1">Owner's Name:</th>
+				<th class="col-sm-1">Owner's Phone Number:</th>
+				<th class="col-sm-1">Owner's Email:</th>
 			</tr>
 			@foreach($pets as $pet) 
 				<tr>
@@ -28,7 +32,7 @@
 			@endforeach
 		</table>
 
-			{!! $posts->render() !!}
+			{!! $pets->render() !!}
 	</div>
 
 @stop
