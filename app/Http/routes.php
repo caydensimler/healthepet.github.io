@@ -19,11 +19,7 @@ Route::get('/', function(){
     }
 });
 
-// Route::get('/ownerHome', 'UsersController@show');
-
 Route::resource('users', 'UsersController');
-
-Route::resource('vets', 'VetsController');
 
 Route::resource('pets', 'PetsController');
 

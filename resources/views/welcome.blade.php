@@ -123,7 +123,7 @@
     <!-- Registration Form -->
     <div class="registerForm" style="display: none;">
         <div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
-            <form action="{{action('UsersController@store')}}" method="POST">
+            <form action="{{action('Auth\AuthController@postRegister')}}" method="POST">
                 {!! csrf_field() !!}
                 <div class="col-xs-8 formHeader">Register a new account.</div>
                 <div class="col-xs-4 closeButton">
@@ -163,10 +163,11 @@
                     <div class="col-xs-12 radioForm">
                         <div class="col-xs-12">
                             <div class="col-xs-6 formRadioInput">
-                                <input type="radio" name="accountType" value="petOwner" class="formRadioInput" required> I am a pet owner.
+                                <input type="radio" name="user_type" value="owner" class="formRadioInput" required> I am a pet owner.
+
                             </div>
                             <div class="col-xs-6 formRadioInput">
-                                <input type="radio" name="accountType" value="vetClinic" class="formRadioInput"> I am a vet clinic.
+                                <input type="radio" name="user_type" value="vet" class="formRadioInput"> I am a vet clinic.
                             </div>
                         </div>
                     </div>  
@@ -182,7 +183,7 @@
                 <div class="col-xs-6">
                     <div class="col-xs-12 formLabel">Confirm Password</div>
                     <div class="col-xs-12">
-                        <input type="password" name="confirmPassword" id="confirmPassword" class="formInput" required>
+                        <input type="password" name="password_confirmation" id="password_confirmation" class="formInput" required>
                     </div>
                 </div>
 

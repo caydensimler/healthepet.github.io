@@ -12,9 +12,6 @@ use Illuminate\Support\Facades\Redirect;
 
 class UsersController extends Controller
 {
-    public function __construct() {
-        $this->middleware('auth');
-    }
 
     public function index()
     {
@@ -28,23 +25,21 @@ class UsersController extends Controller
 
     public function store(Request $request)
     {
-        $user = new User();
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->address = $request->address;
-        $user->phoneNumber = $request->phoneNumber;
-        $user->password = Hash::make($request->password);
-        $user->save();
-        return redirect('pets');
+        // $user = new User();
+        // $user->name = $request->name;
+        // $user->email = $request->email;
+        // $user->address = $request->address;
+        // $user->phoneNumber = $request->phoneNumber;
+        // $user->password = Hash::make($request->password);
+        // $user->user_type = $request->accountType;
+        // $user->save();
+        // \Auth::login($user);
+        // return redirect('pets');
     }
 
     public function show()
     {
-        // if (\Auth::check()) {
-        //     return view('/pets');
-        // } else {
-        //     return redirect('/');
-        // }
+
     }    
 
     public function edit($id)
