@@ -25,24 +25,10 @@
                         <span class="sr-only">Toggle navigation</span>
                         <i class="fa fa-paw" aria-hidden="true"> Menu </i>
                     </button>
-
-
-
-
-
-
-                    <!-- Should there be a link to the home page when they're logged in? -->
-
-
-                    <a class="navbar-brand" href="">HealthEPet</a>
-
-
-                    <!--  -->
-
                 </div>
-
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
+                        <li class="siteName hidden-xs">HealthEPet</li>
                         <li class="active"><a href="{{ action('PetsController@index') }}">Account</a></li>
                         <li><a href="/auth/logout">Logout</a></li>
                     </ul>

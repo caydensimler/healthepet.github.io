@@ -1,11 +1,11 @@
+
+
+
+
+    <div class="allContent">
 @extends('layouts.master')
 
 @section('content')
-
-
-
-
-	<div class="allContent">
 
 		<div class="welcomeHeaderAccountPage">
 			Welcome to your account page, {{ Auth::user()->name }}.
@@ -63,6 +63,8 @@
 
 			</div>
 		@endforeach
+
+    </div>
     <div class="addPetForm" style="display: none;">
         <div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
             <form action="" method="POST">

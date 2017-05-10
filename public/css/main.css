@@ -34,8 +34,12 @@
 			color: #EFEFEF;
 		}
 
-		body > div.allContent > nav > div > div.navbar-header > a {
+		#navbar > ul > li:nth-child(3) > a {
 			color: #EFEFEF;
+		}
+
+		#navbar > ul > li:nth-child(3) > a:hover {
+			color: #7A6F64;
 		}
 
 		.navbar > .container > #navbar > ul {
@@ -50,6 +54,11 @@
 		#navbar > ul > li.active > a {
 			color: #7594A5;
 			background-color: #EFEFEF;
+		}
+
+		.siteName {
+			padding-top: 15px;
+			padding-right: 10px;
 		}
 
 	.allContent {
