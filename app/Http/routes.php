@@ -12,14 +12,12 @@
 */
 
 Route::get('/', function(){
-    if (\Auth::check()) {
-        return view('layouts.ownerHome');
-    } else {
-        return view('layouts.home');
-    }
+  
+    return view('welcome');
+ 
 });
 
-Route::get('/ownerHome', 'UsersController@show');
+// Route::get('/ownerHome', 'UsersController@show');
 
 Route::resource('users', 'UsersController');
 
