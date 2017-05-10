@@ -81,15 +81,15 @@ $(document).ready(function(){
 
 			if ($(this).is(':checked')) {
 
-	    		$(this).prev().prev().prev().prev().children().removeClass('fa-square-o').addClass('fa-check-square-o');
-	    		$(this).prev().prev().prev().children().html(datetimeAdminister);
-	    		$(this).prev().prev().children().html(datetimeRenewal);
+	    		$(this).prev().prev().prev().children().removeClass('fa-square-o').addClass('fa-check-square-o');
+	    		$(this).prev().prev().children().html(datetimeAdminister);
+	    		$(this).prev().children().html(datetimeRenewal);
 		    	$(this).parent().toggleClass('shotRecordBodyChecked');
 			} else {
 
-	    		$(this).prev().prev().prev().prev().children().removeClass('fa-check-square-o').addClass('fa-square-o');
-	    		$(this).prev().prev().prev().children().html('');
+	    		$(this).prev().prev().prev().children().removeClass('fa-check-square-o').addClass('fa-square-o');
 	    		$(this).prev().prev().children().html('');
+	    		$(this).prev().children().html('');
 				$(this).parent().toggleClass('shotRecordBodyChecked');
 			}
 		});
