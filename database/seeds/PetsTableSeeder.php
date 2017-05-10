@@ -14,7 +14,7 @@ class PetsTableSeeder extends Seeder
 	    $pet = new \App\Pet();
         $pet->name = "Wally";
         $pet->species = "Dog";
-        $pet->breed = "Mutt";
+        $pet->breed = "Chihuaha";
         $pet->sex = "Male";
         $pet->weight = 20;
         $pet->color = 'Blonde';
@@ -32,6 +32,30 @@ class PetsTableSeeder extends Seeder
         $pet->color = 'Black';
         $pet->age = 5;
         $pet->owner_id = 2;
+        $pet->vet_id = 1;
+        $pet->save();
+
+        $pet = new \App\Pet();
+        $pet->name = "Izzy";
+        $pet->species = "Dog";
+        $pet->breed = "Poodle";
+        $pet->sex = "Female";
+        $pet->weight = 15;
+        $pet->color = 'White';
+        $pet->age = 8;
+        $pet->owner_id = 2;
+        $pet->vet_id = 1;
+        $pet->save();
+
+        $pet = new \App\Pet();
+        $pet->name = "Rambo";
+        $pet->species = "Cat";
+        $pet->breed = "Black Cat";
+        $pet->sex = "Male";
+        $pet->weight = 10;
+        $pet->color = 'Black';
+        $pet->age = 2;
+        $pet->owner_id = 3;
         $pet->vet_id = 1;
         $pet->save();
     }
