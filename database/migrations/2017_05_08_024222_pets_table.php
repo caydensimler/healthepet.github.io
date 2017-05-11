@@ -17,6 +17,9 @@ class PetsTable extends Migration
             $table->integer('weight');
             $table->string('color');
             $table->integer('age');
+            $table->string('ownerName');
+            $table->string('phoneNumber');
+            $table->string('ownerEmail');
             $table->integer('owner_id')->unsigned();
             $table->foreign('owner_id')->references('id')->on('users');
             $table->integer('vet_id')->unsigned();
