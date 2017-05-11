@@ -4,12 +4,12 @@
 
 @section('content')
 	<div class="col-xs-12 welcomeHeaderAccountPage">
-		{{ $pet->name}}'s Shot Records
+		{{ $pet->name}}'s Vaccination Records
 	</div>
 
 	@if (Auth::user()->user_type === 'vet')
 	<div class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-4 treatmentTypeButton shotButton">
-		Add Shot	
+		Add Vaccination	
 	</div>
 	@endif
 
@@ -20,7 +20,7 @@
 		<div class="col-xs-12 shotRecordsTable">
 
 			<div class="col-xs-12 shotRecordsHeaderBody">
-				<div class="col-xs-6 shotRecordsHeader">Shot Name</div>
+				<div class="col-xs-6 shotRecordsHeader">Vaccination Name</div>
 				<div class="col-xs-3 shotRecordsHeader">Date Administered</div>
 				<div class="col-xs-3 shotRecordsHeader">Renewal Date</div>
 			</div>

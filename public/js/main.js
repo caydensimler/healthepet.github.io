@@ -75,6 +75,15 @@ $(document).ready(function(){
 			$('.allContent').toggleClass('blur');
 
 			$('.shotsForm').fadeToggle(500);
+		});
+
+
+		$('.petHeaderInfo').click(function(){
+			$(this).parent().children('.petInfo').fadeToggle(1000);
+		});
+
+		$('.petHeaderOwner').click(function(){
+			$(this).parent().children('.petOwnerInfo').fadeToggle(1000);
 		})
 
 
