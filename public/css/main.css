@@ -43,35 +43,22 @@
 			color: #EFEFEF;
 		}
 
-		#navbar > ul > li:nth-child(3) > a {
-			color: #EFEFEF;
-		}
-
-		#navbar > ul > li:nth-child(3) > a:hover {
-			color: #7A6F64;
-		}
-
 		.navbar > .container > #navbar > ul {
 			text-align: center;
 			color: #EFEFEF;
 		}
 
-		#navbar > ul > li:nth-child(2) > a {
-			color: white;
-		}
-
-		#navbar > ul > li:nth-child(2) > a:hover {
-			color: #7A6F64;
-		}
-
-		#navbar > ul > li.active > a {
-			color: #7594A5;
-			background-color: #EFEFEF;
-		}
-
 		.siteName {
 			padding-top: 15px;
 			padding-right: 10px;
+		}
+
+		#navbar > ul > li > a {
+			color: #EFEFEF;
+		}
+
+		#navbar > ul > li > a:hover {
+			color: #7A6F64;
 		}
 
 	.allContent {
@@ -455,6 +442,25 @@
 		width: auto;
 		height: 20vw;
 		box-shadow: 8px 8px 7px #888888;
+	}
+
+	.petBody {
+		background-color: #7A6F64;
+		color: #EFEFEF;
+		margin-bottom: 2%;
+		border: 1vw solid #EFEFEF;
+	}
+
+	.petNameVet {
+		font-size: 3vw;
+	}
+
+	.petRecordSubHeader {
+		font-size: 2vw;
+	}
+
+	.petRecordInformation {
+		font-size: 1.5vw;
 	}
 
 
