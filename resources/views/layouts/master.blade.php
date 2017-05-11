@@ -29,7 +29,8 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="siteName hidden-xs">HealthEPet</li>
-                        <li><a href="{{ action('PetsController@index') }}">Account</a></li>
+                        <li><a href="{{ action('UsersController@show') }}">Account</a></li>
+                        <li><a href="{{ action('PetsController@index') }}">Pets</a></li>
                         <li><a href="/auth/logout">Logout</a></li>
                     </ul>
                 </div>
