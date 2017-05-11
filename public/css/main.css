@@ -498,6 +498,7 @@
 
 	.petInformationBody:hover {
 		background-color: #527589;
+		cursor: pointer;
 	}
 
 /* Account Information Page */
