@@ -21,7 +21,7 @@
 
 			<div class="col-xs-12 petInformation">
 
-				<div class="col-xs-3 petHeaderPicture sampleDogPicture"></div>
+				<div class="col-xs-3"><img class="petHeaderPicture" src="/img/{{ $pet->img }}" alt="dog"></div>
 
 				<div class="col-xs-offset-1 col-xs-8 petDescriptionBody">
 

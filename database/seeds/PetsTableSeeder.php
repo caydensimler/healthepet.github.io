@@ -21,6 +21,7 @@ class PetsTableSeeder extends Seeder
         $pet->age = 2;
         $pet->owner_id = 2;
         $pet->vet_id = 1;
+        $pet->img = 'sampleDogPicture.jpg';
         $pet->save();
 
         $pet = new \App\Pet();
@@ -33,6 +34,7 @@ class PetsTableSeeder extends Seeder
         $pet->age = 5;
         $pet->owner_id = 2;
         $pet->vet_id = 1;
+        $pet->img = 'sampleDogPicture2.jpg';
         $pet->save();
 
         $pet = new \App\Pet();
@@ -45,6 +47,7 @@ class PetsTableSeeder extends Seeder
         $pet->age = 8;
         $pet->owner_id = 2;
         $pet->vet_id = 1;
+        $pet->img = 'sampleDogPicture3.jpg';
         $pet->save();
 
         $pet = new \App\Pet();
@@ -57,6 +60,7 @@ class PetsTableSeeder extends Seeder
         $pet->age = 2;
         $pet->owner_id = 3;
         $pet->vet_id = 1;
+        $pet->img = 'sampleDogPicture.jpg';
         $pet->save();
     }
 }

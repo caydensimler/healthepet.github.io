@@ -21,6 +21,7 @@ class PetsTable extends Migration
             $table->foreign('owner_id')->references('id')->on('users');
             $table->integer('vet_id')->unsigned();
             $table->foreign('vet_id')->references('id')->on('users');
+            $table->string('img');
             $table->timestamps();
         });
     }
