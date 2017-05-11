@@ -60,7 +60,14 @@ class PetsController extends Controller
     {
         $pet = Pet::findOrFail($id);
 
-        return view('pets.show', ['pet' => $pet]);
+        $shots = Pet::join('shotRecords', 'pets.id', '=', 'shotRecords.pet_id')
+        ->join('shots', 'shotRecords.shot_id', '=', 'shots.id')
+        ->get();
+        // ->where('pet_id', $id);
+
+        // dd($shots, $pet);
+
+        return view('pets.show', ['pet' => $pet, 'shots' => $shots]);
     }
 
 
