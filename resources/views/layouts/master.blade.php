@@ -16,12 +16,44 @@
     </head>
     <body>
 
+    @if (Auth::check())
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+            
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-paw" aria-hidden="true"> Menu </i>
+                    </button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="siteName hidden-xs">HealthEPet</li>
+                        <li><a href="{{ action('UsersController@show')}}">Account</a></li>
+                        <li><a href="{{ action('PetsController@index') }}">Pets</a></li>
+                        <li><a href="/auth/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    @endif
 
 
     @yield('content')
 
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/788edc112b.js"></script>
+
+    <!-- Personalized Scripts -->
+    <script src="/js/main.js"></script>
+
+    <script type="text/javascript" src="/js/passtest.js"></script>
 
     </body>
 </html>

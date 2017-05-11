@@ -1,49 +1,518 @@
 /* Universal Settings */
 
+	html {
+	  	position: relative;
+	  	min-height: 100%;
+	}
+
 	body {
 	    font-family: 'Open Sans Condensed', sans-serif;
 	    background-color: #EFEFEF;
 	}
 
+	.blur {
+		-webkit-filter: blur(2px);
+		-moz-filter: blur(2px);
+		-o-filter: blur(2px);
+		-ms-filter: blur(2px);
+		filter: blur(2px);
+	}
+
+	body > div.allContent > div > div > div.col-xs-12.introductionList> .fa-paw {
+		font-size: 50%;
+		text-align: center;
+	    position: relative;
+	    top: 50%;
+	    -ms-transform: translateY(-50%);
+	    -webkit-transform: translateY(-50%);
+	    transform: translateY(-50%);
+	}
+
+	.invisibleOne {
+		font-size: 5vw;
+	}
+
+	.invisibleTwo {
+		font-size: 3vw;
+	}
+
+	/* Navbar */
+
+		.navbar {
+			background-color: #638DA5;
+			color: #EFEFEF;
+		}
+
+		.navbar > .container > #navbar > ul {
+			text-align: center;
+			color: #EFEFEF;
+		}
+
+		.siteName {
+			padding-top: 15px;
+			padding-right: 10px;
+		}
+
+		#navbar > ul > li > a {
+			color: #EFEFEF;
+		}
+
+		#navbar > ul > li > a:hover {
+			color: #7A6F64;
+		}
+
+	.allContent {
+		background-color: #EFEFEF;
+	}
 
 
 /* Home Page */
 
+	/* Header Text */
+
 	.welcomeHeader {
 		background-color: #7A6F64;
 		color: #EFEFEF;
-		font-size: 5vw;
+		font-size: 4.7vw;
 		text-align: center;
+		padding: 1%;
+		position: relative;
 	}
 
-	.petOwnerBodyHome {
-		border: .1vw solid #EFEFEF;
-	}
-
-	.vetClinicBodyHome{
-		border: .1vw solid #EFEFEF;
-		border-left: 0px;
-	}
-
-	.petOwnerBodyBackground {
-		background-image: url('/img/dog-with-person.jpg');
-		background-size: cover;
-	}
-
-	.vetClinicBodyBackground {
-		background-image: url('/img/cat-with-vet.jpg');
-		background-size: cover;
-	}
-
-	.introductionContentHeader {
+	.welcomeHeaderAccountPage {
 		background-color: #7A6F64;
-		opacity: .9;
-		margin-top: 10%;
-		padding-bottom: 50%;
+		color: #EFEFEF;
+		font-size: 4.7vw;
+		text-align: center;
+		padding: 1%;
+		position: relative;
+	    padding-top: 70px;
 	}
 
-	.introductionHeaderHome {
+	.introductionContent {
+		padding: 1%;
+		/*border: .2vw solid #7A6F64;*/
+	}
+
+	.introductionPicture {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 25vw;
+		box-shadow: 8px 8px 7px #888888;
+	}
+
+	.petOwnerPicture {
+		background-image: url('/img/dog-with-person.jpg');
+	}
+
+
+	.vetClinicPicture {
+		background-image: url('/img/cat-with-vet.jpg');
+	}
+
+	.introductionHeader {
+		opacity: .9;
+		font-size: 3vw;
+		text-align: center;
+		margin-top: 2%;
+		color: #7A6F64; 
+	}
+
+	.introductionList {
+		color: #7A6F64;
+		font-size: 2.2vw;
+		padding-bottom: 4%;
+	}
+
+	/* Login/Register Button */
+
+		.loginRegisterButtonBody {
+			text-align: center;
+			margin-bottom: 3%;
+			text-align: center;
+		}
+
+		.loginRegisterButtonHeader {
+			margin-top: 5%;
+		}
+
+		.loginRegisterButton {
+			font-size: 1.5vw;
+			background-color: #638DA5;
+			color: #EFEFEF;
+			padding-top: 1vw;
+			padding-bottom: 1vw;
+			padding-left: 2vw;
+			padding-right: 2vw;
+			border: 1px solid #EFEFEF;
+
+		}
+
+		.loginRegisterButton:hover {
+			background-color: #577C91;
+			color: #EFEFEF;
+		}
+
+		.loginRegisterButton:focus {
+			color: #EFEFEF;
+			outline: none;
+			background-color: #638DA5;
+			border: 1px solid #EFEFEF;
+		}
+
+		.loginRegisterButton:active {
+			outline: none !important;
+			color: #EFEFEF !important;
+			background-color: #7A6F64 !important;
+		}
+
+	/* Forms */
+
+		.formBackground {
+			background-color: #383836;
+			border-radius: 1%;
+			position: fixed;
+			top: 50%;
+			transform: translateY(-50%);
+			opacity: .95;
+		}
+
+		.formHeader {
+			color: #EFEFEF;
+			padding: 5%;
+			font-size: 2vw;
+		}
+
+		.closeButton {
+			text-align: right;
+			color: #EFEFEF;
+			padding: 5%;
+			font-size: 2vw;
+		}
+
+		.fa-window-close:hover {
+			color: #CECECE;
+		}
+
+		.formInput {
+			width: 100%;
+			height: 2.5vw;
+			font-size: 1.5vw;
+			text-align: center;
+			margin-bottom: 2vw;
+			background-color: #383836;
+			outline: none;
+			border: 0px;
+			border-bottom: .1vw solid #EFEFEF;
+			color: #EFEFEF;
+		}
+
+		.formInput:focus {
+			border-bottom: .1vw solid #AFAFAF;
+		}
+
+		.formLabel {
+			color: #EFEFEF;
+			font-size: 2vw;
+		}
+
+		/* Placeholder Modifications */
+			::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+		    	color: #AFAFAF;
+			}
+
+			:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			   color: #AFAFAF;
+			   opacity:  1;
+			}
+
+			::-moz-placeholder { /* Mozilla Firefox 19+ */
+			   color: #AFAFAF;
+			   opacity:  1;
+			}
+
+			:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			   color: #AFAFAF;
+			}
+
+		.rememberMeCheckbox {
+			color: #EFEFEF;
+			font-size: 1vw;
+			text-align: center;
+			padding-bottom: 2%;
+			padding-left: 2%;
+			/* Double-sized Checkboxes */
+			-ms-transform: scale(1.5); /* IE */
+			-moz-transform: scale(1.5); /* FF */
+			-webkit-transform: scale(1.5); /* Safari and Chrome */
+			-o-transform: scale(1.5); /* Opera */
+		}
+
+		.forgotPassword {
+			text-align: center;
+			font-style: italic;
+			color: #EFEFEF;
+			font-size: 1.5vw;
+			padding-bottom: 3%;
+		}
+
+/* Owner Account Page */
+
+	/* Each Pet View */
+
+		.sampleDogPicture {
+			background-image: url('/img/sampleDogPicture.jpg');
+		}		
+
+		.sampleDogPictureTwo {
+			background-image: url('/img/sampleDogPicture2.jpg');
+		}		
+
+		.sampleDogPictureThree {
+			background-image: url('/img/sampleDogPicture3.jpg');
+		}
+
+		.petInformation {
+			padding-bottom: 8%;
+		}
+
+		.petHeaderPicture {
+			background-size: cover;
+			background-repeat: no-repeat;
+			/*background-position: center;*/
+			height: 20vw;
+			box-shadow: 4px 4px 3px #888888;
+		}
+
+		.petDescriptionBody {
+			background-color: #7A6F64;
+			height: 20vw;
+			box-shadow: 4px 4px 3px #888888;
+			color: #EFEFEF;
+		}
+
+		.petName {
+			padding-top: 1%;
+			font-size: 5vw; 
+		}
+
+		.viewRecordsLink {
+			font-size: 3vw;
+			color: #EFEFEF;
+			text-align: center;
+		}
+
+		.petSubHeader {
+			font-size: 2vw;
+			/*text-align: center;*/
+		}
+
+		.petSubHeaderInfo {
+			text-align: center;
+			font-size: 1.5vw;
+		}
+
+	/* Add Pet Button */
+
+		.addPetButton {
+			margin-top: 5%;
+			margin-bottom: 5%;
+			width: 100%;
+			height: 5vw;
+			background-color: #638DA5;
+			border: 1px solid #7A6F64;
+			color: #EFEFEF;
+			font-size: 3vw;
+		}
+
+		.addPetButton:hover {
+			background-color: #577C91;
+			color: #EFEFEF;
+		}
+
+		.addPetButton:active {
+			outline: none !important;
+			color: #EFEFEF !important;
+			background-color: #7A6F64 !important;
+		}
+
+		.addPetButton:focus {
+			color: #EFEFEF;
+			outline: none;
+			background-color: #638DA5;
+			border: 1px solid #EFEFEF;
+		}
+
+
+	/* Add Pet Form */
+
+		.formRadioInput {
+			color: #EFEFEF;
+			font-size: 1.4vw;
+			padding: 4%;
+		}
+
+		.radioForm {
+			text-align: center;
+			margin-top: 1%;
+			margin-bottom: 3%;
+			border: 1px solid #EFEFEF;
+		}
+
+		.imageUpload {
+			text-align: center;
+			margin-bottom: 5%;
+		}
+
+		.addPetImageButton {
+			background-color: #7A6F64;
+		}
+
+		.birthYearDropDown {
+			width: 100%;
+			height: 2.6vw;
+			font-size: 1vw;
+			background-color: #7A6F64;
+			color: #EFEFEF;
+		}
+
+
+/* Shots Page */
+
+	.treatmentTypeButton {
+		margin-top: 3%;
+		background-color: #638DA5;
+		color: #EFEFEF;
 		font-size: 4vw;
 		text-align: center;
+		border: 1px solid #7A6F64;
+		border-radius: 1vw;
+		margin-bottom: 1.5%;
+	}
+
+	hr {
+		border: 1px solid #7A6F64;
+	}
+
+	.shotsDropdown {
+		margin-bottom: 3%;
+	}
+
+	.shotRecordsHeader {
+		font-size: 2.2vw;
+		color: #EFEFEF;
+		padding-top: 1.5%;
+		padding-bottom: 1.5%;
+	}
+
+	.shotRecordsContent {
+		font-size: 1.7vw;
+	}
+
+	.shotRecordsBody {
+		background-color: #638DA5;
+		padding-top: 1%;
+		padding-bottom: 1%;
+		color: #EFEFEF;
+	}	
+
+	.shotRecordsBodyAlt {
+		background-color: #55798E;
+		padding-top: 1%;
+		padding-bottom: 1%;
 		color: #EFEFEF;
 	}
+
+	.shotRecordsHeaderBody {
+		background-color: #7A6F64;
+	}
+
+	.shotRecordsTable {
+		margin-top: 1.5%;
+	}
+
+	.noRecordsFound {
+		text-align: center;
+		font-size: 5vw;
+		color: #7A6F64;
+	}
+
+	.noRecordsPicture {
+		width: auto;
+		height: 20vw;
+		box-shadow: 8px 8px 7px #888888;
+	}
+
+	.petBody {
+		background-color: #7A6F64;
+		color: #EFEFEF;
+		margin-bottom: 2%;
+		border-left: 1vw solid #EFEFEF;
+		border-right: 1vw solid #EFEFEF;
+		border-top: .5vw solid #EFEFEF;
+		border-bottom: .5vw solid #EFEFEF;
+	}
+
+	.petNameVet {
+		font-size: 3vw;
+	}
+
+	.petRecordSubHeader {
+		font-size: 2vw;
+	}
+
+	.petRecordInformation {
+		font-size: 1.5vw;
+	}
+
+	.petInformationBody {
+		background-color: #638DA5;
+		margin-bottom: 2%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+	}
+
+	.subHeader {
+		text-align: right;
+	}
+
+	.petInformationHeader {
+		font-size: 2vw;
+	}
+
+	.recordsLink {
+		text-align: right;
+		font-size: 2vw;
+		margin-top: 2%;
+		margin-bottom: 2%;
+	}
+
+	.recordsLink a {
+		color: #EFEFEF;
+	}
+
+	.recordsLink a:hover {
+		color: #638DA5;
+		text-decoration: none;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
