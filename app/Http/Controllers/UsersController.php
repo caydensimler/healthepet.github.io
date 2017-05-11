@@ -25,16 +25,24 @@ class UsersController extends Controller
 
     public function store(Request $request)
     {
-        // $user = new User();
-        // $user->name = $request->name;
-        // $user->email = $request->email;
-        // $user->address = $request->address;
-        // $user->phoneNumber = $request->phoneNumber;
-        // $user->password = Hash::make($request->password);
-        // $user->user_type = $request->accountType;
-        // $user->save();
-        // \Auth::login($user);
-        // return redirect('pets');
+
+        // $email = $request->email;
+
+        // $user = User::where('email', $email);
+
+        // if (!is_null($user)) {
+        //     $user->password = $request->password;
+        // } else {
+        //     // create a new user
+        //     $user = new User;
+        //     $user->name = $request->name;
+        //     $user->email = $request->email;
+        //     $user->address = $request->address;
+        //     $user->phoneNumber = $request->phoneNumber;
+        //     $user->password = Hash::make($request->password);
+        //     $user->user_type = $request->user_type;
+        //     $user->save();
+        // }
     }
 
     public function show(Request $request, $id)
