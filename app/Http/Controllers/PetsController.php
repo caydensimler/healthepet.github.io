@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Pet;
+Use App\User;
 use Log;
 
 class PetsController extends Controller
@@ -44,6 +45,7 @@ class PetsController extends Controller
 
     public function store(Request $request)
     {
+
         $pets = new Pet;
         $pets->name = $request->name;
         $pets->species = $request->species;
@@ -52,9 +54,23 @@ class PetsController extends Controller
         $pets->weight = $request->weight;
         $pets->color = $request->color;
         $pets->age = $request->age;
-        $pets->ownerName = $request->ownerName;
-        $pets->phoneNumber = $request->phoneNumber;
-        $pets->ownerEmail = $request->ownerEmail;
+        
+        $ownerEmail = $request->email;
+        $owner = User::where('email', $ownerEmail)->first();
+
+        $vet = \Auth::id();
+        if(!is_null($owner)) {
+            $pets->owner_id = $owner->id;
+            $pets->vet_id = $vet;
+            
+        } else {
+            $owner = new User;
+            $owner->user_type = 'owner';
+            $owner->email = $ownerEmail;
+            $owner->save();
+            $pets->owner_id = $owner->id;
+        }
+
         $pets->save();
 
         $request->session()->flash('successMessage', 'Pet Saved Successfully');

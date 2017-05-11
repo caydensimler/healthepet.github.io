@@ -96,7 +96,7 @@
 
 	<div class="addPetForm" style="display: none;">
         <div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
-            <form action="" method="POST">
+            <form action="{{ action('PetsController@store') }}" method="POST">
             {!! csrf_field() !!}
 
                 <div class="col-xs-12 closeButton">
@@ -159,7 +159,7 @@
                 <div class="col-xs-6">
                     <div class="col-xs-12 formLabel">Birth Year</div>
                     <div class="col-xs-12">
-                        <select name="birthYear" id="birthYear" class="birthYearDropDown" required>
+                        <select name="age" id="age" class="birthYearDropDown" required>
                         	<option value=""></option>
                             <option value="2000">2000</option>
                             <option value="2001">2001</option>
