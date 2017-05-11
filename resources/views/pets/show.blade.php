@@ -14,7 +14,7 @@
 	@endif
 
 	@if (sizeof($shots) === 0) 
-		<div class="col-xs-12 noRecordsFound">Sorry, no shot records available! :(</div>
+		<div class="col-xs-12 noRecordsFound">Sorry, no records available! :(</div>
 		<div class="col-xs-offset-4 col-xs-4"><img src="/img/noRecords.jpg" alt="No Records Found Sad Puppy" class="noRecordsPicture"></div>
 	@elseif (sizeof($shots) != 0)
 		<div class="col-xs-12 shotRecordsTable">
