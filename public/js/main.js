@@ -3,7 +3,7 @@ $(document).ready(function(){
 	"use strict";
 
 
-	function HideAll(){
+	function HideAllHomepage(){
 		$('.allContent').removeClass('blur');
 
 		$('.loginForm').hide();
@@ -15,14 +15,14 @@ $(document).ready(function(){
 	// Pet Owner Login
 	//////////////////
 		$('.login').click(function(){
-			HideAll();
+			HideAllHomepage();
 			$('.loginForm').fadeToggle(500);
 
-			$('.allContent').toggleClass('blur', 10000);
+			$('.allContent').toggleClass('blur');
 		});
 
 		$('body > div.loginForm > div > form > div > i').click(function(){
-			$('.allContent').toggleClass('blur', 10000);
+			$('.allContent').toggleClass('blur');
 
 			$('.loginForm').fadeToggle(500);
 		});
@@ -32,14 +32,14 @@ $(document).ready(function(){
 	// Registration
 	///////////////
 		$('.register').click(function(){
-			HideAll();
+			HideAllHomepage();
 			$('.registerForm').fadeToggle(500);
 
-			$('.allContent').toggleClass('blur', 10000);
+			$('.allContent').toggleClass('blur');
 		});
 
 		$('body > div.registerForm > div > form > div.col-xs-4.closeButton > i').click(function(){
-			$('.allContent').toggleClass('blur', 10000);
+			$('.allContent').toggleClass('blur');
 
 			$('.registerForm').fadeToggle(500);
 		});
@@ -51,48 +51,32 @@ $(document).ready(function(){
 		$('.addPetButton').click(function(){
 			$('.addPetForm').fadeToggle(500);
 
-			$('.allContent').toggleClass('blur', 10000);
+			$('.allContent').toggleClass('blur');
 		});
 
 		$('body > div.addPetForm > div > form > div > i').click(function(){
-			$('.allContent').toggleClass('blur', 10000);
+			$('.allContent').toggleClass('blur');
 
 			$('.addPetForm').fadeToggle(500);
 		});
 
-		$(":checkbox").on('click', function(){
 
-	            var dateAdminister = new Date();
-	            var datetimeAdminister = 
-	            	(dateAdminister.getMonth()+1) + 
-	            	'/' +
-	            	dateAdminister.getUTCDate() +
-	            	'/' +
-	            	(dateAdminister.getFullYear());
+	///////////////
+	// Shot Records
+	///////////////
 
+		$('.shotButton').click(function(){
+			$('.shotsForm').fadeToggle(500);
 
-	            var dateRenewal = new Date();
-	            var datetimeRenewal = 
-	            	(dateRenewal.getMonth()+1) + 
-	            	'/' +
-	            	dateRenewal.getUTCDate() +
-	            	'/' +
-	            	(dateRenewal.getFullYear()+1);
+			$('.allContent').toggleClass('blur');
+		});	
 
-			if ($(this).is(':checked')) {
+		$('body > div.shotsForm > form > div > div.col-xs-4.closeButton > i').click(function(){
+			$('.allContent').toggleClass('blur');
 
-	    		$(this).prev().prev().prev().children().removeClass('fa-square-o').addClass('fa-check-square-o');
-	    		$(this).prev().prev().children().html(datetimeAdminister);
-	    		$(this).prev().children().html(datetimeRenewal);
-		    	$(this).parent().toggleClass('shotRecordBodyChecked');
-			} else {
+			$('.shotsForm').fadeToggle(500);
+		})
 
-	    		$(this).prev().prev().prev().children().removeClass('fa-check-square-o').addClass('fa-square-o');
-	    		$(this).prev().prev().children().html('');
-	    		$(this).prev().children().html('');
-				$(this).parent().toggleClass('shotRecordBodyChecked');
-			}
-		});
 
 
 
