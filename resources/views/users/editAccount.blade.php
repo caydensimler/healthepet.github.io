@@ -38,11 +38,5 @@
 		<input type="hidden" name="id" value="{{Auth::id()}}">
 		<input type="submit" value="Update User" class="btn btn-primary">
 	</form>
-
-	<!-- DELETE POST BUTTON-->
-	<form  method="POST" action="{{ action('UsersController@destroy', [$user->id]) }}">
-		{!! csrf_field() !!}
-		<input class="btn btn-danger pull-right" type="submit" value="Delete">
-		{{ method_field('DELETE') }}
-	</form>
+	
 @stop

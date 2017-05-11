@@ -39,6 +39,10 @@ class UsersController extends Controller
 
     public function show(Request $request, $id)
     {
+        if (\Auth::id() != $id) {
+            return redirect('/users/' . \Auth::id());
+        }
+
         $user = User::findOrFail($id);
 
         return view('users.userAccount', ['user' => $user]);
@@ -46,6 +50,10 @@ class UsersController extends Controller
 
     public function edit(Request $request, $id)
     {
+        if (\Auth::id() != $id) {
+            return redirect('/users/' . \Auth::id() . '/edit');
+        }
+
         $user = User::find($id);
 
         if(!$user) {
