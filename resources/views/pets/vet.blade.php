@@ -32,6 +32,13 @@
 			@endforeach
 		</table>
 
+		@if(\Auth::check())
+			<form method="get" action="{{ action('PetsController@create') }}">
+				{!! csrf_field()!!}
+				<input type="submit" class="btn btn-default" value="Add new Pet">
+			</form>
+		@endif
+
 			{!! $pets->render() !!}
 	</div>
 

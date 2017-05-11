@@ -7,7 +7,7 @@
 		
 		@include('partials.pet-form')
 
-		<input type="submit" class="btn btn-primary" value="Add">
+		<input type="submit" class="btn btn-primary" value="Add Pet">
 
 	</form>
 @stop
