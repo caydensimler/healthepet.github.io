@@ -177,6 +177,9 @@
                     <div class="col-xs-12 formLabel">Password</div>
                     <div class="col-xs-12">
                         <input type="password" name="password" id="password" class="formInput">
+                        @if ($errors->has('password'))
+                            {{$errors->first('password')}}
+                        @endif
                     </div>
                 </div>
  
@@ -184,6 +187,9 @@
                     <div class="col-xs-12 formLabel">Confirm Password</div>
                     <div class="col-xs-12">
                         <input type="password" name="password_confirmation" id="password_confirmation" class="formInput" required>
+                        @if ($errors->has('password_confirmation'))
+                            {{$errors->first('password_confirmation')}}
+                        @endif
                     </div>
                 </div>
 
@@ -194,17 +200,5 @@
             </form>
         </div>
     </div>
-    </div>
-
+    
 @stop
-
-
-
-
-
-
-
-
-
-
-
