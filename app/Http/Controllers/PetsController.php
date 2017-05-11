@@ -53,7 +53,7 @@ class PetsController extends Controller
         $pets->sex = $request->sex;
         $pets->weight = $request->weight;
         $pets->color = $request->color;
-        $pets->age = $request->age;
+        $pets->age = date('Y') - $request->age;
         
         $ownerEmail = $request->email;
         $owner = User::where('email', $ownerEmail)->first();
