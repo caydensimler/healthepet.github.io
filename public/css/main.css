@@ -60,6 +60,10 @@
 			color: white;
 		}
 
+		#navbar > ul > li:nth-child(2) > a:hover {
+			color: #7A6F64;
+		}
+
 		#navbar > ul > li.active > a {
 			color: #7594A5;
 			background-color: #EFEFEF;

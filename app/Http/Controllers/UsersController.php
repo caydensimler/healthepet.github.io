@@ -37,19 +37,41 @@ class UsersController extends Controller
         // return redirect('pets');
     }
 
-    public function show()
+    public function show(Request $request, $id)
     {
+        $user = User::findOrFail($id);
 
+        return view('users.userAccount', ['user' => $user]);
     }    
 
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+
+        if(!$user) {
+            Log::info('Cannot Edit Account');
+            $request->session()->flash('errorMessage', 'Account Cannot Be Found');
+        }
+
+        return view('users.editAccount', ['user' => $user]);
     }
 
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+        if(!$user) {
+            Log::info('Cannot Edit Account');
+            $request->session()->flash('errorMessage', 'Account Cannot Be Found');
+        }
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->phoneNumber = $request->phoneNumber;
+        $user->address = $request->address;
+        $user->password = $request->password;
+        $user->save();
+        $request->session()->flash('successMessage', 'Account Updated Successfully');
+        return redirect()->action('UsersController@show', [$user->id]);
     }
 
     public function destroy($id)
