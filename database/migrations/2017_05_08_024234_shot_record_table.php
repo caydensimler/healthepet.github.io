@@ -14,8 +14,9 @@ class ShotRecordTable extends Migration
             $table->foreign('shot_id')->references('id')->on('shots');
             $table->integer('pet_id')->unsigned();
             $table->foreign('pet_id')->references('id')->on('pets');
+            $table->string('date_administered');
+            $table->string('date_renewal');
             $table->timestamps('created_at');
-
         });
     }
 

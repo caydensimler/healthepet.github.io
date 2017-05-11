@@ -14,11 +14,27 @@
 		Add Shot	
 	</div>
 
-	<div class="col-xs-12"><hr></div>
+	<div class="col-xs-12 shotRecordsHeaderBody">
+		<div class="col-xs-6 shotRecordsHeader">Shot Name</div>
+		<div class="col-xs-3 shotRecordsHeader">Date Administered</div>
+		<div class="col-xs-3 shotRecordsHeader">Renewal Date</div>
+	</div>
 
+	<?php $i = 0; ?>
 	@foreach ($shots as $shot)
-		<div class="col-xs-6 col-sm-4 col-md-3 shotRecordBody">
-			<div class="col-xs-12 shotName">{{ $shot->shotName }}</div>
+		<div class="col-xs-12 <?php if ($i % 2 === 0) { echo 'shotRecordsBody'; } else { echo 'shotRecordsBodyAlt' ;} ?>">
+			<div class="col-xs-6 shotRecordsContent">
+				{{ $shot->shotName }}
+			</div>
+
+			<div class="col-xs-3 shotRecordsContent">
+				{{ $shot->date_administered }}
+			</div>		
+
+			<div class="col-xs-3 shotRecordsContent">
+				{{ $shot->date_renewal }}
+			</div>
+			<?php $i++ ?>
 		</div>
 	@endforeach
 
@@ -41,8 +57,9 @@
 		            <div class="col-xs-12 formLabel">Shot Name</div>
 
 		            <div class="col-xs-12">
-		                <select name="shotType" id="shotType" class="birthYearDropDown shotsDropdown">
+		                <select name="shotType" id="shotType" class="birthYearDropDown shotsDropdown" required>
 		                	@if ($pet->species === 'Dog' || $pet->species === 'Cat')
+		                		<option value=""></option>
 		                        <option value="rabies">Rabies</option>
 		                        <option value="bordetella">Bordetella</option>
 		                    @endif
@@ -86,13 +103,9 @@
 					</div>
 				</div>
 
-				<div class="col-xs-12">
-					<div class="col-xs-12 formLabel">Comments</div>
-
-					<div class="col-xs-12">
-						<input type="text" name="shotComment" id="shotComment" class="formInput">
-					</div>
-				</div>
+				<div class="col-xs-12 loginRegisterButtonBody">
+                    <button type="submit" class="petOwnerRegisterButton btn btn-default loginRegisterButton">Add</button>
+                </div>
 
 			</div>
 		</form>
