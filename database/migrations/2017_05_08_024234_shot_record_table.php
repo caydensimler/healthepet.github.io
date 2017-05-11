@@ -10,7 +10,6 @@ class ShotRecordTable extends Migration
     {
         Schema::create('shotRecords', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('comments');
             $table->integer('shot_id')->unsigned();
             $table->foreign('shot_id')->references('id')->on('shots');
             $table->integer('pet_id')->unsigned();

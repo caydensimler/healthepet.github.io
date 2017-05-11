@@ -1,3 +1,5 @@
+<div class="allContent">
+
 @extends('layouts.master')
 
 @section('content')
@@ -8,204 +10,93 @@
 
 	<div class="col-xs-12 invisible invisibleTwo">filler text</div>
 
-	<form action="" method="POST">
-	@if ($pet->species === 'Dog' || $pet->species === 'Cat')
+	<div class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-4 treatmentTypeButton shotButton">
+		Add Shot	
+	</div>
 
-		<label for="rabies" class="col-xs-12 col-sm-4 shotRecordBody">
-			<div class="col-xs-12 shotName">
-				<i class="fa fa-square-o" aria-hidden="true"></i> Rabies
+	<div class="col-xs-12"><hr></div>
+
+	@foreach ($shots as $shot)
+		<div class="col-xs-6 col-sm-4 col-md-3 shotRecordBody">
+			<div class="col-xs-12 shotName">{{ $shot->shotName }}</div>
+		</div>
+	@endforeach
+
+
+
+</div>
+
+	<!-- Forms Hidden by Default -->
+
+	<div class="shotsForm" style="display: none;">
+		<form action="" method="POST">
+		{!! csrf_field() !!}
+			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
+	            <div class="col-xs-8 formHeader">Add a new shot.</div>
+	            <div class="col-xs-4 closeButton">
+	                <i class="fa fa-window-close" aria-hidden="true"></i>
+	            </div>
+
+	            <div class="col-xs-12">
+		            <div class="col-xs-12 formLabel">Shot Name</div>
+
+		            <div class="col-xs-12">
+		                <select name="shotType" id="shotType" class="birthYearDropDown shotsDropdown">
+		                	@if ($pet->species === 'Dog' || $pet->species === 'Cat')
+		                        <option value="rabies">Rabies</option>
+		                        <option value="bordetella">Bordetella</option>
+		                    @endif
+
+		                    @if ($pet->species === 'Dog')
+		                        <option value="canineDistemper">Canine Distemper</option>
+		                        <option value="measles">Measles</option>
+		                        <option value="parvovirus">Parvovirus</option>
+		                        <option value="hepatitis">Hepatitis</option>
+		                        <option value="CAV2">CAV2</option>
+		                        <option value="parainfluenza">Parainfluenza</option>
+		                        <option value="leptospirosis">Leptospirosis</option>
+		                        <option value="coronavirus">Coronavirus</option>
+		                        <option value="lyme">Lyme</option>
+		                    @elseif ($pet->species === 'Cat')
+		                        <option value="panleukopenia">Panleukopenia</option>
+		                        <option value="rhinotracheitis">Rhinotracheitis</option>
+		                        <option value="felineLeukemia">Feline Leukemia</option>
+		                        <option value="chlamydophila">Chlamydophila</option>
+		                        <option value="felineInfectiousPeritonitis">Feline Infectious Peritonitis</option>
+		                        <option value="giardia">Giardia</option>
+		                        <option value="felineImmunodeficiencyVirus">Feline Immunodeficiency Virus</option>
+							@endif
+		                </select>
+		        	</div>
+		        </div>
+				
+				<div class="col-xs-6">
+					<div class="col-xs-12 formLabel">Date Administered</div>
+
+					<div class="col-xs-12">
+						<input type="text" name="shotAdmin" id="shotAdmin" class="formInput" required>
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="col-xs-12 formLabel">Renewal Date</div>
+
+					<div class="col-xs-12">
+						<input type="text" name="shotRenew" id="shotRenew" class="formInput" required>
+					</div>
+				</div>
+
+				<div class="col-xs-12">
+					<div class="col-xs-12 formLabel">Comments</div>
+
+					<div class="col-xs-12">
+						<input type="text" name="shotComment" id="shotComment" class="formInput">
+					</div>
+				</div>
+
 			</div>
+		</form>
+	</div>
 
-			<div class="col-xs-12 shotDate">
-				Date Administered: <span class="dateAdministered"></span>
-			</div>			
-
-			<div class="col-xs-12 shotDate">
-				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="rabies" value="rabies">
-	
-		</label>
-
-		<label for="bordetella" class="col-xs-12 col-sm-4 shotRecordBody">
-			<div class="col-xs-12 shotName">
-				<i class="fa fa-square-o" aria-hidden="true"></i> Bordetella
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Date Administered: <span class="dateAdministered"></span>
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="bordetella" value="rabies">
-
-		</label>		
-
-	@endif
-
-
-
-	@if ($pet->species === 'Dog')
-
-		<label for="canine_distemper" class="col-xs-12 col-sm-4 shotRecordBody">
-			<div class="col-xs-12 shotName">
-				<i class="fa fa-square-o" aria-hidden="true"></i> Canine Distemper
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Date Administered: <span class="dateAdministered"></span>
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="canine_distemper" value="rabies">
-
-		</label>		
-
-		<label for="measles" class="col-xs-12 col-sm-4 shotRecordBody">
-			<div class="col-xs-12 shotName">
-				<i class="fa fa-square-o" aria-hidden="true"></i> Measles
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Date Administered: <span class="dateAdministered"></span>
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="measles" value="rabies">
-
-		</label>		
-
-		<label for="parvo" class="col-xs-12 col-sm-4 shotRecordBody">
-			<div class="col-xs-12 shotName">
-				<i class="fa fa-square-o" aria-hidden="true"></i> Parvovirus
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Date Administered: <span class="dateAdministered"></span>
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="parvo" value="rabies">
-
-		</label>
-
-		<label for="hepatitis" class="col-xs-12 col-sm-4 shotRecordBody">
-			<div class="col-xs-12 shotName">
-				<i class="fa fa-square-o" aria-hidden="true"></i> Hepatitis
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Date Administered: <span class="dateAdministered"></span>
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="hepatitis" value="rabies">
-
-		</label>		
-
-		<label for="cav2" class="col-xs-12 col-sm-4 shotRecordBody">
-			<div class="col-xs-12 shotName">
-				<i class="fa fa-square-o" aria-hidden="true"></i> CAV2
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Date Administered: <span class="dateAdministered"></span>
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="cav2" value="rabies">
-		</label>		
-
-		<label for="para" class="col-xs-12 col-sm-4 shotRecordBody">
-			<div class="col-xs-12 shotName">
-				<i class="fa fa-square-o" aria-hidden="true"></i> Parainfluenza
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Date Administered: <span class="dateAdministered"></span>
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="para" value="rabies">
-
-		</label>		
-
-		<label for="lepto" class="col-xs-12 col-sm-4 shotRecordBody">
-			<div class="col-xs-12 shotName">
-				<i class="fa fa-square-o" aria-hidden="true"></i> Leptospirosis
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Date Administered: <span class="dateAdministered"></span>
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="lepto" value="rabies">
-
-		</label>		
-
-		<label for="corona" class="col-xs-12 col-sm-4 shotRecordBody">
-			<div class="col-xs-12 shotName">
-				<i class="fa fa-square-o" aria-hidden="true"></i> Coronavirus
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Date Administered: <span class="dateAdministered"></span>
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="corona" value="rabies">
-
-		</label>		
-
-		<label for="lyme" class="col-xs-12 col-sm-4 shotRecordBody">
-			<div class="col-xs-12 shotName">
-				<i class="fa fa-square-o" aria-hidden="true"></i> Lyme
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Date Administered: <span class="dateAdministered"></span>
-			</div>
-
-			<div class="col-xs-12 shotDate">
-				Renewal Date: <span class="dateRenewal"></span>
-			</div>
-
-			<input type="checkbox" class="shotRecordCheckbox" name="shot" id="lyme" value="rabies">
-
-		</label>
-
-	@elseif ($pet->species === 'Cat')
-
-
-	@endif
-	</form>
 
 @stop

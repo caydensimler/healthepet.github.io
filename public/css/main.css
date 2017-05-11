@@ -389,39 +389,39 @@
 
 /* Shots Page */
 
-	.shotRecordBody {
-		background-color: #9AA1A5;
+	.treatmentTypeButton {
+		background-color: #638DA5;
 		color: #EFEFEF;
-		border: 19px solid #EFEFEF;
-		padding-top: 2%;
-		padding-bottom: 2%;
+		font-size: 4vw;
+		text-align: center;
+		border: 1px solid #7A6F64;
+		border-radius: 1vw;
+		margin-bottom: 3%;
 	}
 
-	.shotRecordBody:hover {
+	hr {
+		border: 1px solid #7A6F64;
+	}
+
+	.shotsFormSubHeader {
+		font-size: 2vw;
+		color: #EFEFEF;
+	}
+
+	.shotsDropdown {
+		margin-bottom: 3%;
+	}
+
+	.shotRecordBody {
+		background-color: #638DA5;
+		color: #EFEFEF;
+		border: 2vw solid #EFEFEF;
 	}
 
 	.shotName {
-		font-size: calc(1.5vw + 1.5vh);
+		font-size: 30px;
 		text-align: center;
 	}
-
-	.shotDate {
-		font-size: 15px;
-	}
-	
-	.shotRecordBodyChecked{
-		background-color: #638DA5;
-	}
-
-	label.shotRecordBody > input[type=checkbox] {
-		display: none;
-	}	
-
-	.fa-check-square {
-		color: #A5625B;
-	}
-
-
 
 
 
