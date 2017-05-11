@@ -48,7 +48,12 @@ class PetsController extends Controller
         $pets->species = $request->species;
         $pets->breed = $request->breed;
         $pets->sex = $request->sex;
+        $pets->weight = $request->weight;
+        $pets->color = $request->color;
         $pets->age = $request->age;
+        $pets->ownerName = $request->ownerName;
+        $pets->phoneNumber = $request->phoneNumber;
+        $pets->ownerEmail = $request->ownerEmail;
         $pets->save();
 
         $request->session()->flash('successMessage', 'Pet Saved Successfully');
@@ -95,11 +100,18 @@ class PetsController extends Controller
             abort(404);
         }
 
+        $pets = new Pet;
         $pets->name = $request->name;
         $pets->species = $request->species;
         $pets->breed = $request->breed;
         $pets->sex = $request->sex;
+        $pets->weight = $request->weight;
+        $pets->color = $request->color;
         $pets->age = $request->age;
+        $pets->ownerName = $request->ownerName;
+        $pets->phoneNumber = $request->phoneNumber;
+        $pets->ownerEmail = $request->ownerEmail;
+        $pets->save();
         $request->session()->flash('successMessage', 'Pet Information Saved Succesfully');
         return redirect()->action('PetsController@show', [$pet->id]);
 
