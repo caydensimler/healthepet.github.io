@@ -66,7 +66,7 @@ class PetsController extends Controller
         ->where('pet_id', $id)
         ->get();
 
-        if (Auth::user()->id != $pet->owner_id) {
+        if (Auth::user()->id != $pet->owner_id || Auth::user()->user_type === 'vet') {
             return redirect('/pets');
         } else {
             return view('pets.show', ['pet' => $pet, 'shots' => $shots]);   
