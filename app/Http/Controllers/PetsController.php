@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -67,12 +68,14 @@ class PetsController extends Controller
 
         $shots = Pet::join('shotRecords', 'pets.id', '=', 'shotRecords.pet_id')
         ->join('shots', 'shotRecords.shot_id', '=', 'shots.id')
+        ->where('pet_id', $id)
         ->get();
-        // ->where('pet_id', $id);
 
-        // dd($shots, $pet);
-
-        return view('pets.show', ['pet' => $pet, 'shots' => $shots]);
+        if (Auth::user()->id != $pet->owner_id) {
+            return redirect('/pets');
+        } else {
+            return view('pets.show', ['pet' => $pet, 'shots' => $shots]);   
+        }
     }
 
 
