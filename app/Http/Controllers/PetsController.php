@@ -75,7 +75,7 @@ class PetsController extends Controller
             // dd(Auth::user()->user_type);
             return redirect('/pets');
 
-        } else if (Auth::user()->user_type === 'vet' || Auth::user()->id === $pet->owner_id) {
+        } else if (Auth::user()->id === $pet->vet_id || Auth::user()->id === $pet->owner_id) {
             return view('pets.show', ['pet' => $pet, 'shots' => $shots]);   
         }
     }
