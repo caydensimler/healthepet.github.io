@@ -67,19 +67,27 @@ class AuthController extends Controller
     public function postRegister(Request $request) {
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
+            'email' => 'required|email|max:255',
             'password' => 'required|confirmed|min:6',
         ]);
 
-        // dd($request->password != $request->password_confirmation, $validator->fails());
+        $passwordsMatch = $request->password === $request->password_confirmation;
+        $user = User::where('email', $request->email)->first();
 
-        if ($validator->fails() && $request->password == $request->password_confirmation) {
-            Session::flash('registerErrorMessage', 'Email address already exists');
-            return redirect('/');
-        } else if ($validator->fails() && $request->password != $request->password_confirmation) {
-            Session::flash('passwordErrorMessage', 'Passwords do not match.');
-            return redirect('/');
+        if ($user->password) {
+            if ($validator->fails() && $passwordsMatch) {
+                Session::flash('registerErrorMessage', 'Email address already exists');
+                return redirect('/');
+            } else if ($validator->fails() && !$passwordsMatch) {
+                Session::flash('passwordErrorMessage', 'Passwords do not match.');
+                return redirect('/');
+            }
+        } else {
+            $this->create($request->all());
+            redirect ('/pets');
         }
+
+
     }
 
 
