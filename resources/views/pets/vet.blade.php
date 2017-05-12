@@ -8,7 +8,7 @@
 	</div>
 
 	<div class="col-xs-offset-1 col-xs-10">
-		<button class="btn btn-default addPetButton"><i class="fa fa-plus-square" aria-hidden="true"></i> Add New Pet</button>
+		<div class="addPetButton"><i class="fa fa-plus-square" aria-hidden="true"></i> Add New Pet</div>
 	</div>
 
 	<div class="col-xs-12">

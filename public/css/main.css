@@ -193,6 +193,10 @@
 			color: #CECECE;
 		}
 
+		.fa-window-close {
+			cursor: pointer;
+		}
+
 		.formInput {
 			width: 100%;
 			height: 2.5vw;
@@ -322,6 +326,8 @@
 			border: 1px solid #7A6F64;
 			color: #EFEFEF;
 			font-size: 3vw;
+			text-align: center;
+			cursor: pointer;
 		}
 
 		.addPetButton:hover {
@@ -469,7 +475,7 @@
 		margin-bottom: 2%;
 		padding-top: 2%;
 		padding-bottom: 2%;
-		box-shadow: 6px 6px 6px #454547;
+		box-shadow: .2vw .2vw .2vw #454547;
 	}
 
 	.subHeader {
