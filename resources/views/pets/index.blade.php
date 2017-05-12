@@ -7,10 +7,9 @@
 
 @section('content')
 
-
-        <div class="welcomeHeaderAccountPage">
-            Welcome to your account page, {{ Auth::user()->name }}.
-        </div>
+		<div class="welcomeHeaderAccountPage">
+			Welcome to your pets page, {{ Auth::user()->name }}.
+		</div>
         
         @if(session()->has('alert-success'))
             <div class="alert-success">{{ session()->get('alert-success') }}</div>
@@ -27,10 +26,6 @@
 		@foreach($pets as $pet)
 
 			<div class="col-xs-12 petInformation">
-                
-                
-
-
 				<div class="col-xs-3">
                     @if($pet->img == '')
                         <img class="petHeaderPicture" src="/img/default.png" alt="dog">
@@ -48,9 +43,12 @@
 
 				<div class="col-xs-offset-1 col-xs-8 petDescriptionBody">
 
-					<div class="col-xs-12">
-						<span class="petName">{{ $pet->name }}</span>
-					</div>
+                    <!-- <div class="col-xs-12 petNameHeader"> -->
+                        <div class="col-xs-5 petNameVet">{{ $pet->name }}</div>
+                        <div class="col-xs-7 recordsLink">
+                            <a href="/pets/{{ $pet->id }}">Click here to view {{ $pet->name }}'s records. <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+                        </div>
+                    <!-- </div> -->
 
 					<div class="col-xs-6">
 						<div class="col-xs-12 petSubHeader">
@@ -79,20 +77,11 @@
 							Age: {{ $pet->age }}
 						</div>
 					</div>
-
-					<div class="col-xs-12 viewRecordsLink">
-						<i class="fa fa-file-text-o" aria-hidden="true"></i><a href="{{ action('PetsController@show', $pet->id)}}">Click here to view {{ $pet->name}} records.</a>
-					</div>
-
 				</div>
-
 			</div>
 		@endforeach
-
-    </div>
-
+        </div>
 
     {!! $pets->render() !!}
-
 
 @stop

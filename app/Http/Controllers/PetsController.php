@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Pet;
+use App\Shot;
+use App\ShotRecord;
 Use App\User;
 use Log;
 
@@ -41,7 +43,6 @@ class PetsController extends Controller
     {
         return view('pets.create');
     }
-
 
     public function store(Request $request)
     {
@@ -78,14 +79,27 @@ class PetsController extends Controller
         return redirect()->action('PetsController@show', [$pets->id]);
     }
 
+    public function shotStore(Request $request, $id)
+    {
+        $record = new ShotRecord;
+
+        $record->pet_id = $id;
+        $record->shot_id = $request->shot_id;
+        $record->date_administered = $request->date_administered;
+        $record->date_renewal = $request->date_renewal;
+        // dd($record);
+        $record->save();
+
+        return redirect()->action('PetsController@show', $id);
+
+    }
 
     public function show(Request $request, $id)
     {
         $pet = Pet::findOrFail($id);
 
-        $shots = Pet::join('shotRecords', 'pets.id', '=', 'shotRecords.pet_id')
-        ->join('shots', 'shotRecords.shot_id', '=', 'shots.id')
-        ->where('pet_id', $id)
+        $shots = Shot::where('shots.species', $pet->species)
+        ->orWhere('shots.species', 'Both')
         ->get();
 
         if (Auth::user()->id != $pet->owner_id && Auth::user()->user_type != 'vet') {
