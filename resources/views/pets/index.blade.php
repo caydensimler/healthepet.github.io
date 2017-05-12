@@ -26,7 +26,7 @@
                     <!-- <div class="col-xs-12 petNameHeader"> -->
                         <div class="col-xs-5 petNameVet">{{ $pet->name }}</div>
                         <div class="col-xs-7 recordsLink">
-                            <a href="/pets/{{ $pet->id }}">Click here to view Loca's records. <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+                            <a href="/pets/{{ $pet->id }}">Click here to view {{ $pet->name }}'s records. <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
                         </div>
                     <!-- </div> -->
 
@@ -105,10 +105,10 @@
                     <div class="col-xs-12 formLabel">Species</div>
                     <div class="col-xs-12">
                         <div class="col-xs-6 formRadioInput">
-                            <input type="radio" name="species" value="dog" class="formRadioInput" required> Dog
+                            <input type="radio" name="species" value="Dog" class="formRadioInput" required> Dog
                         </div>
                         <div class="col-xs-6 formRadioInput">
-                            <input type="radio" name="species" value="cat" class="formRadioInput"> Cat
+                            <input type="radio" name="species" value="Cat" class="formRadioInput"> Cat
                         </div>
                     </div>
                 </div>                      

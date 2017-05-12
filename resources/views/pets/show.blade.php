@@ -15,7 +15,7 @@
 
 	@if (sizeof($shots) === 0) 
 		<div class="col-xs-12 noRecordsFound">Sorry, no records available! :(</div>
-		<div class="col-xs-offset-4 col-xs-4"><img src="/img/noRecords.jpg" alt="No Records Found Sad Puppy" class="noRecordsPicture"></div>
+		<div class="col-xs-offset-4 col-xs-4"><img src="/img/<?php if ($pet->species == 'dog') { echo 'noRecordsDog.jpg'; } else { echo 'noRecordsCat.jpg'; } ?>" alt="No Records Found Sad Puppy" class="noRecordsPicture"></div>
 	@elseif (sizeof($shots) != 0)
 		<div class="col-xs-12 shotRecordsTable">
 

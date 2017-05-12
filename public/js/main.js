@@ -124,7 +124,7 @@ $(document).ready(function(){
 			$(this).parent().children('.petInfo').slideToggle(600);
 
 			if (rotatePetInfo4 === 0) {
-				$(this).velocity({  rotateX: -180 }, 500);
+				$(this).velocity({  rotateX: -180	 }, 500);
 				rotatePetInfo4 = 1;
 			} else {
 				$(this).velocity({  rotateX: -360 }, 500);
