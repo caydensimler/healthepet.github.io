@@ -58,7 +58,7 @@
 			{{ method_field('PUT') }}
 			<input type="hidden" name="id" value="{{Auth::id()}}">
 			<div class="col-xs-12 loginRegisterButtonBody">
-				<input type="submit" value="Update User" class="btn btn-default editAccountButton">
+				<input type="submit" value="Update Account" class="btn btn-default editAccountButton">
 			</div>
 
 		</form>
