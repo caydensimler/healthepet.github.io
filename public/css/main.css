@@ -65,6 +65,43 @@
 		background-color: #EFEFEF;
 	}
 
+	/* Pagination */
+
+		.pagination {
+			font-size: 1.5vw;
+		}
+
+		.paginationHolder {
+			text-align: center;
+		}
+
+		/* Active Page */
+
+		body > div.allContent > div.col-xs-12.paginationHolder > ul > li.active > span {
+			background-color: #7A6F64;
+			border: .1vw solid #7A6F64;
+			cursor: not-allowed;
+			color: #EFEFEF;
+		}		
+
+		body > div.allContent > div.col-xs-12.paginationHolder > ul > li.disabled > span {
+			background-color: #638DA5;
+			border: .1vw solid #7A6F64;
+			cursor: not-allowed;
+			color: #EFEFEF;
+		}
+
+		body > div.allContent > div.col-xs-12.paginationHolder > ul > li > a {
+			background-color: #638DA5;
+			border: .1vw solid #7A6F64;
+			color: #EFEFEF;
+			cursor: pointer;
+		}		
+
+		body > div.allContent > div.col-xs-12.paginationHolder > ul > li > a:hover {
+			background-color: #7A6F64;
+		}
+
 
 /* Home Page */
 
@@ -277,6 +314,7 @@
 
 		.petInformation {
 			padding-bottom: 8%;
+			margin-top: 3%;
 		}
 
 		.petHeaderPicture {
@@ -299,20 +337,42 @@
 			font-size: 5vw; 
 		}
 
+		.petNameHeader {
+			margin-top: 1%;
+		}
+
 		.viewRecordsLink {
-			font-size: 3vw;
+			font-size: 2vw;
 			color: #EFEFEF;
 			text-align: center;
 		}
 
 		.petSubHeader {
-			font-size: 2vw;
+			font-size: 1.5vw;
 			/*text-align: center;*/
 		}
 
 		.petSubHeaderInfo {
 			text-align: center;
 			font-size: 1.5vw;
+		}
+
+		.addEditPicture {
+			font-size: 2vw;
+			text-align: center;
+			margin-top: 4%;
+			background-color: #638DA5;
+			border: 1px solid #EFEFEF;
+			color: #EFEFEF;
+			cursor: pointer;
+		}
+
+		.addEditPicture:hover {
+			background-color: #577C91;
+		}
+
+		.addEditPicture:active {
+			background-color: #638DA5;
 		}
 
 	/* Add Pet Button */
@@ -393,6 +453,12 @@
 		border: 1px solid #7A6F64;
 		border-radius: 1vw;
 		margin-bottom: 1.5%;
+		cursor: pointer;
+	}	
+
+	.treatmentTypeButton:hover {
+		background-color: #7A6F64;
+		border: .1vw solid #638DA5;
 	}
 
 	hr {

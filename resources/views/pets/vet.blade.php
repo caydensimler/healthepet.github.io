@@ -90,7 +90,9 @@
 		<input type="submit" class="btn btn-default" value="Add new Pet">
 	</form> -->
 
-		{!! $pets->render() !!}
+        <div class="col-xs-12 paginationHolder">
+		  {!! $pets->render() !!}
+        </div>
 
 </div>
 

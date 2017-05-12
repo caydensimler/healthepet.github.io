@@ -101,7 +101,7 @@
 					<div class="col-xs-12 formLabel">Date Administered</div>
 
 					<div class="col-xs-12">
-						<input type="text" name="shotAdmin" id="shotAdmin" class="formInput" required>
+						<input type="text" name="shotAdmin" id="shotAdmin" class="formInput" placeholder="DD/MM/YYYY" required>
 					</div>
 				</div>
 
@@ -109,7 +109,7 @@
 					<div class="col-xs-12 formLabel">Renewal Date</div>
 
 					<div class="col-xs-12">
-						<input type="text" name="shotRenew" id="shotRenew" class="formInput" required>
+						<input type="text" name="shotRenew" id="shotRenew" class="formInput" placeholder="DD/MM/YYYY" rrequired>
 					</div>
 				</div>
 

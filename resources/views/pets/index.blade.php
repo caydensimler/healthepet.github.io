@@ -8,7 +8,7 @@
 @section('content')
 
 		<div class="welcomeHeaderAccountPage">
-			Welcome to your account page, {{ Auth::user()->name }}.
+			Welcome to your pets page, {{ Auth::user()->name }}.
 		</div>
         
         @if(\Auth::User()->user_type == 'vet')
@@ -19,13 +19,16 @@
 
 			<div class="col-xs-12 petInformation">
 
-				<div class="col-xs-3"><img class="petHeaderPicture" src="/img/{{ $pet->img }}" alt="dog"></div>
+				<div class="col-xs-3"><img class="petHeaderPicture" src="/img/<?php if ($pet->img === null) { echo 'sampleDogPicture.jpg'; } else { echo '{{ $pet->img }}'; }  ?>" alt="dog/cat picture"></div>
 
 				<div class="col-xs-offset-1 col-xs-8 petDescriptionBody">
 
-					<div class="col-xs-12">
-						<span class="petName">{{ $pet->name }}</span>
-					</div>
+                    <!-- <div class="col-xs-12 petNameHeader"> -->
+                        <div class="col-xs-5 petNameVet">{{ $pet->name }}</div>
+                        <div class="col-xs-7 recordsLink">
+                            <a href="/pets/{{ $pet->id }}">Click here to view Loca's records. <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+                        </div>
+                    <!-- </div> -->
 
 					<div class="col-xs-6">
 						<div class="col-xs-12 petSubHeader">
@@ -55,9 +58,11 @@
 						</div>
 					</div>
 
-					<div class="col-xs-12 viewRecordsLink">
-						<i class="fa fa-file-text-o" aria-hidden="true"></i><a href="{{ action('PetsController@show', $pet->id)}}">Click here to view {{ $pet->name}} records.</a>
-					</div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-offset-1 col-xs-10 addEditPicture">
+                            Add/Edit Picture
+                        </div>
+                    </div>
 
 				</div>
 
