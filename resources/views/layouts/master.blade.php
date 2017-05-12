@@ -28,9 +28,10 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="siteName hidden-xs">HealthEPet</li>
-                        <li><a href="{{ action('UsersController@show')}}">Account</a></li>
-                        <li><a href="{{ action('PetsController@index') }}">Pets</a></li>
+                        <li>
+                            <a href="{{ action('PetsController@index') }}">HealthEPet</a>
+                        </li>
+                        <li><a href="{{ action('UsersController@show') }}">Account</a></li>
                         <li><a href="/auth/logout">Logout</a></li>
                     </ul>
                 </div>
@@ -40,6 +41,7 @@
 
 
     @yield('content')
+
 
     <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -52,8 +54,7 @@
 
     <!-- Personalized Scripts -->
     <script src="/js/main.js"></script>
-
-    <script type="text/javascript" src="/js/passtest.js"></script>
+    <script src="/js/velocity.min.js"></script>
 
     </body>
 </html>
