@@ -69,6 +69,7 @@ class PetsController extends Controller
             $owner->email = $ownerEmail;
             $owner->save();
             $pets->owner_id = $owner->id;
+            $pets->vet_id = $vet;
         }
 
         $pets->save();
