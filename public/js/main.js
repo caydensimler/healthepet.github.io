@@ -79,11 +79,11 @@ $(document).ready(function(){
 
 
 		$('.petHeaderInfo').click(function(){
-			$(this).parent().children('.petInfo').fadeToggle(1000);
+			$(this).parent().children('.petInfo').fadeToggle(500);
 		});
 
 		$('.petHeaderOwner').click(function(){
-			$(this).parent().children('.petOwnerInfo').fadeToggle(1000);
+			$(this).parent().children('.petOwnerInfo').fadeToggle(500);
 		})
 
 

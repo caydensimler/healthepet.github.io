@@ -35,7 +35,7 @@
             <div class="col-xs-12 introductionList">
                 <i class="fa fa-paw" aria-hidden="true"></i> Localized records from all clinic visits.
                 <br>
-                <i class="fa fa-paw" aria-hidden="true"></i> Keep track of all your pet's shot records all in one place.
+                <i class="fa fa-paw" aria-hidden="true"></i> Keep track of all your pet's vaccination records all in one place.
                 <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> No hastle of keeping physical copies of all treatments to your pet(s).
                 <br>
@@ -58,7 +58,7 @@
                     <br>
                     <i class="fa fa-paw" aria-hidden="true"></i> Fully structured list of all patients in your personal directory.
                     <br>
-                    <i class="fa fa-paw" aria-hidden="true"></i> Backed up files stored in our database.
+                    <i class="fa fa-paw" aria-hidden="true"></i> Comprehensive table of all vaccinations to an animal.
                     <br>
                     <i class="fa fa-paw" aria-hidden="true"></i> Completely paperless.
                 </div>
