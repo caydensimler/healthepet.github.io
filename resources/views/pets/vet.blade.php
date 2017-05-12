@@ -11,6 +11,7 @@
 		<div class="addPetButton"><i class="fa fa-plus-square" aria-hidden="true"></i> Add New Pet</div>
 	</div>
 
+    <?php $i = 1; ?>
 	<div class="col-xs-12">
 		@foreach($pets as $pet)
 			<div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8 petBody">
@@ -21,7 +22,8 @@
 
 				<div class="col-xs-12 petInformationBody">
 
-					<div class="col-xs-12 petInformationHeader petHeaderInfo">Pet Information</div>
+					<div class="col-xs-11 petInformationHeader">Pet Information</div>  
+                    <div class="col-xs-1 expandInfo expandInfoPet<?= $i ?>"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
 
                     <div class="petInfo" style="display: none;">
     					<div class="col-xs-6 petRecordInformation">
@@ -60,7 +62,8 @@
 
 				<div class="col-xs-12 petInformationBody">
 
-					<div class="col-xs-12 petInformationHeader petHeaderOwner">Owner Information</div>
+					<div class="col-xs-11 petInformationHeader">Owner Information</div>
+                    <div class="col-xs-1 expandInfo expandInfoOwner<?= $i ?>"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
 
                     <div class="petOwnerInfo" style="display: none;">
     					<div class="col-xs-12 petRecordInformation">
@@ -82,6 +85,8 @@
 				</div>
 
 			</div> 
+
+            <?php $i++; ?>
 		@endforeach
 	</div>
 

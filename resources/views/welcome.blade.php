@@ -70,7 +70,7 @@
 
     <div class="col-xs-12 invisible invisibleOne">filler text for space</div>
 
-    </div>
+</div>
 
 
 
