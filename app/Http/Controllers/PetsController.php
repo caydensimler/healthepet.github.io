@@ -48,7 +48,7 @@ class PetsController extends Controller
     {
 
         $pets = new Pet;
-        $pets->name = $request->name;
+        $pets->petName = $request->petName;
         $pets->species = $request->species;
         $pets->breed = $request->breed;
         $pets->sex = $request->sex;
@@ -57,7 +57,14 @@ class PetsController extends Controller
         $pets->age = $request->age;
         
         $ownerEmail = $request->email;
-        $owner = User::where('email', $ownerEmail)->first();
+        $ownerName = $request->name;
+        $ownerPhone = $request->phoneNumber;
+        $owner = User::where('email', $ownerEmail)
+            ->where('name', $ownerName)
+            ->where('phoneNumber', $ownerPhone)
+            ->first();
+
+      
 
         $vet = \Auth::id();
         if(!is_null($owner)) {
@@ -68,6 +75,8 @@ class PetsController extends Controller
             $owner = new User;
             $owner->user_type = 'owner';
             $owner->email = $ownerEmail;
+            $owner->name = $ownerName;
+            $owner->phoneNumber = $ownerPhone;
             $owner->save();
             $pets->owner_id = $owner->id;
             $pets->vet_id = $vet;
@@ -137,7 +146,7 @@ class PetsController extends Controller
         }
 
         $pets = new Pet;
-        $pets->name = $request->name;
+        $pets->petName = $request->petName;
         $pets->species = $request->species;
         $pets->breed = $request->breed;
         $pets->sex = $request->sex;

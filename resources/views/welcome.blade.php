@@ -5,7 +5,7 @@
 
 @section('content')
     
-    <?php var_dump($errors); ?>
+
     
 
     <!-- Welcome Header -->
