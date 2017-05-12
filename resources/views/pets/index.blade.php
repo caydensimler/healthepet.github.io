@@ -105,10 +105,10 @@
                     <div class="col-xs-12 formLabel">Species</div>
                     <div class="col-xs-12">
                         <div class="col-xs-6 formRadioInput">
-                            <input type="radio" name="species" value="dog" class="formRadioInput" required> Dog
+                            <input type="radio" name="species" value="Dog" class="formRadioInput" required> Dog
                         </div>
                         <div class="col-xs-6 formRadioInput">
-                            <input type="radio" name="species" value="cat" class="formRadioInput"> Cat
+                            <input type="radio" name="species" value="Cat" class="formRadioInput"> Cat
                         </div>
                     </div>
                 </div>                      

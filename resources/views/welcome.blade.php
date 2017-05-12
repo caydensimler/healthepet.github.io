@@ -4,6 +4,9 @@
 
 
 @section('content')
+    
+    <?php var_dump($errors); ?>
+    
 
     <!-- Welcome Header -->
     <div class="col-xs-12 welcomeHeader">
