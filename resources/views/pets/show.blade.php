@@ -15,7 +15,7 @@
 
 	@if (sizeof($shots) === 0) 
 		<div class="col-xs-12 noRecordsFound">Sorry, no records available! :(</div>
-		<div class="col-xs-offset-4 col-xs-4"><img src="/img/noRecords.jpg" alt="No Records Found Sad Puppy" class="noRecordsPicture"></div>
+		<div class="col-xs-offset-4 col-xs-4"><img src="/img/<?php if ($pet->species == 'dog') { echo 'noRecordsDog.jpg'; } else { echo 'noRecordsCat.jpg'; } ?>" alt="No Records Found Sad Puppy" class="noRecordsPicture"></div>
 	@elseif (sizeof($shots) != 0)
 		<div class="col-xs-12 shotRecordsTable">
 
@@ -109,7 +109,7 @@
 					<div class="col-xs-12 formLabel">Renewal Date</div>
 
 					<div class="col-xs-12">
-						<input type="text" name="shotRenew" id="shotRenew" class="formInput" placeholder="DD/MM/YYYY" rrequired>
+						<input type="text" name="shotRenew" id="shotRenew" class="formInput" placeholder="DD/MM/YYYY" required>
 					</div>
 				</div>
 
