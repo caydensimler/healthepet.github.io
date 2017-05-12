@@ -8,7 +8,7 @@
 @section('content')
 
 		<div class="welcomeHeaderAccountPage">
-			Welcome to your account page, {{ Auth::user()->name }}.
+			Welcome to your pets page, {{ Auth::user()->name }}.
 		</div>
         
         @if(\Auth::User()->user_type == 'vet')
@@ -23,12 +23,12 @@
 
 				<div class="col-xs-offset-1 col-xs-8 petDescriptionBody">
 
-                    <div class="col-xs-12 petNameHeader">
+                    <!-- <div class="col-xs-12 petNameHeader"> -->
                         <div class="col-xs-5 petNameVet">{{ $pet->name }}</div>
                         <div class="col-xs-7 recordsLink">
                             <a href="/pets/{{ $pet->id }}">Click here to view Loca's records. <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
                         </div>
-                    </div>
+                    <!-- </div> -->
 
 					<div class="col-xs-6">
 						<div class="col-xs-12 petSubHeader">
