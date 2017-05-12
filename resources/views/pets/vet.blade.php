@@ -195,7 +195,7 @@
                     <div class="col-xs-12">
                         <input type="text" name="email" id="email" class="formInput" placeholder="petlover@gmail.com" required>
                     </div>
-                </div>       
+                </div>     
 
                 <div class="col-xs-12 loginRegisterButtonBody">
                     <button type="submit" class="petOwnerRegisterButton btn btn-default loginRegisterButton">Add Pet</button>
