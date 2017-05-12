@@ -25,6 +25,8 @@ Route::resource('users', 'UsersController');
 
 Route::resource('pets', 'PetsController');
 
+Route::post('pets', 'PetsController@image');
+
 // Authentication routes...
 Route::get('auth/login', function(){
 	return redirect('/');
