@@ -60,6 +60,22 @@ $(document).ready(function(){
 			$('.addPetForm').fadeToggle(500);
 		});
 
+	////////////////////////////////
+	// Authentication Error Messages
+	////////////////////////////////
+
+	if ($(".loginError").length > 0) {
+		$('.loginForm').fadeToggle(500);
+
+		$('.allContent').toggleClass('blur');
+	}
+
+	if ($(".registerError").length > 0) {
+		$('.registerForm').fadeToggle(500);
+
+		$('.allContent').toggleClass('blur');
+	}
+
 
 	///////////////
 	// Shot Records

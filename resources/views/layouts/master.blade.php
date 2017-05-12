@@ -25,14 +25,28 @@
                         <span class="sr-only">Toggle navigation</span>
                         <i class="fa fa-paw" aria-hidden="true"> Menu </i>
                     </button>
+                        
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li>
                             <a href="{{ action('PetsController@index') }}">HealthEPet</a>
                         </li>
-                        <li><a href="{{ action('UsersController@show') }}">Account</a></li>
+<!--                         @if (Auth::user()->user_type === 'vet')
+                        <ul>
+                            <nav class="navbar navbar-left">
+                              <form class="" action="" method="POST">
+                                <input class="form-control searchBar" type="text" placeholder="Search">
+                              </form>
+                            </nav>
+                        </ul>
+                        @endif -->
+                        
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
                         <li><a href="/auth/logout">Logout</a></li>
+                        <li><a href="{{ action('UsersController@show') }}">Account</a></li>
                     </ul>
                 </div>
             </div>

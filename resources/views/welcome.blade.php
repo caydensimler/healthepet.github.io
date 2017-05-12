@@ -4,10 +4,16 @@
 
 
 @section('content')
-    
-    <?php var_dump($errors); ?>
+
+    @if (session()->has('loginErrorMessage'))
+        <?php echo '<div class="invisible loginError"></div>'; ?>
+    @elseif (session()->has('registerErrorMessage') || session()->has('passwordErrorMessage'))
+        <?php echo '<div class="invisible registerError"></div>'; ?>
+    @endif
+
     
 
+    
     <!-- Welcome Header -->
     <div class="col-xs-12 welcomeHeader">
         <div class="col-xs-7">What can HealthEPet do for you?</div>
@@ -85,7 +91,13 @@
         <div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
             <form action="{{action('Auth\AuthController@postLogin')}}" method="POST">
                 {!! csrf_field() !!}
-                <div class="col-xs-8 formHeader">Login with an existing account.</div>
+                <div class="col-xs-8 formHeader">
+                    @if (session()->has('loginErrorMessage'))
+                        Invalid username or password.
+                    @else
+                        Login with an existing account.
+                    @endif
+                </div>
                 <div class="col-xs-4 closeButton">
                     <i class="fa fa-window-close" aria-hidden="true"></i>
                 </div>
@@ -128,7 +140,15 @@
         <div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
             <form action="{{action('Auth\AuthController@postRegister')}}" method="POST">
                 {!! csrf_field() !!}
-                <div class="col-xs-8 formHeader">Register a new account.</div>
+                 <div class="col-xs-8 formHeader">
+                    @if (session()->has('registerErrorMessage'))
+                        Email account already in use.
+                    @elseif (session()->has('passwordErrorMessage'))
+                        Passwords do not match.
+                    @else
+                        Register a new account.
+                    @endif
+                </div>
                 <div class="col-xs-4 closeButton">
                     <i class="fa fa-window-close" aria-hidden="true"></i>
                 </div>

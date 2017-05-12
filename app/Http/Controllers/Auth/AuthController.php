@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Http\Request;
+use Session;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Auth;
 
 class AuthController extends Controller
 {
@@ -50,6 +53,36 @@ class AuthController extends Controller
         }
       
     }
+
+    public function postLogin(Request $request) {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            return redirect('/pets');
+        } else {
+            Session::flash('loginErrorMessage', 'Invalid email or password.');
+
+            return redirect('/');
+        }
+    }
+
+    public function postRegister(Request $request) {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|confirmed|min:6',
+        ]);
+
+        // dd($request->password != $request->password_confirmation, $validator->fails());
+
+        if ($validator->fails() && $request->password == $request->password_confirmation) {
+            Session::flash('registerErrorMessage', 'Email address already exists');
+            return redirect('/');
+        } else if ($validator->fails() && $request->password != $request->password_confirmation) {
+            Session::flash('passwordErrorMessage', 'Passwords do not match.');
+            return redirect('/');
+        }
+    }
+
+
 
     protected function create(array $data)
     {
