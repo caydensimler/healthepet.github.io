@@ -19,6 +19,8 @@ Route::get('/', function(){
     }
 });
 
+Route::post('/pets/{id}', 'PetsController@shotStore');
+
 Route::resource('users', 'UsersController');
 
 Route::resource('pets', 'PetsController');
