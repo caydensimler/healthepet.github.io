@@ -15,7 +15,7 @@
 
     
     <!-- Welcome Header -->
-    <div class="col-xs-12 welcomeHeader">
+<!--     <div class="col-xs-12 welcomeHeader">
         <div class="col-xs-7">What can HealthEPet do for you?</div>
         <div class="col-xs-5">
             <div class="col-xs-12 loginRegisterButtonHeader">
@@ -30,11 +30,11 @@
         </div>
     </div>
 
-    <div class="col-xs-12 invisible invisibleOne">filler text for space</div>
+    <div class="col-xs-12 invisible invisibleOne">filler text for space</div> -->
     
     <!-- Pet Owner Introduction -->
 
-    <div class="col-xs-12 introductionContent">
+  <!--   <div class="col-xs-12 introductionContent">
 
         <div class="col-xs-offset-3 col-xs-6 col-sm-offset-1 col-sm-4 introductionPicture petOwnerPicture"></div>
 
@@ -52,11 +52,11 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 
 
     <!-- Vet Clinic Introduction -->
-    <div class="col-xs-12 introductionContent">
+  <!--   <div class="col-xs-12 introductionContent">
 
         <div class="col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-5">
             <div class="col-xs-12 introductionHeader">
@@ -77,7 +77,60 @@
 
     </div>
 
-    <div class="col-xs-12 invisible invisibleOne">filler text for space</div>
+    <div class="col-xs-12 invisible invisibleOne">filler text for space</div> -->
+
+    <!-- New Homepage -->
+    <img src="/img/homeHeader.jpg" alt="dog in park" class="headerImage">
+
+    <div class="col-xs-12 homeButtonHolder">
+        <div class="col-xs-6">
+            <span class="homeLoginRegister login"><i class="fa fa-user" aria-hidden="true"></i> Login</span>
+        </div>
+
+        <div class="col-xs-6">
+            <span class="homeLoginRegister register"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</span>
+        </div>      
+    </div>
+
+    <div class="col-xs-12 homeWhatIs">What can HealthEPet do for you?</div>
+
+    <div class="col-xs-12 homeInfoBody">
+        <div class="col-xs-offset-1 col-xs-3">
+            <img src="/img/dog-with-person.jpg" alt="dog with person" class="homeInfoPicture">
+        </div>
+
+        <div class="col-xs-7 homeWhatIsText">
+            Pet Owners
+            <br>
+            <i class="fa fa-paw" aria-hidden="true"></i> Localized records from all clinic visits.
+            <br>
+            <i class="fa fa-paw" aria-hidden="true"></i> Keep track of all your pet's vaccination records all in one place.
+            <br>
+            <i class="fa fa-paw" aria-hidden="true"></i> No hastle of keeping physical copies of all treatments to your pet(s).
+            <br>
+            <i class="fa fa-paw" aria-hidden="true"></i> Completely paperless.
+        </div>
+    </div>   
+
+    <div class="col-xs-12 homeInfoBody homeInfoBottom">
+        <div class="col-xs-offset-1 col-xs-6 homeWhatIsText">
+            Vet Clinics
+            <br>
+            <i class="fa fa-paw" aria-hidden="true"></i> Ability to pull in new patient's records from other clinics.
+            <br>
+            <i class="fa fa-paw" aria-hidden="true"></i> Fully structured list of all patients in your personal directory.
+            <br>
+            <i class="fa fa-paw" aria-hidden="true"></i> Comprehensive table of all vaccinations to an animal.
+            <br>
+            <i class="fa fa-paw" aria-hidden="true"></i> Completely paperless.
+        </div>
+
+        <div class="col-xs-3">
+            <img src="/img/cat-with-vet.jpg" alt="dog with person" class="homeInfoPicture">
+        </div>
+    </div>
+        
+
 
 </div>
 
@@ -177,7 +230,7 @@
                 <div class="col-xs-12">
                     <div class="col-xs-12 formLabel">Physical Address</div>
                     <div class="col-xs-12">
-                        <input type="text" name="address" id="address" placeholder="123 Pet St, Bark City, Meow, 54321" class="formInput" required>
+                        <input type="text" name="address" id="address" placeholder="123 Pet St, Bark City, TX, 54321" class="formInput" required>
                     </div>  
                 </div>  
                 
