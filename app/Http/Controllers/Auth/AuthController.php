@@ -71,22 +71,40 @@ class AuthController extends Controller
             'password' => 'required|confirmed|min:6',
         ]);
 
-        $passwordsMatch = $request->password === $request->password_confirmation;
-        $user = User::where('email', $request->email)->first();
+        $passwordsMatch = $request->password == $request->password_confirmation;
 
-        if ($user->password) {
-            if ($validator->fails() && $passwordsMatch) {
-                Session::flash('registerErrorMessage', 'Email address already exists');
-                return redirect('/');
-            } else if ($validator->fails() && !$passwordsMatch) {
-                Session::flash('passwordErrorMessage', 'Passwords do not match.');
-                return redirect('/');
-            }
-        } else {
+        $user = User::where('email', $request->email)->first();
+        $emailExists = $user->email == $request->email;
+
+
+        // Validation passes and user doesn't already exist.
+        if ($validator->passes() && !$user) {
             $this->create($request->all());
-            redirect ('/pets');
+            return redirect ('/pets');
+        }
+        
+        // Validation passes and useer account exists w/o password
+        if ($validator->passes() && $user && !$user->password) {
+            $this->create($request->all());
+            return redirect ('/pets');
         }
 
+        // Validation fails and passwords match.
+        if ($emailExists && !$user && $user->password && $passwordsMatch) {
+            Session::flash('registerErrorMessage', 'Email address already exists');
+            // throw new \Exception("This should never happen!");
+            return redirect('/');
+        }
+
+        // Validation passes and passwords do not match.
+        if (!$passwordsMatch) {
+            Session::flash('passwordErrorMessage', 'Passwords do not match.');
+            return redirect('/');
+        }
+
+        // validation fails and useer account exists w/o password
+        // validation fails and juser account exists w/ password
+        throw new Exception("This should never happen!");
 
     }
 
