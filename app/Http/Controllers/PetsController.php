@@ -200,12 +200,7 @@ class PetsController extends Controller
             $uploadOk = 0;
             return redirect()->action('PetsController@index');
         }
-        // Check file size
-        if ($_FILES["fileToUpload"]["size"] > 500000) {
-            $request->session()->flash('alert-danger', 'Sorry, your file is too large.');
-            $uploadOk = 0;
-            return redirect()->action('PetsController@index');
-        }
+        
         // Allow certain file formats
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
             $request->session()->flash('alert-danger', 'Sorry, only JPG, JPEG, & PNG files are allowed.');

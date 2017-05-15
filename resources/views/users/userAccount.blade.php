@@ -51,7 +51,7 @@
 			<div class="col-xs-12 col-md-6">
 				<div class="col-xs-12 formLabelAccount">Confirm Password</div>
 				<div class="col-xs-12">
-					<input class="formInputAccount" type="confirmPassword" name="confirmPassword" placeholder="**************">
+					<input class="formInputAccount" type="password" name="confirmPassword" placeholder="**************">
 				</div>
 			</div>
 
