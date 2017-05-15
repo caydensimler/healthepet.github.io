@@ -74,7 +74,7 @@ class AuthController extends Controller
         $passwordsMatch = $request->password == $request->password_confirmation;
 
         $user = User::where('email', $request->email)->first();
-        $emailExists = $user->email == $request->email;
+        $emailExists = !is_null($user) && $user->email == $request->email;
 
 
         // Validation passes and user doesn't already exist.

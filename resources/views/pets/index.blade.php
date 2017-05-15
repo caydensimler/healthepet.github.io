@@ -29,7 +29,7 @@
 			<div class="col-sm-6 petInformation">
 
                 <div class="col-xs-offset-1 col-xs-3">
-                    <img class="petHeaderPicture" src="/img/{{ $pet->img == null ? 'default.jpg' : $pet->img }}" alt="dog/cat picture">
+                    <img class="petHeaderPicture" src="/img/{{ $pet->img == null ? 'default.png' : $pet->img }}" alt="dog/cat picture">
                     <form action="{{ action('PetsController@image', $pet->id) }}" method="post" enctype="multipart/form-data">
                     {!! csrf_field() !!}
                         Add/Edit Image:
