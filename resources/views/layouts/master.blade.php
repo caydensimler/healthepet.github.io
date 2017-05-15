@@ -62,6 +62,11 @@
                         <li><a href="/auth/logout">Logout</a></li>
                         <li><a href="{{ action('UsersController@show') }}">Account</a></li>
                     @endif
+
+                    @if (!Auth::check())
+                        <li class="login"><a>Login</a></li>
+                        <li class="register"><a>Register</a></li>
+                    @endif 
                     </ul>
 
                 </div>
