@@ -173,16 +173,16 @@
 
 	/* Search Bar */
 
-		.searchBar {
-			text-align: center;
-			border: 1px solid #7A6F64;
-			margin-top: 11%;
-			width: 250%;
-			color: #7A6F64
+		.form-control {
+			border-radius: 0px;
 		}
 
-		.searchBar:focus {
-			outline: none;
+		.submitButton {
+			height: 34px;
+		}
+
+		.input-group {
+			width: 100%;
 		}
 
 
