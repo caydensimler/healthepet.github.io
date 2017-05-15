@@ -214,7 +214,7 @@ $(document).ready(function(){
 	// Smooth Scrolling
 	///////////////////
   	$(document).on('click', 'a', function(event){
-	    event.preventDefault();
+	    // event.preventDefault();
 
 	    $('html, body').animate({
 	        scrollTop: $( $.attr(this, 'href') ).offset().top
