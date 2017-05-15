@@ -168,9 +168,9 @@
                     <button type="submit" class="petOwnerLoginButton btn btn-default loginRegisterButton">Login</button>
                 </div>
 
-                <div class="col-xs-12 forgotPassword">
+                <!-- <div class="col-xs-12 forgotPassword">
                     Forgot your password?
-                </div>
+                </div> -->
 
             </form>
         </div>
@@ -241,7 +241,7 @@
                 <div class="col-xs-6">
                     <div class="col-xs-12 formLabel">Password</div>
                     <div class="col-xs-12">
-                        <input type="password" name="password" id="password" class="formInput">
+                        <input type="password" name="password" id="password" class="formInput" required>
                         @if ($errors->has('password'))
                             {{$errors->first('password')}}
                         @endif

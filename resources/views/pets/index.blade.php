@@ -29,19 +29,19 @@
 			<div class="col-sm-6 petInformation">
 
                 <div class="col-xs-offset-1 col-xs-3">
-                    <img class="petHeaderPicture" src="/img/{{ $pet->img == null ? 'sampleDogPicture.jpg' : $pet->img }}" alt="dog/cat picture">
+                    <img class="petHeaderPicture" src="/img/{{ $pet->img == null ? 'default.jpg' : $pet->img }}" alt="dog/cat picture">
                     <form action="{{ action('PetsController@image', $pet->id) }}" method="post" enctype="multipart/form-data">
                     {!! csrf_field() !!}
                         Add/Edit Image:
                         <input type="hidden" name="pet_id" value="{{ $pet->id }}">
-                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <input type="file" name="fileToUpload" id="fileToUpload" required>
                         <input type="submit" value="Upload Image" name="submit">
                     </form>
                 </div>	
 
 				<div class="col-xs-offset-2 col-xs-5 petDescriptionBody">
 
-                    <div class="col-xs-12 petNameVet">{{ $pet->name }}</div>
+                    <div class="col-xs-12 petNameVet">{{ $pet->petName }}</div>
 
 					<div class="col-xs-12 petSubHeader">
 						Species: {{ ucfirst($pet->species) }}					
@@ -54,7 +54,7 @@
                         <br>					
 						Color(s): {{ $pet->color }}		
                         <br>			
-						Age: {{ (date('Y') - $pet->age) }} years
+						Age: {{ $pet->age }} years
                         <br>
                     </div>
 				</div>
