@@ -13,16 +13,6 @@
     <!-- New Homepage -->
     <img src="/img/homeHeader.jpg" alt="dog in park" class="headerImage">
 
-    <div class="col-xs-12 homeButtonHolder">
-        <div class="col-xs-6">
-            <span class="homeLoginRegister login"><i class="fa fa-user" aria-hidden="true"></i> Login</span>
-        </div>
-
-        <div class="col-xs-6">
-            <span class="homeLoginRegister register"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</span>
-        </div>      
-    </div>
-
     <div class="col-xs-12 invisible fillerText" id="about"> filler text</div>
 
     <div class="aboutBody">
@@ -80,7 +70,7 @@
                 </div>
 
                 <div class="col-xs-12 siteCreatorsLink">
-                    <a href="https://github.com/caydensimler">
+                    <a href="https://github.com/caydensimler" target="_blank">
                         <i class="fa fa-github" aria-hidden="true"></i> Github
                     </a>
                     <br>
@@ -97,7 +87,7 @@
                 </div>
 
                 <div class="col-xs-12 siteCreatorsLink">
-                    <a href="https://github.com/jtn0113">
+                    <a href="https://github.com/jtn0113" target="_blank">
                         <i class="fa fa-github" aria-hidden="true"></i> Github
                     </a>
                     <br>
@@ -114,7 +104,7 @@
                 </div>
 
                 <div class="col-xs-12 siteCreatorsLink">
-                    <a href="https://github.com/thomasehayes">
+                    <a href="https://github.com/thomasehayes" target="_blank">
                         <i class="fa fa-github" aria-hidden="true"></i> Github
                     </a>
                     <br>

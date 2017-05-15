@@ -15,7 +15,7 @@
 	<div class="col-xs-12 petInfoHolder">
 		@foreach($pets as $pet)
 			<div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8 petBody">
-				<div class="col-xs-5 petNameVet">{{ $pet->name }}</div>
+				<div class="col-xs-5 petNameVet">{{ $pet->petName }}</div>
 				<div class="col-xs-7 vetRecordsLink">
 					<a href="/pets/{{ $pet->id }}">Click here to add a new vaccination. <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
 				</div>
