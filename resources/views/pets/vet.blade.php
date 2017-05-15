@@ -55,7 +55,7 @@
 
     					<div class="col-xs-6 petRecordInformation">
     						<div class="col-xs-4 subHeader">Age:</div>
-    						<div class="col-xs-8">{{ $pet->age }} years</div>
+    						<div class="col-xs-8">{{ ( $pet->age) }} years</div>
     					</div>
                     </div>
 
