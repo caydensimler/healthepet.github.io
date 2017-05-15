@@ -44,14 +44,14 @@
 			<div class="col-xs-12 col-md-6">
 				<div class="col-xs-12 formLabelAccount">Password</div>
 				<div class="col-xs-12">
-					<input class="formInputAccount" type="password" name="password" placeholder="**************">
+					<input class="formInputAccount" type="password" name="password" placeholder="**************" required>
 				</div>
 			</div>		
 
 			<div class="col-xs-12 col-md-6">
 				<div class="col-xs-12 formLabelAccount">Confirm Password</div>
 				<div class="col-xs-12">
-					<input class="formInputAccount" type="confirmPassword" name="confirmPassword" placeholder="**************">
+					<input class="formInputAccount" type="password" name="confirmPassword" placeholder="**************" required>
 				</div>
 			</div>
 

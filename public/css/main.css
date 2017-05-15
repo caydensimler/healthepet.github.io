@@ -8,6 +8,7 @@
 	body {
 	    font-family: 'Open Sans Condensed', sans-serif;
 	    background-color: #EFEFEF;
+	    
 	}
 
 	.blur {
@@ -18,7 +19,7 @@
 		filter: blur(3px);
 	}
 
-	body > div.allContent > .homeInfoBody > .homeWhatIsText > .fa-paw {
+	.fa-paw {
 		font-size: 50%;
 		text-align: center;
 	    position: relative;
@@ -75,10 +76,6 @@
 
 	/* What is HealthEPet? */
 
-		.aboutBody {
-			margin-top: 7%;
-		}
-
 		.homeWhatIs {
 			font-size: 4vw;
 		}
@@ -88,11 +85,12 @@
 		}
 
 		.homeInfoPicture {
-			border-radius: 100%;
+			/*border-radius: 100%;*/
+			box-shadow: .3vw .3vw .2vw #888888;
 			width: auto;
 			height: 20vw;
 			width: 20vw;
-			border: .1vw solid #11151C;
+			/*border: .1vw solid #11151C;*/
 			margin-top: 3%;
 			text-align: center;
 		}
@@ -125,7 +123,15 @@
 		}
 
 		#navbar > ul > li > a:hover {
-			color: #7A6F64;
+			color: #AFAFAF;
+		}
+
+		.login {
+			cursor: pointer;
+		}
+
+		.register {
+			cursor: pointer;
 		}
 
 
@@ -193,8 +199,7 @@
 	/* Header Text */
 
 	.fillerText {
-		margin-top: 4%;
-		position: absolute;
+		margin-bottom: 2%;
 	}
 
 	.contactBody {
@@ -325,7 +330,7 @@
 		}
 
 		.loginRegisterButton:hover {
-			background-color: #49533B;
+			background-color: #AFAFAF;
 			color: #EFEFEF;
 		}
 
@@ -462,6 +467,7 @@
 			background-repeat: no-repeat;
 			border: .1vw solid #11151C;
 			height: 20vw;
+			width: 20vw;
 		}
 
 		.petDescriptionBody {
