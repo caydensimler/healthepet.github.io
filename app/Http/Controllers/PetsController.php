@@ -60,32 +60,27 @@ class PetsController extends Controller
         $ownerName = $request->name;
         $ownerPhone = $request->phoneNumber;
         $owner = User::where('email', $ownerEmail)
-            ->where('name', $ownerName)
-            ->where('phoneNumber', $ownerPhone)
             ->first();
 
       
 
         $vet = \Auth::id();
-        if(!is_null($owner)) {
-            $pets->owner_id = $owner->id;
-            $pets->vet_id = $vet;
-            
-        } else {
+        if(is_null($owner)) {
             $owner = new User;
             $owner->user_type = 'owner';
             $owner->email = $ownerEmail;
             $owner->name = $ownerName;
             $owner->phoneNumber = $ownerPhone;
             $owner->save();
-            $pets->owner_id = $owner->id;
-            $pets->vet_id = $vet;
         }
+
+        $pets->owner_id = $owner->id;
+        $pets->vet_id = $vet;
 
         $pets->save();
 
         $request->session()->flash('successMessage', 'Pet Saved Successfully');
-        return redirect()->action('PetsController@show', [$pets->id]);
+        return redirect()->action('PetsController@index');
     }
 
     public function shotStore(Request $request, $id)
@@ -181,10 +176,10 @@ class PetsController extends Controller
         return redirect()->action('PetsController@index');
     }
 
-    public function image(Request $request)
+    public function image(Request $request, $id)
     {
         $target_dir = "../public/img/";
-        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $target_file = $target_dir . uniqid() . ".png";
         $file_name = basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
         $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -224,7 +219,7 @@ class PetsController extends Controller
         // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                $pet = Pet::find($request->pet_id); 
+                $pet = Pet::find($id); 
                 $pet->img = $file_name;
                 $pet->save();   
                 $request->session()->flash('alert-success', 'Image was successfuly added!');
