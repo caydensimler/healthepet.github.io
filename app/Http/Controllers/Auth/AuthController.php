@@ -36,7 +36,7 @@ class AuthController extends Controller
 
     protected function validator(array $data)
     {
-        $user = User::where('email', $data['email'])->where('name', '')->where('address', '')->where('phoneNumber', '')->where('password', '')->get()->first();
+        $user = User::where('email', $data['email'])->first();
 
         if(is_null($user)){
             return Validator::make($data, [
@@ -112,16 +112,18 @@ class AuthController extends Controller
 
     protected function create(array $data)
     {
-        $user = User::where('email', $data['email'])->get()->first();
+        $user = User::where('email', $data['email'])
+            ->first();
+
         if (is_null($user)) {
             return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'address' => $data['address'],
-            'phoneNumber' => $data['phoneNumber'],
-            'password' => bcrypt($data['password']),
-            'user_type' => $data['user_type'],
-        ]); 
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'address' => $data['address'],
+                'phoneNumber' => $data['phoneNumber'],
+                'password' => bcrypt($data['password']),
+                'user_type' => $data['user_type'],
+            ]); 
         } else {
             $user->name = $data['name'];
             $user->address = $data['address'];

@@ -4,16 +4,12 @@
 
 
 @section('content')
-
     @if (session()->has('loginErrorMessage'))
         <?php echo '<div class="invisible loginError"></div>'; ?>
     @elseif (session()->has('registerErrorMessage') || session()->has('passwordErrorMessage'))
         <?php echo '<div class="invisible registerError"></div>'; ?>
     @endif
 
-    
-
-    
     <!-- Welcome Header -->
 <!--     <div class="col-xs-12 welcomeHeader">
         <div class="col-xs-7">What can HealthEPet do for you?</div>

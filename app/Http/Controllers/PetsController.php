@@ -48,16 +48,23 @@ class PetsController extends Controller
     {
 
         $pets = new Pet;
-        $pets->name = $request->name;
+        $pets->petName = $request->petName;
         $pets->species = $request->species;
         $pets->breed = $request->breed;
         $pets->sex = $request->sex;
         $pets->weight = $request->weight;
         $pets->color = $request->color;
-        $pets->age = $request->age;
+        $pets->age = date('Y') - $request->age;
         
         $ownerEmail = $request->email;
-        $owner = User::where('email', $ownerEmail)->first();
+        $ownerName = $request->name;
+        $ownerPhone = $request->phoneNumber;
+        $owner = User::where('email', $ownerEmail)
+            ->where('name', $ownerName)
+            ->where('phoneNumber', $ownerPhone)
+            ->first();
+
+      
 
         $vet = \Auth::id();
         if(!is_null($owner)) {
@@ -68,6 +75,8 @@ class PetsController extends Controller
             $owner = new User;
             $owner->user_type = 'owner';
             $owner->email = $ownerEmail;
+            $owner->name = $ownerName;
+            $owner->phoneNumber = $ownerPhone;
             $owner->save();
             $pets->owner_id = $owner->id;
             $pets->vet_id = $vet;
@@ -137,7 +146,7 @@ class PetsController extends Controller
         }
 
         $pets = new Pet;
-        $pets->name = $request->name;
+        $pets->petName = $request->petName;
         $pets->species = $request->species;
         $pets->breed = $request->breed;
         $pets->sex = $request->sex;
@@ -170,5 +179,59 @@ class PetsController extends Controller
         $pet->delete();
 
         return redirect()->action('PetsController@index');
+    }
+
+    public function image(Request $request)
+    {
+        $target_dir = "../public/img/";
+        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $file_name = basename($_FILES["fileToUpload"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+        // Check if image file is a actual image or fake image
+        if(isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+            if($check !== false) {
+                $uploadOk = 1;
+            } else {
+            $request->session()->flash('alert-danger', 'File is not an image.');
+                $uploadOk = 0;
+            return redirect()->action('PetsController@index');
+            }
+        }
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            $request->session()->flash('alert-danger', 'Sorry, file already exists.');
+            $uploadOk = 0;
+            return redirect()->action('PetsController@index');
+        }
+        // Check file size
+        if ($_FILES["fileToUpload"]["size"] > 500000) {
+            $request->session()->flash('alert-danger', 'Sorry, your file is too large.');
+            $uploadOk = 0;
+            return redirect()->action('PetsController@index');
+        }
+        // Allow certain file formats
+        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
+            $request->session()->flash('alert-danger', 'Sorry, only JPG, JPEG, & PNG files are allowed.');
+            $uploadOk = 0;
+            return redirect()->action('PetsController@index');
+        }
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            $request->session()->flash('alert-danger', 'Sorry, your file was not uploaded.');
+            return redirect()->action('PetsController@index');
+        // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                $pet = Pet::find($request->pet_id); 
+                $pet->img = $file_name;
+                $pet->save();   
+                $request->session()->flash('alert-success', 'Image was successfuly added!');
+                return redirect()->action('PetsController@index');
+            } else {
+                $request->session()->flash('alert-danger', 'Sorry, there was an error uploading your file.');
+            }
+        }
     }
 }

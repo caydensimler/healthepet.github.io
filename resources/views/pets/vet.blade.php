@@ -92,11 +92,6 @@
 		@endforeach
 	</div>
 
-<!-- 	<form method="get" action="{{ action('PetsController@create') }}">
-		{!! csrf_field()!!}
-		<input type="submit" class="btn btn-default" value="Add new Pet">
-	</form> -->
-
         <div class="col-xs-12 paginationHolder">
 		  {!! $pets->render() !!}
         </div>
@@ -116,7 +111,7 @@
                 <div class="col-xs-12 col-sm-4">
                     <div class="col-xs-12 formLabel">Name</div>
                     <div class="col-xs-12">
-                        <input type="text" name="name" id="name" class="formInput" required>
+                        <input type="text" name="petName" id="petName" class="formInput" required>
                     </div>
                 </div>              
 
@@ -190,14 +185,30 @@
                             <option value="2017">2017</option>
                         </select>
                     </div>
-                </div>                      
+                </div>   
 
                 <div class="col-xs-12">
+                    <div class="col-xs-12 formLabel">Owner's Name</div>
+                    <div class="col-xs-12">
+                        <input type="text" name="name" id="name" class="formInput" placeholder="Bob Bobberson" required>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-4">
+                    <div class="col-xs-12 formLabel">Owner's Phone Number</div>
+                    <div class="col-xs-12">
+                        <input type="text" name="phoneNumber" id="phoneNumber" class="formInput" placeholder="2105559999" required>
+                    </div>
+                </div>    
+
+                <div class="col-xs-6 col-sm-4">
                     <div class="col-xs-12 formLabel">Owner's Email</div>
                     <div class="col-xs-12">
                         <input type="text" name="email" id="email" class="formInput" placeholder="petlover@gmail.com" required>
                     </div>
-                </div>       
+
+                </div>     
+
 
                 <div class="col-xs-12 loginRegisterButtonBody">
                     <button type="submit" class="petOwnerRegisterButton btn btn-default loginRegisterButton">Add Pet</button>

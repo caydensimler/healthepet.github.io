@@ -4,7 +4,7 @@
 
 @section('content')
 	<div class="col-xs-12 welcomeHeaderAccountPage">
-		{{ $pet->name}}'s Vaccination Records
+		{{ $pet->petName}}'s Vaccination Records
 	</div>
 
 	@if (Auth::user()->user_type === 'vet')

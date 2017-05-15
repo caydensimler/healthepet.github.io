@@ -12,7 +12,7 @@ class PetsTableSeeder extends Seeder
     public function run()
     {
 	    $pet = new \App\Pet();
-        $pet->name = "Wally";
+        $pet->petName = "Wally";
         $pet->species = "Dog";
         $pet->breed = "Chihuaha";
         $pet->sex = "Male";
@@ -25,7 +25,7 @@ class PetsTableSeeder extends Seeder
         $pet->save();
 
         $pet = new \App\Pet();
-        $pet->name = "Riley";
+        $pet->petName = "Riley";
         $pet->species = "Dog";
         $pet->breed = "Mutt";
         $pet->sex = "Male";
@@ -38,7 +38,7 @@ class PetsTableSeeder extends Seeder
         $pet->save();
 
         $pet = new \App\Pet();
-        $pet->name = "Izzy";
+        $pet->petName = "Izzy";
         $pet->species = "Dog";
         $pet->breed = "Poodle";
         $pet->sex = "Female";
@@ -51,7 +51,7 @@ class PetsTableSeeder extends Seeder
         $pet->save();
 
         $pet = new \App\Pet();
-        $pet->name = "Rambo";
+        $pet->petName = "Rambo";
         $pet->species = "Cat";
         $pet->breed = "Black Cat";
         $pet->sex = "Male";
