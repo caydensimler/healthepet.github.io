@@ -21,7 +21,7 @@ class PetsController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Request $request)
     {
 
         if(\Auth::user()->user_type == 'owner') {
@@ -30,7 +30,19 @@ class PetsController extends Controller
             $data['pets'] = $pets;
             return view('pets.index')->with($data);  
         } elseif (\Auth::user()->user_type == 'vet') {
-            $pets = Pet::with('user')->where('vet_id', '=', \Auth::id())->paginate(4);
+            if($request->has('q')) {
+                $pets = Pet::join('users', 'owner_id', '=', 'users.id')
+                ->where('users.email', 'like', "%".$request->q."%")
+                ->orWhere('users.phoneNumber', 'like', "%".$request->q."%")
+                ->orWhere('petName', 'like', "%".$request->q."%")
+                ->orWhere('users.name', 'like', "%".$request->q."%")
+                ->where('vet_id', '=', \Auth::id())
+                ->orderBy('pets.id', 'DESC')
+                ->paginate(4);
+            } else {$pets = Pet::with('user')
+                ->where('vet_id', '=', \Auth::id())
+                ->paginate(4);
+            }
             $data = [];
             $data['pets'] = $pets;
             return view('pets.vet')->with($data);
