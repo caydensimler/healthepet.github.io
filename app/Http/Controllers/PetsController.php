@@ -191,7 +191,8 @@ class PetsController extends Controller
     public function image(Request $request, $id)
     {
         $target_dir = "../public/img/";
-        $target_file = $target_dir . uniqid() . ".png";
+        $name = uniqid() . ".png";
+        $target_file = $target_dir . $name;
         $file_name = basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
         $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -227,7 +228,7 @@ class PetsController extends Controller
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 $pet = Pet::find($id); 
-                $pet->img = $file_name;
+                $pet->img = $name;
                 $pet->save();   
                 $request->session()->flash('alert-success', 'Image was successfuly added!');
                 return redirect()->action('PetsController@index');
