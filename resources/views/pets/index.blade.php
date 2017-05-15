@@ -25,13 +25,11 @@
         
 		@foreach($pets as $pet)
 
-			<div class="col-xs-12 petInformation">
-				<div class="col-xs-3">
-                    @if($pet->img == '')
-                        <img class="petHeaderPicture" src="/img/default.png" alt="dog">
-                    @else
-                        <img class="petHeaderPicture" src="/img/{{ $pet->img }}" alt="dog">
-                    @endif
+
+			<div class="col-xs-12 col-sm-6 petInformation">
+
+                <div class="col-xs-offset-1 col-xs-3">
+                    <img class="petHeaderPicture" src="/img/<?php if ($pet->img == null) { echo 'sampleDogPicture.jpg'; } else { echo '{{ $pet->img }}'; }  ?>" alt="dog/cat picture">
                     <form action="{{ action('PetsController@image') }}" method="post" enctype="multipart/form-data">
                     {!! csrf_field() !!}
                         Edit Image:
@@ -69,13 +67,26 @@
 							Weight: {{ $pet->weight }}
 						</div>					
 
-						<div class="col-xs-12 petSubHeader">
-							Color(s): {{ $pet->color }}
-						</div>					
+				<div class="col-xs-offset-2 col-xs-5 petDescriptionBody">
 
-						<div class="col-xs-12 petSubHeader">
-							Age: {{ $pet->age }}
-						</div>
+                    <div class="col-xs-12 petNameVet">{{ $pet->name }}</div>
+
+					<div class="col-xs-12 petSubHeader">
+						Species: {{ ucfirst($pet->species) }}					
+                        <br>
+						Breed: {{ $pet->breed }}					
+                        <br>
+						Sex: {{ ucfirst($pet->sex) }}
+                        <br>
+						Weight: {{ $pet->weight }} pounds
+                        <br>					
+						Color(s): {{ $pet->color }}		
+                        <br>			
+						Age: {{ (date('Y') - $pet->age) }} years
+                        <br>
+                    </div>
+
+                    <div class="col-xs-6">
 					</div>
 				</div>
 			</div>

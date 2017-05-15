@@ -25,16 +25,34 @@
                         <span class="sr-only">Toggle navigation</span>
                         <i class="fa fa-paw" aria-hidden="true"> Menu </i>
                     </button>
+                        
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li>
-                            <a href="{{ action('PetsController@index') }}">HealthEPet</a>
-                        </li>
-                        <li><a href="{{ action('UsersController@show') }}">Account</a></li>
-                        <li><a href="/auth/logout">Logout</a></li>
+                        <li><a href="{{ action('PetsController@index') }}">HealthEPet</a></li>
+                        @if (Auth::user()->user_type === 'vet')
+                            <li>
+                                <div class="col-xs-12">
+                                    <form class="navbar-form" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search Pets" name="q">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default submitButton" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                        </div>
+                                    </div>
+                                    </form>
+                                </div> 
+                            </li>
+                        @endif
                     </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/auth/logout">Logout</a></li>
+                        <li><a href="{{ action('UsersController@show') }}">Account</a></li>
+                    </ul>
+
                 </div>
+
             </div>
         </nav>
     @endif
