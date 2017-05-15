@@ -461,7 +461,8 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 			border: .1vw solid #11151C;
-			height: 20vw;
+			/*height: 20vw;*/
+			width: 20vw;
 		}
 
 		.petDescriptionBody {
