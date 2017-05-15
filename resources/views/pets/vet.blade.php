@@ -17,7 +17,7 @@
 			<div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8 petBody">
 				<div class="col-xs-5 petNameVet">{{ $pet->petName }}</div>
 				<div class="col-xs-7 vetRecordsLink">
-					<a href="/pets/{{ $pet->id }}">Click here to add a new vaccination. <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+					<a href="/pets/{{ $pet->id }}">Click here to add a new vaccination <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
 				</div>
 
 				<div class="col-xs-12 petInformationBody petInfoBody<?= $i ?>">
@@ -55,7 +55,7 @@
 
     					<div class="col-xs-6 petRecordInformation">
     						<div class="col-xs-4 subHeader">Age:</div>
-    						<div class="col-xs-8">{{ (date('Y') - $pet->age) }} years</div>
+    						<div class="col-xs-8">{{ $pet->age }} years</div>
     					</div>
                     </div>
 
@@ -104,7 +104,7 @@
             {!! csrf_field() !!}
 
                 <div class="col-xs-12 closeButton">
-                    <div class="col-xs-8">Add a new pet.</div>
+                    <div class="col-xs-8">Add New Pet</div>
                     <i class="fa fa-window-close" aria-hidden="true"></i>
                 </div>
 
