@@ -16,7 +16,6 @@
     </head>
     <body>
 
-    @if (Auth::check())
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
             
@@ -29,8 +28,20 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
+                        @if (!Auth::check())
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+
+                        @endif 
+
+                        @if (Auth::check())
                         <li><a href="{{ action('PetsController@index') }}">HealthEPet</a></li>
-                        @if (Auth::user()->user_type === 'vet')
+                        @endif
+                        @if (Auth::check() && Auth::user()->user_type === 'vet')
                             <li>
                                 <div class="col-xs-12">
                                     <form class="navbar-form" role="search">
@@ -47,15 +58,16 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
+                    @if (Auth::check())
                         <li><a href="/auth/logout">Logout</a></li>
                         <li><a href="{{ action('UsersController@show') }}">Account</a></li>
+                    @endif
                     </ul>
 
                 </div>
 
             </div>
         </nav>
-    @endif
 
 
     @yield('content')
