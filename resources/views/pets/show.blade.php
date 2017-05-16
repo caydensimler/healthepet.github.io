@@ -20,7 +20,8 @@
 		<div class="col-xs-12 shotRecordsTable">
 
 			<div class="col-xs-12 shotRecordsHeaderBody">
-				<div class="col-xs-6 shotRecordsHeader">Vaccination Name</div>
+				<div class="col-xs-3 shotRecordsHeader">Vaccination Name</div>
+				<div class="col-xs-3 shotRecordsHeader">Clinic's Name</div>
 				<div class="col-xs-3 shotRecordsHeader">Date Administered</div>
 				<div class="col-xs-3 shotRecordsHeader">Renewal Date</div>
 			</div>
@@ -77,6 +78,7 @@
 		                </select>
 		        	</div>
 		        </div>
+
 				
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Date Administered</div>
