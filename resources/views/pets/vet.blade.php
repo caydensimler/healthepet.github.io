@@ -8,7 +8,7 @@
 	</div>
 
 	<div class="col-xs-offset-5 col-xs-2 loginRegisterButtonBody">
-		<div class="homeLoginRegister addPetButton"><i class="fa fa-plus-square" aria-hidden="true"></i> Add New Pet</div>
+		<div class="addPetButton"><i class="fa fa-plus-square" aria-hidden="true"></i> Add New Pet</div>
 	</div>
 
     <?php $i = 1; ?>
@@ -55,7 +55,7 @@
 
     					<div class="col-xs-6 petRecordInformation">
     						<div class="col-xs-4 subHeader">Age:</div>
-    						<div class="col-xs-8">{{ ( $pet->age) }} years</div>
+    						<div class="col-xs-8">{{ $pet->age }} years</div>
     					</div>
                     </div>
 
@@ -194,14 +194,14 @@
                     </div>
                 </div>
 
-                <div class="col-xs-6 col-sm-4">
+                <div class="col-xs-6">
                     <div class="col-xs-12 formLabel">Owner's Phone Number</div>
                     <div class="col-xs-12">
                         <input type="text" name="phoneNumber" id="phoneNumber" class="formInput" placeholder="2105559999" required>
                     </div>
                 </div>    
 
-                <div class="col-xs-6 col-sm-4">
+                <div class="col-xs-6">
                     <div class="col-xs-12 formLabel">Owner's Email</div>
                     <div class="col-xs-12">
                         <input type="text" name="email" id="email" class="formInput" placeholder="petlover@gmail.com" required>

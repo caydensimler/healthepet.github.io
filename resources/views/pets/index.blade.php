@@ -43,21 +43,12 @@
 
                     <div class="col-xs-12 petNameVet">{{ $pet->petName }}</div>
 
-					<div class="col-xs-12 petSubHeader">
-						Species: {{ ucfirst($pet->species) }}					
-                        <br>
-						Breed: {{ $pet->breed }}					
-                        <br>
-						Sex: {{ ucfirst($pet->sex) }}
-                        <br>
-						Weight: {{ $pet->weight }} pounds
-                        <br>					
-						Color(s): {{ $pet->color }}		
-                        <br>			
-						Age: {{ $pet->age }} years
-                        <br>
+                    <div class="col-xs-12 vetRecordsLink">
+                        <a href="/pets/{{ $pet->id }}">Click here to view records. <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
                     </div>
+
 				</div>
+
 			</div>
 		@endforeach
         </div>

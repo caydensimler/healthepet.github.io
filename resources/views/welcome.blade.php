@@ -167,11 +167,6 @@
                 <div class="col-xs-12 loginRegisterButtonBody">
                     <button type="submit" class="petOwnerLoginButton btn btn-default loginRegisterButton">Login</button>
                 </div>
-
-                <!-- <div class="col-xs-12 forgotPassword">
-                    Forgot your password?
-                </div> -->
-
             </form>
         </div>
     </div>

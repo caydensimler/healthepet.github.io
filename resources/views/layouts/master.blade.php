@@ -30,10 +30,10 @@
                     <ul class="nav navbar-nav">
                         @if (!Auth::check())
                             <li>
-                                <a href="#about">About</a>
+                                <a href="#about" class="homepageLink">About</a>
                             </li>
                             <li>
-                                <a href="#contact">Contact</a>
+                                <a href="#contact" class="homepageLink">Contact</a>
                             </li>
 
                         @endif 
