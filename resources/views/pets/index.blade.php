@@ -41,7 +41,7 @@
 
 				<div class="col-xs-offset-2 col-xs-5 petDescriptionBody">
 
-                    <div class="col-xs-12 petNameVet">{{ $pet->name }}</div>
+                    <div class="col-xs-12 petNameVet">{{ $pet->petName }}</div>
 
 					<div class="col-xs-12 petSubHeader">
 						Species: {{ ucfirst($pet->species) }}					
