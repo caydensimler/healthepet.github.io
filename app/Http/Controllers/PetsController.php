@@ -21,7 +21,7 @@ class PetsController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Request $request)
     {
 
         if(\Auth::user()->user_type == 'owner') {
@@ -30,7 +30,19 @@ class PetsController extends Controller
             $data['pets'] = $pets;
             return view('pets.index')->with($data);  
         } elseif (\Auth::user()->user_type == 'vet') {
-            $pets = Pet::with('user')->where('vet_id', '=', \Auth::id())->paginate(4);
+            if($request->has('q')) {
+                $pets = Pet::join('users', 'owner_id', '=', 'users.id')
+                ->where('users.email', 'like', "%".$request->q."%")
+                ->orWhere('users.phoneNumber', 'like', "%".$request->q."%")
+                ->orWhere('petName', 'like', "%".$request->q."%")
+                ->orWhere('users.name', 'like', "%".$request->q."%")
+                ->where('vet_id', '=', \Auth::id())
+                ->orderBy('pets.id', 'DESC')
+                ->paginate(4);
+            } else {$pets = Pet::with('user')
+                ->where('vet_id', '=', \Auth::id())
+                ->paginate(4);
+            }
             $data = [];
             $data['pets'] = $pets;
             return view('pets.vet')->with($data);
@@ -60,32 +72,27 @@ class PetsController extends Controller
         $ownerName = $request->name;
         $ownerPhone = $request->phoneNumber;
         $owner = User::where('email', $ownerEmail)
-            ->where('name', $ownerName)
-            ->where('phoneNumber', $ownerPhone)
             ->first();
 
       
 
         $vet = \Auth::id();
-        if(!is_null($owner)) {
-            $pets->owner_id = $owner->id;
-            $pets->vet_id = $vet;
-            
-        } else {
+        if(is_null($owner)) {
             $owner = new User;
             $owner->user_type = 'owner';
             $owner->email = $ownerEmail;
             $owner->name = $ownerName;
             $owner->phoneNumber = $ownerPhone;
             $owner->save();
-            $pets->owner_id = $owner->id;
-            $pets->vet_id = $vet;
         }
+
+        $pets->owner_id = $owner->id;
+        $pets->vet_id = $vet;
 
         $pets->save();
 
         $request->session()->flash('successMessage', 'Pet Saved Successfully');
-        return redirect()->action('PetsController@show', [$pets->id]);
+        return redirect()->action('PetsController@index');
     }
 
     public function shotStore(Request $request, $id)
@@ -181,10 +188,11 @@ class PetsController extends Controller
         return redirect()->action('PetsController@index');
     }
 
-    public function image(Request $request)
+    public function image(Request $request, $id)
     {
         $target_dir = "../public/img/";
-        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $name = uniqid() . ".png";
+        $target_file = $target_dir . $name;
         $file_name = basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
         $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -205,12 +213,7 @@ class PetsController extends Controller
             $uploadOk = 0;
             return redirect()->action('PetsController@index');
         }
-        // Check file size
-        if ($_FILES["fileToUpload"]["size"] > 500000) {
-            $request->session()->flash('alert-danger', 'Sorry, your file is too large.');
-            $uploadOk = 0;
-            return redirect()->action('PetsController@index');
-        }
+        
         // Allow certain file formats
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
             $request->session()->flash('alert-danger', 'Sorry, only JPG, JPEG, & PNG files are allowed.');
@@ -224,8 +227,8 @@ class PetsController extends Controller
         // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                $pet = Pet::find($request->pet_id); 
-                $pet->img = $file_name;
+                $pet = Pet::find($id); 
+                $pet->img = $name;
                 $pet->save();   
                 $request->session()->flash('alert-success', 'Image was successfuly added!');
                 return redirect()->action('PetsController@index');

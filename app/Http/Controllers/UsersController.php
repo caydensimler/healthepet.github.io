@@ -84,7 +84,7 @@ class UsersController extends Controller
         $user->email = $request->email;
         $user->phoneNumber = $request->phoneNumber;
         $user->address = $request->address;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
         $user->save();
         $request->session()->flash('successMessage', 'Account Updated Successfully');
         return redirect()->action('UsersController@show', [$user->id]);

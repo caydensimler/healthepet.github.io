@@ -25,59 +25,30 @@
         
 		@foreach($pets as $pet)
 
-			<div class="col-xs-12 petInformation">
-				<div class="col-xs-3">
-                    @if($pet->img == '')
-                        <img class="petHeaderPicture" src="/img/default.png" alt="dog">
-                    @else
-                        <img class="petHeaderPicture" src="/img/{{ $pet->img }}" alt="dog">
-                    @endif
-                    <form action="{{ action('PetsController@image') }}" method="post" enctype="multipart/form-data">
+
+			<div class="col-sm-6 petInformation">
+
+                <div class="col-xs-offset-1 col-xs-3">
+                    <img class="petHeaderPicture" src="/img/{{ $pet->img == null ? 'default.png' : $pet->img }}" alt="dog/cat picture">
+                    <form action="{{ action('PetsController@image', $pet->id) }}" method="post" enctype="multipart/form-data">
                     {!! csrf_field() !!}
-                        Edit Image:
+                        Add/Edit Image:
                         <input type="hidden" name="pet_id" value="{{ $pet->id }}">
-                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <input type="file" name="fileToUpload" id="fileToUpload" required>
                         <input type="submit" value="Upload Image" name="submit">
                     </form>
-                </div>
+                </div>	
 
-				<div class="col-xs-offset-1 col-xs-8 petDescriptionBody">
+				<div class="col-xs-offset-2 col-xs-5 petDescriptionBody">
 
-                    <!-- <div class="col-xs-12 petNameHeader"> -->
-                        <div class="col-xs-5 petNameVet">{{ $pet->name }}</div>
-                        <div class="col-xs-7 recordsLink">
-                            <a href="/pets/{{ $pet->id }}">Click here to view {{ $pet->name }}'s records. <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
-                        </div>
-                    <!-- </div> -->
+                    <div class="col-xs-12 petNameVet">{{ $pet->petName }}</div>
 
-					<div class="col-xs-6">
-						<div class="col-xs-12 petSubHeader">
-							Species: {{ $pet->species }}
-						</div>					
+                    <div class="col-xs-12 vetRecordsLink">
+                        <a href="/pets/{{ $pet->id }}">Click here to view records. <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+                    </div>
 
-						<div class="col-xs-12 petSubHeader">
-							Breed: {{ $pet->breed }}
-						</div>					
-
-						<div class="col-xs-12 petSubHeader">
-							Gender: {{ $pet->sex }}
-						</div>
-					</div>
-
-					<div class="col-xs-6">
-						<div class="col-xs-12 petSubHeader">
-							Weight: {{ $pet->weight }}
-						</div>					
-
-						<div class="col-xs-12 petSubHeader">
-							Color(s): {{ $pet->color }}
-						</div>					
-
-						<div class="col-xs-12 petSubHeader">
-							Age: {{ $pet->age }}
-						</div>
-					</div>
 				</div>
+
 			</div>
 		@endforeach
         </div>

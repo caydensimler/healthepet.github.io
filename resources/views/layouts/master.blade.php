@@ -16,7 +16,6 @@
     </head>
     <body>
 
-    @if (Auth::check())
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
             
@@ -25,19 +24,55 @@
                         <span class="sr-only">Toggle navigation</span>
                         <i class="fa fa-paw" aria-hidden="true"> Menu </i>
                     </button>
+                        
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li>
-                            <a href="{{ action('PetsController@index') }}">HealthEPet</a>
-                        </li>
-                        <li><a href="{{ action('UsersController@show') }}">Account</a></li>
-                        <li><a href="/auth/logout">Logout</a></li>
+                        @if (!Auth::check())
+                            <li>
+                                <a href="#about" class="homepageLink">About</a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="homepageLink">Contact</a>
+                            </li>
+
+                        @endif 
+
+                        @if (Auth::check())
+                        <li><a href="{{ action('PetsController@index') }}">HealthEPet</a></li>
+                        @endif
+                        @if (Auth::check() && Auth::user()->user_type === 'vet')
+                            <li>
+                                <div class="col-xs-12">
+                                    <form class="navbar-form" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search Pets" name="q">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default submitButton" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                        </div>
+                                    </div>
+                                    </form>
+                                </div> 
+                            </li>
+                        @endif
                     </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                    @if (Auth::check())
+                        <li><a href="/auth/logout">Logout</a></li>
+                        <li><a href="{{ action('UsersController@show') }}">Account</a></li>
+                    @endif
+
+                    @if (!Auth::check())
+                        <li class="login"><a>Login</a></li>
+                        <li class="register"><a>Register</a></li>
+                    @endif 
+                    </ul>
+
                 </div>
+
             </div>
         </nav>
-    @endif
 
 
     @yield('content')
