@@ -809,6 +809,10 @@
 		cursor: pointer;
 	}
 
+	.petOwnerRecordView {
+		margin-top: 2%;
+	}
+
 	.addImage {
 		font-size: 1.5vw;
 	}

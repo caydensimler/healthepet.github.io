@@ -11,6 +11,9 @@
 	<div class="col-xs-offset-5 col-xs-2 loginRegisterButtonBody">
 		<div class="shotButton"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Vaccination</div>
 	</div>
+	@else
+		<div class="col-xs-12 petOwnerRecordView"></div>
+
 	@endif
 
 	@if (sizeof($shots) === 0) 
@@ -21,9 +24,9 @@
 
 			<div class="col-xs-12 shotRecordsHeaderBody">
 				<div class="col-xs-3 shotRecordsHeader">Vaccination Name</div>
-				<div class="col-xs-3 shotRecordsHeader">Clinic's Name</div>
 				<div class="col-xs-3 shotRecordsHeader">Date Administered</div>
 				<div class="col-xs-3 shotRecordsHeader">Renewal Date</div>
+				<div class="col-xs-3 shotRecordsHeader">Clinic's Name</div>
 			</div>
 
 
