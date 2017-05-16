@@ -15,32 +15,23 @@
 
 	@if (sizeof($shots) === 0) 
 		<div class="col-xs-12 noRecordsFound">Sorry, no records available! :(</div>
-<<<<<<< HEAD
-		<div class="col-xs-offset-4 col-xs-4"><img src="/img/<?php if ($pet->species == 'dog') { echo 'noRecordsDog.jpg'; } else { echo 'noRecordsCat.jpg'; } ?>" alt="No Records Found Sad Pet" class="noRecordsPicture"></div>
-=======
 		<div class="col-xs-offset-4 col-xs-4"><img src="/img/{{ $pet->species == 'dog' ?'noRecordsDog.jpg' :'noRecordsCat.jpg' }}" alt="No Records Found Sad Puppy" class="noRecordsPicture"></div>
->>>>>>> 3952467ace3f34e1a61c0cb7c358de54637cb109
 	@elseif (sizeof($shots) != 0)
 		<div class="col-xs-12 shotRecordsTable">
 
 			<div class="col-xs-12 shotRecordsHeaderBody">
 				<div class="col-xs-3 shotRecordsHeader">Vaccination Name</div>
+				<div class="col-xs-3 shotRecordsHeader">Clinic's Name</div>
 				<div class="col-xs-3 shotRecordsHeader">Date Administered</div>
 				<div class="col-xs-3 shotRecordsHeader">Renewal Date</div>
-				<div class="col-xs-3 shotRecordsHeader">Clinic Name</div>
 			</div>
 
 
 
 			<?php $i = 0; ?>
 			@foreach ($pet->shots as $shot)
-<<<<<<< HEAD
 				<div class="col-xs-12 <?php if ($i % 2 === 0) { echo 'shotRecordsBody'; } else { echo 'shotRecordsBodyAlt' ;} ?>">
 					<div class="col-xs-3 shotRecordsContent">
-=======
-				<div class="col-xs-12 {{ $i % 2 === 0 ? 'shotRecordsBody' : 'shotRecordsBodyAlt' }}">
-					<div class="col-xs-6 shotRecordsContent">
->>>>>>> 3952467ace3f34e1a61c0cb7c358de54637cb109
 						{{ $shot->shotName }}
 					</div>
 
@@ -89,6 +80,7 @@
 		                </select>
 		        	</div>
 		        </div>
+
 				
 				<div class="col-xs-6">
 					<div class="col-xs-12 formLabel">Date Administered</div>
