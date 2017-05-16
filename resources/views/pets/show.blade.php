@@ -15,7 +15,11 @@
 
 	@if (sizeof($shots) === 0) 
 		<div class="col-xs-12 noRecordsFound">Sorry, no records available! :(</div>
+<<<<<<< HEAD
 		<div class="col-xs-offset-4 col-xs-4"><img src="/img/<?php if ($pet->species == 'dog') { echo 'noRecordsDog.jpg'; } else { echo 'noRecordsCat.jpg'; } ?>" alt="No Records Found Sad Pet" class="noRecordsPicture"></div>
+=======
+		<div class="col-xs-offset-4 col-xs-4"><img src="/img/{{ $pet->species == 'dog' ?'noRecordsDog.jpg' :'noRecordsCat.jpg' }}" alt="No Records Found Sad Puppy" class="noRecordsPicture"></div>
+>>>>>>> 3952467ace3f34e1a61c0cb7c358de54637cb109
 	@elseif (sizeof($shots) != 0)
 		<div class="col-xs-12 shotRecordsTable">
 
@@ -30,8 +34,13 @@
 
 			<?php $i = 0; ?>
 			@foreach ($pet->shots as $shot)
+<<<<<<< HEAD
 				<div class="col-xs-12 <?php if ($i % 2 === 0) { echo 'shotRecordsBody'; } else { echo 'shotRecordsBodyAlt' ;} ?>">
 					<div class="col-xs-3 shotRecordsContent">
+=======
+				<div class="col-xs-12 {{ $i % 2 === 0 ? 'shotRecordsBody' : 'shotRecordsBodyAlt' }}">
+					<div class="col-xs-6 shotRecordsContent">
+>>>>>>> 3952467ace3f34e1a61c0cb7c358de54637cb109
 						{{ $shot->shotName }}
 					</div>
 
@@ -61,7 +70,7 @@
 		<form action="{{ action('PetsController@shotStore', [$pet->id])}}" method="POST">
 		{!! csrf_field() !!}
 			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
-	            <div class="col-xs-8 formHeader">Add a new shot.</div>
+	            <div class="col-xs-8 formHeader">Add New Vaccination Record</div>
 	            <div class="col-xs-4 closeButton">
 	                <i class="fa fa-window-close" aria-hidden="true"></i>
 	            </div>
@@ -93,7 +102,7 @@
 					<div class="col-xs-12 formLabel">Renewal Date</div>
 
 					<div class="col-xs-12">
-						<input type="text" name="date_renewal" id="date_renewal" class="formInput" placeholder="DD/MM/YYYY" rrequired>
+						<input type="text" name="date_renewal" id="date_renewal" class="formInput" placeholder="DD/MM/YYYY" required>
 					</div>
 				</div>
 
