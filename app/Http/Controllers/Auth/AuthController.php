@@ -71,7 +71,7 @@ class AuthController extends Controller
             'password' => 'required|confirmed|min:6',
         ]);
 
-        $passwordsMatch = $request->password == $request->password_confirmation;
+        // $passwordsMatch = $request->password == $request->password_confirmation;
 
         $user = User::where('email', $request->email)->first();
         if ($user) {

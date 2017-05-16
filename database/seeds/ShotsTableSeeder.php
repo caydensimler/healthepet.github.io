@@ -54,7 +54,7 @@ class ShotsTableSeeder extends Seeder
         $feline_infectious_peritonitis->save();
 
         $giardia = new \App\Shot();
-        $giardia->shotName = "giardia";
+        $giardia->shotName = "Giardia";
         $giardia->species = 'Cat';
         $giardia->save();
 

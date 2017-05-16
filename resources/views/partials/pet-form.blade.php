@@ -7,10 +7,10 @@
             id="name" 
             name="name" 
             class="form-control" 
-            value="{{old('name')}}"
+            value="{{old('petName')}}"
         >
-        @if ($errors->has('name'))
-            {{ $errors->first('name') }}
+        @if ($errors->has('petName'))
+            {{ $errors->first('petName') }}
         @endif
 	</div>
 

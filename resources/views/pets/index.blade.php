@@ -34,7 +34,7 @@
                     {!! csrf_field() !!}
                         Add/Edit Image:
                         <input type="hidden" name="pet_id" value="{{ $pet->id }}">
-                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <input type="file" name="fileToUpload" id="fileToUpload" required>
                         <input type="submit" value="Upload Image" name="submit">
                     </form>
                 </div>	
