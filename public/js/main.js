@@ -213,7 +213,7 @@ $(document).ready(function(){
 	///////////////////
 	// Smooth Scrolling
 	///////////////////
-  	$(document).on('click', 'a', function(event){
+  	$(document).on('click', '.homepageLink', function(event){
 	    event.preventDefault();
 
 	    $('html, body').animate({
