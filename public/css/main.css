@@ -11,6 +11,10 @@
 	    
 	}
 
+	.error {
+		color: #E03D38;
+	}
+
 	.blur {
 		-webkit-filter: blur(3px);
 		-moz-filter: blur(3px);
