@@ -59,6 +59,8 @@ class PetsController extends Controller
     public function store(Request $request)
     {
 
+
+
         $pets = new Pet;
         $pets->petName = $request->petName;
         $pets->species = $request->species;
@@ -198,6 +200,7 @@ class PetsController extends Controller
         $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
         // Check if image file is a actual image or fake image
         if(isset($_POST["submit"])) {
+            // dd($_FILES);
             $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
             if($check !== false) {
                 $uploadOk = 1;
