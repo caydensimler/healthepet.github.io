@@ -46,7 +46,9 @@
 						{{ $shot->pivot->date_renewal }}
 					</div>
 
-					<div class="col-xs-3 shotRecordsContent"></div>
+					<div class="col-xs-3 shotRecordsContent">
+						{{ $pet->vet->name }}
+					</div>
 					<?php $i++ ?>
 				</div>
 			@endforeach
