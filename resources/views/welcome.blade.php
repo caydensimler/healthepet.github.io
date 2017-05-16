@@ -135,7 +135,7 @@
                 {!! csrf_field() !!}
                 <div class="col-xs-8 formHeader">
                     @if (session()->has('loginErrorMessage'))
-                        Invalid username or password.
+                        <div class="error">Invalid username or password.</div>
                     @else
                         Login with an existing account.
                     @endif
@@ -179,9 +179,9 @@
                 {!! csrf_field() !!}
                  <div class="col-xs-8 formHeader">
                     @if (session()->has('registerErrorMessage'))
-                        Email account already in use.
+                        <div class="error">Email account already in use.</div>
                     @elseif (session()->has('passwordErrorMessage'))
-                        Passwords do not match.
+                        <div class="error">Passwords do not match.</div>
                     @else
                         Register a new account.
                     @endif
@@ -193,28 +193,28 @@
                 <div class="col-xs-12">
                     <div class="col-xs-12 formLabel">Name</div>
                     <div class="col-xs-12">
-                        <input type="text" name="name" id="name" class="formInput" required>
+                        <input type="text" name="name" id="name" class="formInput" value="{{ session()->get('name') }}"required>
                     </div>  
                 </div>                  
 
                 <div class="col-xs-6">
                     <div class="col-xs-12 formLabel">Email Address</div>
                     <div class="col-xs-12">
-                        <input type="text" name="email" id="email" class="formInput" required>
+                        <input type="text" name="email" id="email" class="formInput"  value="{{ session()->get('email') }}" required>
                     </div>  
                 </div>                      
 
                 <div class="col-xs-6">
                     <div class="col-xs-12 formLabel">Phone Number</div>
                     <div class="col-xs-12">
-                        <input type="text" name="phoneNumber" id="phoneNumber" class="formInput" required>
+                        <input type="text" name="phoneNumber" id="phoneNumber" class="formInput"  value="{{ session()->get('phoneNumber') }}" required>
                     </div>
                 </div>  
 
                 <div class="col-xs-12">
                     <div class="col-xs-12 formLabel">Physical Address</div>
                     <div class="col-xs-12">
-                        <input type="text" name="address" id="address" placeholder="123 Pet St, Bark City, TX, 54321" class="formInput" required>
+                        <input type="text" name="address" id="address" placeholder="123 Pet St, Bark City, TX, 54321" class="formInput"  value="{{ session()->get('address') }} " required>
                     </div>  
                 </div>  
                 

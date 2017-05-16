@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Auth;
+use \Exception;
 
 class AuthController extends Controller
 {
@@ -74,37 +75,42 @@ class AuthController extends Controller
         // $passwordsMatch = $request->password == $request->password_confirmation;
 
         $user = User::where('email', $request->email)->first();
-        if ($user) {
-            $emailExists = $user->email == $request->email;
-        }
+        $emailExists = !is_null($user) && $user->email == $request->email;
+        $passwordsMatch = $request->password === $request->password_confirmation;
 
         // Validation passes and user doesn't already exist.
-        if ($validator->passes() && !$user) {
+        // Works but doesn't redirect.
+        if ($validator->passes() && !$user && $passwordsMatch) {
             $this->create($request->all());
-            return redirect ('/pets');
+            return redirect('/pets');
         }
         
-        // Validation passes and useer account exists w/o password
-        if ($validator->passes() && $user && !$user->password) {
+        // Validation passes and user account exists w/o password.
+        // Works but doesn't redirect.
+        if ($validator->passes() && $user && !$user->password && $passwordsMatch) {
             $this->create($request->all());
-            return redirect ('/pets');
+            return redirect('/pets');
         }
 
-        // Validation fails and passwords match.
-        if ($emailExists && !$user && $user->password && $passwordsMatch) {
+        // Validation fails because user already exists with a password.
+        // Works.
+        if ($emailExists && $user && $user->password) {
             Session::flash('registerErrorMessage', 'Email address already exists');
-            // throw new \Exception("This should never happen!");
             return redirect('/');
         }
 
-        // Validation passes and passwords do not match.
+        // Passwords do not match.
+        // Works
         if (!$passwordsMatch) {
             Session::flash('passwordErrorMessage', 'Passwords do not match.');
+            Session::flash('name', $request->name);
+            Session::flash('email', $request->email);
+            Session::flash('phoneNumber', $request->phoneNumber);
+            Session::flash('address', $request->address);
             return redirect('/');
         }
 
-        // validation fails and useer account exists w/o password
-        // validation fails and juser account exists w/ password
+        dd($emailExists , $user, $user->password);
         throw new Exception("This should never happen!");
 
     }
