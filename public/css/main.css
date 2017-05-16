@@ -842,7 +842,7 @@
 	}
 
 	.fileUploadLink {
-		border-bottom: .1vw solid #11151C;
+		/*border-bottom: .1vw solid #11151C;*/
 		font-size: 1.2vw;
 		margin-bottom: 2%;
 	}
