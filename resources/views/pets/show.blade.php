@@ -21,9 +21,9 @@
 
 			<div class="col-xs-12 shotRecordsHeaderBody">
 				<div class="col-xs-3 shotRecordsHeader">Vaccination Name</div>
-				<div class="col-xs-3 shotRecordsHeader">Clinic's Name</div>
 				<div class="col-xs-3 shotRecordsHeader">Date Administered</div>
 				<div class="col-xs-3 shotRecordsHeader">Renewal Date</div>
+				<div class="col-xs-3 shotRecordsHeader">Clinic's Name</div>
 			</div>
 
 
@@ -43,7 +43,9 @@
 						{{ $shot->pivot->date_renewal }}
 					</div>
 
-					<div class="col-xs-3 shotRecordsContent"></div>
+					<div class="col-xs-3 shotRecordsContent">
+						{{ $pet->vet->name }}
+					</div>
 					<?php $i++ ?>
 				</div>
 			@endforeach

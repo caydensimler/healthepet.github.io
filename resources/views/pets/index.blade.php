@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="col-xs-12 petOwnerRecordsLink">
-                    <a href="/pets/{{ $pet->id }}">Click here to view Loca's records. <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+                    <a href="/pets/{{ $pet->id }}">Click here to view {{ $pet->petName }}'s records. <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
                 </div>
 
 			</div>
