@@ -220,6 +220,16 @@ $(document).ready(function(){
 	        scrollTop: $( $.attr(this, 'href') ).offset().top
 	    }, 700);
 	});
+
+
+	///////////////////////////////////////////////////
+	// Show value of hidden file input for image upload
+	///////////////////////////////////////////////////
+	 $("input.hiddenInputFileUpload").bind("change", function() {
+       	var hiddenValue = $('input.hiddenInputFileUpload').val();
+		$(this).parent().parent().next().children().html(hiddenValue); 
+ 	});
+
 			
 			
 

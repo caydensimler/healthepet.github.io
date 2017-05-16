@@ -8,8 +8,8 @@
 	</div>
 
 	@if (Auth::user()->user_type === 'vet')
-	<div class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-4 treatmentTypeButton shotButton">
-		Add Vaccination	
+	<div class="col-xs-offset-5 col-xs-2 loginRegisterButtonBody">
+		<div class="shotButton"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Vaccination</div>
 	</div>
 	@endif
 
@@ -30,8 +30,8 @@
 
 			<?php $i = 0; ?>
 			@foreach ($pet->shots as $shot)
-				<div class="col-xs-12 {{ $i % 2 === 0 ? 'shotRecordsBody' : 'shotRecordsBodyAlt' }}">
-					<div class="col-xs-6 shotRecordsContent">
+				<div class="col-xs-12 <?php if ($i % 2 === 0) { echo 'shotRecordsBody'; } else { echo 'shotRecordsBodyAlt' ;} ?>">
+					<div class="col-xs-3 shotRecordsContent">
 						{{ $shot->shotName }}
 					</div>
 
@@ -42,6 +42,8 @@
 					<div class="col-xs-3 shotRecordsContent">
 						{{ $shot->pivot->date_renewal }}
 					</div>
+
+					<div class="col-xs-3 shotRecordsContent"></div>
 					<?php $i++ ?>
 				</div>
 			@endforeach
