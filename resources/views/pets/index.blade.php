@@ -43,13 +43,6 @@
                         <div class="addImage col-xs-12">Upload an image of your pet!</div>
 
                         <input type="hidden" name="pet_id" value="{{ $pet->id }}">
-<<<<<<< HEAD
-=======
-                        <input type="file" name="fileToUpload" id="fileToUpload" required>
-                        <input type="submit" value="Upload Image" name="submit">
-                    </form>
-                </div>	
->>>>>>> 3952467ace3f34e1a61c0cb7c358de54637cb109
 
                         <div class="col-xs-12">
                             <label for="fileToUpload" class="chooseFile">
