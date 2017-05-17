@@ -38,7 +38,7 @@ $(document).ready(function(){
 			$('.allContent').toggleClass('blur');
 		});
 
-		$('body > div.registerForm > div > form > div.col-xs-4.closeButton > i').click(function(){
+		$('body > div.registerForm > div > form > div > i').click(function(){
 			$('.allContent').toggleClass('blur');
 
 			$('.registerForm').fadeToggle(500);

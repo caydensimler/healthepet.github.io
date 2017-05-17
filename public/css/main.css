@@ -404,14 +404,15 @@
 		.formHeader {
 			color: #EFEFEF;
 			padding: 5%;
-			font-size: 2vw;
+			font-size: 1.8em;
 		}
 
 		.closeButton {
 			text-align: right;
 			color: #EFEFEF;
-			padding: 5%;
-			font-size: 2vw;
+			padding-top: 5%;
+			padding-bottom: 5%;
+			font-size: 1.5em;
 		}
 
 		.fa-window-close:hover {
@@ -424,8 +425,8 @@
 
 		.formInput {
 			width: 100%;
-			height: 2.5vw;
-			font-size: 1.5vw;
+			/*height: 2em;*/
+			font-size: 1.5em;
 			text-align: center;
 			margin-bottom: 2vw;
 			background-color: #383836;
@@ -441,7 +442,7 @@
 
 		.formLabel {
 			color: #EFEFEF;
-			font-size: 2vw;
+			font-size: 1.8em;
 		}
 
 		/* Placeholder Modifications */
@@ -611,7 +612,7 @@
 
 		.formRadioInput {
 			color: #EFEFEF;
-			font-size: 1.4vw;
+			font-size: 1.2em;
 			padding: 4%;
 		}
 
