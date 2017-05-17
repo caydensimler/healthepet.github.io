@@ -27,11 +27,11 @@
             <div class="col-xs-12 col-md-7 homeWhatIsText">
                 Pet Owners
                 <br>
+                <i class="fa fa-paw" aria-hidden="true"></i> Keep track of your pet's vaccination records all in one place.
+                <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Localized records from all clinic visits.
                 <br>
-                <i class="fa fa-paw" aria-hidden="true"></i> Keep track of all your pet's vaccination records all in one place.
-                <br>
-                <i class="fa fa-paw" aria-hidden="true"></i> No hastle of keeping physical copies of all treatments to your pet(s).
+                <i class="fa fa-paw" aria-hidden="true"></i> Customizable page for pet owners. 
                 <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Completely paperless.
             </div>
@@ -45,11 +45,11 @@
             <div class="col-xs-12 col-md-7 homeWhatIsText">
                 Vet Clinics
                 <br>
-                <i class="fa fa-paw" aria-hidden="true"></i> Ability to pull in new patient's records from other clinics.
-                <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Fully structured list of all patients in your personal directory.
                 <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Comprehensive table of all vaccinations to an animal.
+                <br>
+                <i class="fa fa-paw" aria-hidden="true"></i> Ability to search through pet records.
                 <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Completely paperless.
             </div>
