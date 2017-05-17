@@ -20,11 +20,11 @@
         <div class="col-xs-12 homeWhatIs">What can HealthEPet do for you?</div>
 
         <div class="col-xs-12 homeInfoBody">
-            <div class="col-xs-offset-1 col-xs-3">
+            <div class="col-xs-offset-1 col-xs-10 col-md-offset-1 col-md-3">
                 <img src="/img/dog-with-person.jpg" alt="dog with person" class="homeInfoPicture">
             </div>
 
-            <div class="col-xs-7 homeWhatIsText">
+            <div class="col-xs-12 col-md-7 homeWhatIsText">
                 Pet Owners
                 <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Localized records from all clinic visits.
@@ -38,7 +38,11 @@
         </div>   
 
         <div class="col-xs-12 homeInfoBody homeInfoBottom">
-            <div class="col-xs-offset-1 col-xs-6 homeWhatIsText">
+            <div class="col-xs-offset-1 col-xs-10 col-md-offset-1 col-md-3">
+                <img src="/img/cat-with-vet.jpg" alt="dog with person" class="homeInfoPicture">
+            </div>
+
+            <div class="col-xs-12 col-md-7 homeWhatIsText">
                 Vet Clinics
                 <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Ability to pull in new patient's records from other clinics.
@@ -50,19 +54,17 @@
                 <i class="fa fa-paw" aria-hidden="true"></i> Completely paperless.
             </div>
 
-            <div class="col-xs-3">
-                <img src="/img/cat-with-vet.jpg" alt="dog with person" class="homeInfoPicture">
-            </div>
         </div>
 
     </div>
 
     <div class="col-xs-12 contactBody">
 
-        <div class="col-xs-12 homeWhatIs contactCreators" id="contact">Questions? Contact the site creators.</div>
+        <div class="col-xs-12 contactCreators" id="contact">Questions? Contact the site creators.</div>
             
         <div class="col-xs-12 siteCreators">
-            <div class="col-xs-4">
+
+            <div class="col-xs-12 col-md-4">
                 <div class="col-xs-12 siteCreatorsName">Cayden Simler</div>
 
                 <div class="col-xs-12">
@@ -79,7 +81,7 @@
 
             </div>
 
-            <div class="col-xs-4">
+            <div class="col-xs-12 col-md-4">
                 <div class="col-xs-12 siteCreatorsName">John Nichols</div>
 
                 <div class="col-xs-12">
@@ -96,7 +98,7 @@
 
             </div>
 
-            <div class="col-xs-4">
+            <div class="col-xs-12 col-md-4">
                 <div class="col-xs-12 siteCreatorsName">Thomas Hayes</div>
 
                 <div class="col-xs-12">
