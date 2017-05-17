@@ -217,7 +217,7 @@
                 </div>  
                 
 
-                <div class="col-xs-12">
+                <div class="col-xs-12 registerRadio">
                     <div class="col-xs-12">
                         <div class="col-xs-12 radioForm">
                             <div class="col-xs-12">
@@ -226,7 +226,7 @@
 
                                 </div>
                                 <div class="col-xs-12 col-md-6 formRadioInput">
-                                    <input type="radio" name="user_type" value="vet" class="formRadioInput"> Vet Clinic
+                                    <input type="radio" name="user_type" value="vet" class="formRadioInput"> Vet Clinic<span class="invisible">O</span>
                                 </div>
                             </div>
                         </div>  
