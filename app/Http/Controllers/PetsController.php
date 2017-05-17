@@ -105,7 +105,7 @@ class PetsController extends Controller
         $record->shot_id = $request->shot_id;
         $record->date_administered = $request->date_administered;
         $record->date_renewal = $request->date_renewal;
-        // dd($record);
+        $record->vet_id = \Auth::id();
         $record->save();
 
         return redirect()->action('PetsController@show', $id);
