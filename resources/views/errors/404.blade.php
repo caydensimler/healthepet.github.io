@@ -15,7 +15,7 @@
     </head>
     <body>
 
-        <div class="col-xs-12 header404">Sorry, looks like our dog ate that page!</div>
+        <div class="col-xs-12 header404">Sorry, looks like our guard dog ate that page!</div>
         <div class="col-xs-12 backLink">
             <a href="#" onClick="history.go(-1);return true;">click here to go back to where you came from</a>
         </div>
