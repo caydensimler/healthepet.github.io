@@ -196,14 +196,14 @@
                 </div>                  
 
                 <div class="col-xs-6">
-                    <div class="col-xs-12 formLabel">Email Address</div>
+                    <div class="col-xs-12 formLabel">Email</div>
                     <div class="col-xs-12">
                         <input type="email" name="email" id="email" class="formInput"  value="{{ session()->get('email') }}" required>
                     </div>  
                 </div>                      
 
                 <div class="col-xs-6">
-                    <div class="col-xs-12 formLabel">Phone Number</div>
+                    <div class="col-xs-12 formLabel">Phone</div>
                     <div class="col-xs-12">
                         <input type="text" name="phoneNumber" id="phoneNumber" class="formInput"  value="{{ session()->get('phoneNumber') }}" required>
                     </div>
