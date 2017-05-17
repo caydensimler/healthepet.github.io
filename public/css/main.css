@@ -2,12 +2,14 @@
 
 	html {
 	  	position: relative;
-	  	min-height: 100%;
+	  	height: 100%;
+	  	overflow: hidden;
 	}
 
 	html, body {
  		height: 100%;
   		margin: 0;
+  		overflow: hidden;
 	}
 
 	body {
@@ -15,6 +17,8 @@
 	    background-color: #EFEFEF;
 	    background-image: url('/img/pawPrint.png');
 	    background-size: 50%;
+	    height: 100%;
+	    overflow: auto;
 	}
 
 	.error {
