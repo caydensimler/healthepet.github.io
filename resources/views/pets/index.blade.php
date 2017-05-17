@@ -39,7 +39,7 @@
                     
                     <form action="{{ action('PetsController@image', $pet->id) }}" method="post" enctype="multipart/form-data" novalidate>
                     {!! csrf_field() !!}
-                        <div class="addImage col-xs-12">Upload an image!</div>
+                        <div class="addImage col-xs-12">Upload {{ $pet->petName }}'s picture here!</div>
 
                         <input type="hidden" name="pet_id" value="{{ $pet->id }}">
 
@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="col-xs-12 petOwnerRecordsLink">
-                    <a href="/pets/{{ $pet->id }}">Click here to view {{ $pet->petName }}'s records. <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+                    <a href="/pets/{{ $pet->id }}">Click here to view {{ $pet->petName }}'s records <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
                 </div>
 
 			</div>
