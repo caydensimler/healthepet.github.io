@@ -38,7 +38,7 @@ $(document).ready(function(){
 			$('.allContent').toggleClass('blur');
 		});
 
-		$('body > div.registerForm > div > form > div.col-xs-4.closeButton > i').click(function(){
+		$('body > div.registerForm > div > form > div > i').click(function(){
 			$('.allContent').toggleClass('blur');
 
 			$('.registerForm').fadeToggle(500);
@@ -225,9 +225,28 @@ $(document).ready(function(){
 	///////////////////////////////////////////////////
 	// Show value of hidden file input for image upload
 	///////////////////////////////////////////////////
-	 $("input.hiddenInputFileUpload").bind("change", function() {
-       	var hiddenValue = $('input.hiddenInputFileUpload').val();
-		$(this).parent().parent().next().children().html(hiddenValue); 
+	$("input.hiddenInputFileUpload1").bind("change", function() {
+       	console.log($(this).parent().parent().next().children());
+       	var hiddenValue = $(this).val();
+		$('.fileUploadLink1').html(hiddenValue); 
+ 	});	 
+
+	$("input.hiddenInputFileUpload2").bind("change", function() {
+       	console.log($(this).parent().parent().next().children());
+       	var hiddenValue = $(this).val();
+		$('.fileUploadLink2').html(hiddenValue); 
+ 	});	 
+
+	$("input.hiddenInputFileUpload3").bind("change", function() {
+       	console.log($(this).parent().parent().next().children());
+       	var hiddenValue = $(this).val();
+		$('.fileUploadLink3').html(hiddenValue); 
+ 	});	 
+
+	$("input.hiddenInputFileUpload4").bind("change", function() {
+       	console.log($(this).parent().parent().next().children());
+       	var hiddenValue = $(this).val();
+		$('.fileUploadLink4').html(hiddenValue); 
  	});
 
 			

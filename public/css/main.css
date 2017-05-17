@@ -8,7 +8,8 @@
 	body {
 	    font-family: 'Open Sans Condensed', sans-serif;
 	    background-color: #EFEFEF;
-	    
+	    background-image: url('/img/pawPrint.png');
+	    background-size: 50%;
 	}
 
 	.error {
@@ -48,6 +49,7 @@
 
 	.headerImage {
 		max-width: 100%;
+		height: auto;
 		padding-top: 50px;
 		border-radius: 0 0 90% 0;
 		border: .1vw solid #11151C;
@@ -84,7 +86,7 @@
 	/* What is HealthEPet? */
 
 		.homeWhatIs {
-			font-size: 4vw;
+			font-size: 2.5em;
 		}
 
 		.homeInfoBody {
@@ -93,16 +95,18 @@
 
 		.homeInfoPicture {
 			border-radius: 100%;
-			width: auto;
-			height: 20vw;
-			width: 20vw;
+			/*width: auto;*/
+			height: 275px;
+			width: 275px;
 			border: .1vw solid #11151C;
 			margin-top: 3%;
-			text-align: center;
+		    display: block;
+		    margin-left: auto;
+		    margin-right: auto;
 		}
 
 		.homeWhatIsText {
-			font-size: 2vw;
+			font-size: 1.8em;
 			margin-top: 4%;
 		}
 
@@ -144,6 +148,8 @@
 
 	.allContent {
 		background-color: #EFEFEF;
+	    background-image: url('/img/pawPrint.png');
+	    background-size: 50%;
 	}
 
 	/* Pagination */
@@ -246,6 +252,7 @@
 
 	.contactCreators {
 		margin-top: 2%;
+		font-size: 2em;
 	}
 
 	.siteCreators {
@@ -254,12 +261,12 @@
 	}
 
 	.siteCreatorsName {
-		font-size: 2.5vw;
+		font-size: 2em;
 		text-align: center;
 	}
 
 	.siteCreatorsPicture {
-		height: 15vw;
+		height: 220px;
 		width: auto;
 	    display: block;
 	    margin-left: auto;
@@ -268,7 +275,7 @@
 
 	.siteCreatorsLink {
 		text-align: center;
-		font-size: 1.5vw;
+		font-size: 1.5em;
 		margin-top: 2%;
 	}
 
@@ -397,14 +404,15 @@
 		.formHeader {
 			color: #EFEFEF;
 			padding: 5%;
-			font-size: 2vw;
+			font-size: 1.8em;
 		}
 
 		.closeButton {
 			text-align: right;
 			color: #EFEFEF;
-			padding: 5%;
-			font-size: 2vw;
+			padding-top: 5%;
+			padding-bottom: 5%;
+			font-size: 1.5em;
 		}
 
 		.fa-window-close:hover {
@@ -417,8 +425,8 @@
 
 		.formInput {
 			width: 100%;
-			height: 2.5vw;
-			font-size: 1.5vw;
+			/*height: 2em;*/
+			font-size: 1.5em;
 			text-align: center;
 			margin-bottom: 2vw;
 			background-color: #383836;
@@ -434,7 +442,7 @@
 
 		.formLabel {
 			color: #EFEFEF;
-			font-size: 2vw;
+			font-size: 1.8em;
 		}
 
 		/* Placeholder Modifications */
@@ -604,7 +612,7 @@
 
 		.formRadioInput {
 			color: #EFEFEF;
-			font-size: 1.4vw;
+			font-size: 1.2em;
 			padding: 4%;
 		}
 
@@ -842,7 +850,7 @@
 	}
 
 	.fileUploadLink {
-		border-bottom: .1vw solid #11151C;
+		/*border-bottom: .1vw solid #11151C;*/
 		font-size: 1.2vw;
 		margin-bottom: 2%;
 	}
