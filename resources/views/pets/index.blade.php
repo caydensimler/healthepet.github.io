@@ -28,11 +28,11 @@
 
 			<div class="col-xs-12 col-sm-6 petInformation">
 
-                <div class="col-xs-offset-1 col-xs-5">
+                <div class="col-xs-offset-1 col-xs-6">
                     <img class="petHeaderPicture img img-responsive" src="/img/{{ $pet->img == null ? 'default.png' : $pet->img }}" alt="dog/cat picture">
                 </div>  
 
-                <div class="col-xs-6">
+                <div class="col-xs-5">
 
                     <div class="col-xs-12 petNameVet">{{ $pet->petName }}</div>
 
@@ -75,11 +75,11 @@
           {!! $pets->render() !!}
         </div>
 
-        <div class="push"></div>
+<!--         <div class="push"></div>
 
         <footer class="footer">
             <div class="col-xs-12 copyrightFooter">Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 HealthEPet. All Rights Reserved.</div>
-        </footer>
+        </footer> -->
 
         
 @stop
