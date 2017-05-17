@@ -7,20 +7,17 @@
 		{{ Auth::user()->name }}'s Records
 	</div>
 
-	<div class="col-xs-offset-5 col-xs-2 loginRegisterButtonBody">
+	<div class="col-xs-12 col-md-offset-4 col-md-4 loginRegisterButtonBody">
 		<div class="addPetButton"><i class="fa fa-plus-square" aria-hidden="true"></i> Add New Pet</div>
 	</div>
 
     <?php $i = 1; ?>
 	<div class="col-xs-12 petInfoHolder">
 		@foreach($pets as $pet)
-			<div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8 petBody">
-				<div class="col-xs-5 petNameVet">{{ $pet->petName }}</div>
-				<div class="col-xs-7 vetRecordsLink">
-					<a href="/pets/{{ $pet->id }}">Click here to add a new vaccination <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
-				</div>
+			<div class="col-xs-offset-1 col-xs-10 petBody">
+				<div class="col-xs-12 petNameVet">{{ $pet->petName }}</div>
 
-				<div class="col-xs-12 petInformationBody petInfoBody<?= $i ?>">
+				<div class="col-xs-12 col-md-6 petInformationBody petInfoBody<?= $i ?>">
 
 					<div class="col-xs-10 petInformationHeader">Pet Information</div>  
                     <div class="col-xs-2 expandInfo expandInfoPet<?= $i ?>">
@@ -28,32 +25,32 @@
                     </div>
 
                     <div class="petInfo" style="display: none;">
-    					<div class="col-xs-6 petRecordInformation">
+    					<div class="col-xs-12 petRecordInformation">
     						<div class="col-xs-4 subHeader">Species:</div>
     						<div class="col-xs-8">{{ ucfirst($pet->species) }}</div>
     					</div>					
 
-    					<div class="col-xs-6 petRecordInformation">
+    					<div class="col-xs-12 petRecordInformation">
     						<div class="col-xs-4 subHeader">Breed:</div>
     						<div class="col-xs-8">{{ $pet->breed }}</div>
     					</div>					
 
-    					<div class="col-xs-6 petRecordInformation">
+    					<div class="col-xs-12 petRecordInformation">
     						<div class="col-xs-4 subHeader">Sex:</div>
     						<div class="col-xs-8">{{ ucfirst($pet->sex) }}</div>
     					</div>					
 
-    					<div class="col-xs-6 petRecordInformation">
+    					<div class="col-xs-12 petRecordInformation">
     						<div class="col-xs-4 subHeader">Weight:</div>
     						<div class="col-xs-8">{{ $pet->weight }} pounds</div>
     					</div>					
 
-    					<div class="col-xs-6 petRecordInformation">
+    					<div class="col-xs-12 petRecordInformation">
     						<div class="col-xs-4 subHeader">Color(s):</div>
     						<div class="col-xs-8">{{ $pet->color }}</div>
     					</div>					
 
-    					<div class="col-xs-6 petRecordInformation">
+    					<div class="col-xs-12 petRecordInformation">
     						<div class="col-xs-4 subHeader">Age:</div>
     						<div class="col-xs-8">{{ $pet->age }} years old</div>
     					</div>
@@ -62,7 +59,7 @@
 				</div>
 			
 
-				<div class="col-xs-12 petInformationBody petOwnerInfo<?= $i ?>">
+				<div class="col-xs-12 col-md-6 petInformationBody petOwnerInfo<?= $i ?>">
 
 					<div class="col-xs-10 petInformationHeader">Owner Information</div>
                     <div class="col-xs-2 expandInfo expandInfoOwner<?= $i ?>"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
@@ -74,7 +71,7 @@
     					</div>						
 
     					<div class="col-xs-12 petRecordInformation">
-    						<div class="col-xs-4 subHeader">Phone Number:</div>
+    						<div class="col-xs-4 subHeader">Phone:</div>
     						<div class="col-xs-8">{{ $pet->user->phoneNumber }}</div>
     					</div>						
 
@@ -85,6 +82,10 @@
                     </div>					
 
 				</div>
+
+                <div class="col-xs-12 vetRecordsLink">
+                    <a href="/pets/{{ $pet->id }}">Click here to add a new vaccination <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+                </div>
 
 			</div> 
 

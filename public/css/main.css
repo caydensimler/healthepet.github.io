@@ -602,7 +602,7 @@
 		}
 
 		.addPetButton {
-			font-size: 2vw;
+			font-size: 2em;
 			text-align: center;
 			border: .1vw solid #11151C;
 			padding-left: 4%;
@@ -759,7 +759,7 @@
 	}
 
 	.petNameVet {
-		font-size: 3.5em;
+		font-size: 2.5em;
 		text-align: center;
 		color: #11151C;
 	}
@@ -769,19 +769,18 @@
 	}
 
 	.petRecordInformation {
-		font-size: 1.5vw;
+		font-size: 1em;
 	}
 
 	.petInformationBody {
 		background-color: #7B7B7F;
-		margin-bottom: 2%;
 		padding-top: 2%;
 		padding-bottom: 2%;
 		cursor: pointer;
+		border: 1em solid #EFEFEF;
 	}
 
 	.petInfoHolder {
-		/*position: absolute;*/
 		margin-top: 1%;
 	}
 
@@ -790,7 +789,7 @@
 	}
 
 	.petInformationHeader {
-		font-size: 2vw;
+		font-size: 1em;
 	}
 
 	.recordsLink {
@@ -811,12 +810,10 @@
 	}
 
 	.vetRecordsLink {
-		text-align: right;
-		font-size: 2vw;
-		margin-top: 2%;
+		font-size: 1.5em;
 		margin-bottom: 2%;
 		color: #11151C;
-		/*margin-left: 39%;*/
+		text-align: center;
 	}
 
 	.vetRecordsLink a {
@@ -829,8 +826,8 @@
 
 	.expandInfo {
 		text-align: right;
-		margin-top: 1%;
-		font-size: 2vw;
+		/*margin-top: 1%;*/
+		font-size: 1.5em;
 		cursor: pointer;
 	}
 
@@ -840,12 +837,10 @@
 
 	.petInfo {
 		margin-top: 3%;
-		margin-bottom: 3%;
 	}	
 
 	.petOwnerInfo {
 		margin-top: 3%;
-		margin-bottom: 3%;
 	}
 
 	.petOwnerRecordsLink {
