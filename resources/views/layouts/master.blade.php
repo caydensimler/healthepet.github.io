@@ -39,6 +39,9 @@
                             <li>
                                 <a href="#contact" class="homepageLink">Contact</a>
                             </li>
+                            <li class="hidden-md">
+                                <div class="col-xs-12"><hr></div>
+                            </li>
 
                         @endif 
 
