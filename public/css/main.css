@@ -5,6 +5,11 @@
 	  	min-height: 100%;
 	}
 
+	html, body {
+ 		height: 100%;
+  		margin: 0;
+	}
+
 	body {
 	    font-family: 'Open Sans Condensed', sans-serif;
 	    background-color: #EFEFEF;
@@ -144,12 +149,22 @@
 			cursor: pointer;
 		}
 
+	/* Footer */
+
+		.footer, .push {
+  			height: 50px;
+		}
+
 
 
 	.allContent {
 		background-color: #EFEFEF;
 	    background-image: url('/img/pawPrint.png');
 	    background-size: 50%;
+		min-height: 100%;
+		/* Equal to height of footer */
+		/* But also accounting for potential margin-bottom of last child */
+		margin-bottom: -50px;
 	}
 
 	/* Pagination */
@@ -508,18 +523,13 @@
 		}
 
 		.petHeaderPicture {
-			background-size: cover;
-			background-repeat: no-repeat;
 			border: .1vw solid #11151C;
-			height: 20vw;
-			width: 20vw;
+			height: 225px;
+			width: 225px;
 			border-radius: 100%;
-		}
-
-		.petDescriptionBody {
-			/*border: .1vw solid #11151C;*/
-			height: 20vw;
-			color: black;
+		    display: block;
+		    margin-left: auto;
+		    margin-right: auto;
 		}
 
 		.petName {
@@ -723,7 +733,8 @@
 	}
 
 	.petNameVet {
-		font-size: 3.5vw;
+		font-size: 3.5em;
+		text-align: center;
 		color: #11151C;
 	}
 
@@ -812,8 +823,9 @@
 	}
 
 	.petOwnerRecordsLink {
-		font-size: 2vw;
+		font-size: 2em;
 		text-align: center;
+		margin-top: 2%;
 	}
 
 	.petOwnerRecordsLink a {
@@ -826,14 +838,18 @@
 	}
 
 	.addImage {
-		font-size: 1.5vw;
+		font-size: 1.5em;
+		text-align: center;
 	}
 
 	.chooseFile {
+	    display: block;
+	    margin-left: auto;
+	    margin-right: auto;
 		text-align: center;
 		background-color: #11151C;
 		color: #EFEFEF;
-		font-size: 1.5vw;
+		font-size: 1.5em;
 		padding: 2%;
 		cursor: pointer;
 		border: .1vw solid #EFEFEF;
@@ -851,7 +867,8 @@
 
 	.fileUploadLink {
 		/*border-bottom: .1vw solid #11151C;*/
-		font-size: 1.2vw;
+		text-align: center;
+		font-size: 1.2em;
 		margin-bottom: 2%;
 	}
 
