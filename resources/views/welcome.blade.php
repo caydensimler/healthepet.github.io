@@ -20,11 +20,11 @@
         <div class="col-xs-12 homeWhatIs">What can HealthEPet do for you?</div>
 
         <div class="col-xs-12 homeInfoBody">
-            <div class="col-xs-offset-1 col-xs-10 col-md-offset-1 col-md-3">
-                <img src="/img/dog-with-person.jpg" alt="dog with person" class="homeInfoPicture">
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-3">
+                <img src="/img/dog-with-person.jpg" alt="dog with person" class="homeInfoPicture img img-responsive">
             </div>
 
-            <div class="col-xs-12 col-md-7 homeWhatIsText">
+            <div class="col-xs-12 col-sm-7 homeWhatIsText">
                 Pet Owners
                 <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Keep track of your pet's vaccination records all in one place.
@@ -38,11 +38,11 @@
         </div>   
 
         <div class="col-xs-12 homeInfoBody homeInfoBottom">
-            <div class="col-xs-offset-1 col-xs-10 col-md-offset-1 col-md-3">
-                <img src="/img/cat-with-vet.jpg" alt="dog with person" class="homeInfoPicture">
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-3">
+                <img src="/img/cat-with-vet.jpg" alt="dog with person" class="homeInfoPicture img img-responsive">
             </div>
 
-            <div class="col-xs-12 col-md-7 homeWhatIsText">
+            <div class="col-xs-12 col-sm-7 homeWhatIsText">
                 Vet Clinics
                 <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Fully structured list of all patients in your personal directory.
