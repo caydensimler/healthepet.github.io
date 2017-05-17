@@ -30,7 +30,7 @@
 			<div class="col-xs-12">
 				<div class="col-xs-12 formLabelAccount">Email Address</div>
 				<div class="col-xs-12">
-					<input class="formInputAccount" type="text" name="email" value="{{ $user->email }}" placeholder="Email Address" required>
+					<input class="formInputAccount" type="email" name="email" value="{{ $user->email }}" placeholder="Email Address" required>
 				</div>
 			</div>		
 
