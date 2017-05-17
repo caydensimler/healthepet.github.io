@@ -55,7 +55,7 @@
 
     					<div class="col-xs-6 petRecordInformation">
     						<div class="col-xs-4 subHeader">Age:</div>
-    						<div class="col-xs-8">{{ $pet->age }} years</div>
+    						<div class="col-xs-8">{{ $pet->age }} years old</div>
     					</div>
                     </div>
 
@@ -190,7 +190,7 @@
                 <div class="col-xs-12">
                     <div class="col-xs-12 formLabel">Owner's Name</div>
                     <div class="col-xs-12">
-                        <input type="text" name="name" id="name" class="formInput" placeholder="Bob Bobberson" required>
+                        <input type="text" name="name" id="name" class="formInput" placeholder="Harrison Ford" required>
                     </div>
                 </div>
 
@@ -204,7 +204,7 @@
                 <div class="col-xs-6">
                     <div class="col-xs-12 formLabel">Owner's Email</div>
                     <div class="col-xs-12">
-                        <input type="text" name="email" id="email" class="formInput" placeholder="petlover@gmail.com" required>
+                        <input type="text" name="email" id="email" class="formInput" placeholder="hford@gmail.com" required>
                     </div>
 
                 </div>     
