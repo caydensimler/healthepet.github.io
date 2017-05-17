@@ -27,6 +27,8 @@
 		-o-filter: blur(3px);
 		-ms-filter: blur(3px);
 		filter: blur(3px);
+		height: 100%;
+  		overflow: hidden;
 	}
 
 	.fa-paw {
