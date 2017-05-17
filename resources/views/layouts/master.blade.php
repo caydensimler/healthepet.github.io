@@ -87,7 +87,9 @@
 
     @yield('content')
 
-    <div class="col-xs-12 copyrightFooter">Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 HealthEPet. All Rights Reserved.</div>
+    <div class="allContent">
+        <div class="col-xs-12 copyrightFooter">Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 HealthEPet. All Rights Reserved.</div>
+    </div>
 
 
     <!-- jQuery CDN -->
