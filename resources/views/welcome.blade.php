@@ -60,7 +60,7 @@
 
     <div class="col-xs-12 contactBody">
 
-        <div class="col-xs-12 contactCreators" id="contact">Questions? Contact the site creators.</div>
+        <div class="col-xs-12 contactCreators" id="contact">Questions? Contact Us Here!</div>
             
         <div class="col-xs-12 siteCreators">
 
@@ -118,7 +118,7 @@
 
     </div>
 
-    <div class="col-xs-12 copyrightFooter">Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 HealthEPet. All Rights Reserved.</div>
+<!--     <div class="col-xs-12 copyrightFooter">Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 HealthEPet. All Rights Reserved.</div> -->
     
         
 
@@ -139,7 +139,7 @@
                     @if (session()->has('loginErrorMessage'))
                         <div class="error">Invalid username or password.</div>
                     @else
-                        Login with an existing account.
+                        Login with an existing account
                     @endif
                 </div>
                 <div class="col-xs-1 closeButton">
@@ -185,7 +185,7 @@
                     @elseif (session()->has('passwordErrorMessage'))
                         <div class="error">Passwords do not match.</div>
                     @else
-                        Register a new account.
+                        Register a new account
                     @endif
                 </div>
                 <div class="col-xs-1 closeButton">
@@ -202,7 +202,7 @@
                 <div class="col-xs-6">
                     <div class="col-xs-12 formLabel">Email Address</div>
                     <div class="col-xs-12">
-                        <input type="text" name="email" id="email" class="formInput"  value="{{ session()->get('email') }}" required>
+                        <input type="email" name="email" id="email" class="formInput"  value="{{ session()->get('email') }}" required>
                     </div>  
                 </div>                      
 
@@ -225,11 +225,11 @@
                     <div class="col-xs-12 radioForm">
                         <div class="col-xs-12">
                             <div class="col-xs-6 formRadioInput">
-                                <input type="radio" name="user_type" value="owner" class="formRadioInput" required> I am a pet owner.
+                                <input type="radio" name="user_type" value="owner" class="formRadioInput" required> Pet Owner
 
                             </div>
                             <div class="col-xs-6 formRadioInput">
-                                <input type="radio" name="user_type" value="vet" class="formRadioInput"> I am a vet clinic.
+                                <input type="radio" name="user_type" value="vet" class="formRadioInput"> Vet Clinic
                             </div>
                         </div>
                     </div>  
