@@ -195,14 +195,14 @@
                     </div>  
                 </div>                  
 
-                <div class="col-xs-6">
+                <div class="col-xs-12 col-md-6">
                     <div class="col-xs-12 formLabel">Email</div>
                     <div class="col-xs-12">
                         <input type="email" name="email" id="email" class="formInput"  value="{{ session()->get('email') }}" required>
                     </div>  
                 </div>                      
 
-                <div class="col-xs-6">
+                <div class="col-xs-12 col-md-6">
                     <div class="col-xs-12 formLabel">Phone</div>
                     <div class="col-xs-12">
                         <input type="text" name="phoneNumber" id="phoneNumber" class="formInput"  value="{{ session()->get('phoneNumber') }}" required>
@@ -221,11 +221,11 @@
                     <div class="col-xs-12">
                         <div class="col-xs-12 radioForm">
                             <div class="col-xs-12">
-                                <div class="col-xs-6 formRadioInput">
+                                <div class="col-xs-12 col-md-6 formRadioInput">
                                     <input type="radio" name="user_type" value="owner" class="formRadioInput" required> Pet Owner
 
                                 </div>
-                                <div class="col-xs-6 formRadioInput">
+                                <div class="col-xs-12 col-md-6 formRadioInput">
                                     <input type="radio" name="user_type" value="vet" class="formRadioInput"> Vet Clinic
                                 </div>
                             </div>
