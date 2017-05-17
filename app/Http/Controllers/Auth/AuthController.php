@@ -110,7 +110,6 @@ class AuthController extends Controller
             return redirect('/');
         }
 
-        dd($emailExists , $user, $user->password);
         throw new Exception("This should never happen!");
 
     }
