@@ -917,6 +917,24 @@
 	}
 
 
+/* 404 Error Page */
+
+	.header404 {
+		font-size: 4em;
+		text-align: center;
+		margin-top: 5%;
+	}
+
+	.backLink {
+		text-align: center;
+		font-size: 2em;
+	}
+
+	.backLink a {
+		color: black;
+	}
+
+
 
 
 
