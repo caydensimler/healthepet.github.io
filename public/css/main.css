@@ -9,7 +9,6 @@
 	html, body {
  		height: 100%;
   		margin: 0;
-  		overflow: hidden;
 	}
 
 	body {
@@ -18,7 +17,8 @@
 	    background-image: url('/img/pawPrint.png');
 	    background-size: 50%;
 	    height: 100%;
-	    overflow: auto;
+	    -webkit-overflow-scrolling: touch;
+    	overflow-y:auto;
 	}
 
 	.error {
