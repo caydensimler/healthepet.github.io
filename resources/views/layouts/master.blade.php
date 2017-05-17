@@ -24,12 +24,14 @@
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
-                        <i class="fa fa-paw" aria-hidden="true"> Menu </i>
+                        <i class="fa fa-paw" aria-hidden="true"></i>
+                        <span class="navbarMenuSelection"> Menu </span>
+                        <i class="fa fa-paw" aria-hidden="true"></i>
                     </button>
                         
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav navbar-left">
                         @if (!Auth::check())
                             <li>
                                 <a href="#about" class="homepageLink">About</a>
@@ -42,6 +44,9 @@
 
                         @if (Auth::check())
                         <li><a href="{{ action('PetsController@index') }}">HealthEPet</a></li>
+                        <li class="hidden-md">
+                            <div class="col-xs-12"><hr></div>
+                        </li>
                         @endif
                         @if (Auth::check() && Auth::user()->user_type === 'vet')
                             <li>
