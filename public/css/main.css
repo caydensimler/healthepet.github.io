@@ -58,7 +58,7 @@
 		max-width: 100%;
 		height: auto;
 		padding-top: 50px;
-		border-radius: 0 0 90% 0;
+		border-radius: 0 0 50% 0;
 		border: .1vw solid #11151C;
 	}
 
@@ -93,7 +93,9 @@
 	/* What is HealthEPet? */
 
 		.homeWhatIs {
-			font-size: 2.5em;
+			font-size: 2em;
+			text-align: center;
+			border-bottom: .05em solid #11151C;
 		}
 
 		.homeInfoBody {
@@ -292,6 +294,8 @@
 	.contactCreators {
 		margin-top: 2%;
 		font-size: 2em;
+		text-align: center;
+		border-bottom: .05em solid #11151C;
 	}
 
 	.siteCreators {
