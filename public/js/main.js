@@ -63,24 +63,22 @@ $(document).ready(function(){
 	////////////////////////////////
 	// Authentication Error Messages
 	////////////////////////////////
+		if ($(".loginError").length > 0) {
+			$('.loginForm').fadeToggle(500);
 
-	if ($(".loginError").length > 0) {
-		$('.loginForm').fadeToggle(500);
+			$('.allContent').toggleClass('blur');
+		};
 
-		$('.allContent').toggleClass('blur');
-	}
+		if ($(".registerError").length > 0) {
+			$('.registerForm').fadeToggle(500);
 
-	if ($(".registerError").length > 0) {
-		$('.registerForm').fadeToggle(500);
-
-		$('.allContent').toggleClass('blur');
-	}
+			$('.allContent').toggleClass('blur');
+		};
 
 
-	///////////////
-	// Shot Records
-	///////////////
-
+	////////////////////
+	// Shot Records Form
+	////////////////////
 		$('.shotButton').click(function(){
 			$('.shotsForm').fadeToggle(500);
 
@@ -93,6 +91,9 @@ $(document).ready(function(){
 			$('.shotsForm').fadeToggle(500);
 		});
 
+	//////////////////////////////////////////////////////////////////////////////////
+	// Animation for expanding and collapsing the pet's information from the vet view.
+	//////////////////////////////////////////////////////////////////////////////////
 		var rotatePetInfo1 = 0;
 		$('.petInfoBody1').click(function(){
 			console.log($(this).children('.petInfo'));
@@ -210,44 +211,44 @@ $(document).ready(function(){
   			$(this).height($(this).height()).hide();
 		});
 
-	///////////////////
-	// Smooth Scrolling
-	///////////////////
-  	$(document).on('click', '.homepageLink', function(event){
-	    event.preventDefault();
-
-	    $('html, body').animate({
-	        scrollTop: $( $.attr(this, 'href') ).offset().top
-	    }, 700);
-	});
-
 
 	///////////////////////////////////////////////////
 	// Show value of hidden file input for image upload
 	///////////////////////////////////////////////////
-	$("input.hiddenInputFileUpload1").bind("change", function() {
-       	console.log($(this).parent().parent().next().children());
-       	var hiddenValue = $(this).val();
-		$('.fileUploadLink1').html(hiddenValue); 
- 	});	 
+		$("input.hiddenInputFileUpload1").bind("change", function() {
+	       	console.log($(this).parent().parent().next().children());
+	       	var hiddenValue = $(this).val();
+			$('.fileUploadLink1').html(hiddenValue); 
+	 	});	 
 
-	$("input.hiddenInputFileUpload2").bind("change", function() {
-       	console.log($(this).parent().parent().next().children());
-       	var hiddenValue = $(this).val();
-		$('.fileUploadLink2').html(hiddenValue); 
- 	});	 
+		$("input.hiddenInputFileUpload2").bind("change", function() {
+	       	console.log($(this).parent().parent().next().children());
+	       	var hiddenValue = $(this).val();
+			$('.fileUploadLink2').html(hiddenValue); 
+	 	});	 
 
-	$("input.hiddenInputFileUpload3").bind("change", function() {
-       	console.log($(this).parent().parent().next().children());
-       	var hiddenValue = $(this).val();
-		$('.fileUploadLink3').html(hiddenValue); 
- 	});	 
+		$("input.hiddenInputFileUpload3").bind("change", function() {
+	       	console.log($(this).parent().parent().next().children());
+	       	var hiddenValue = $(this).val();
+			$('.fileUploadLink3').html(hiddenValue); 
+	 	});	 
 
-	$("input.hiddenInputFileUpload4").bind("change", function() {
-       	console.log($(this).parent().parent().next().children());
-       	var hiddenValue = $(this).val();
-		$('.fileUploadLink4').html(hiddenValue); 
- 	});
+		$("input.hiddenInputFileUpload4").bind("change", function() {
+	       	console.log($(this).parent().parent().next().children());
+	       	var hiddenValue = $(this).val();
+			$('.fileUploadLink4').html(hiddenValue); 
+	 	});
+
+	/////////////////////////////////////////////////
+	// Check whether or not an image has been chosen. 
+	// If it hasn't, then prevent the form from being submitted.
+	// If it has, then continue normally and submit the form.
+	/////////////////////////////////////////////////////////
+	 	$('.submitFile').click(function(event){
+	 		if ($(this).parent().prev().children().children('.fileLink').html() == 'Choose File') {
+	 			event.preventDefault();
+	 		};
+	 	});
 
 			
 			
