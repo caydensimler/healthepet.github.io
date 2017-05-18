@@ -91,7 +91,7 @@
 					<div class="col-xs-12 formLabel">Date Administered</div>
 
 					<div class="col-xs-12">
-						<input type="text" name="date_administered" id="date_administered" class="formInput" placeholder="DD/MM/YYYY" required>
+						<input type="text" name="date_administered" id="date_administered" class="formInput" placeholder="MM/DD/YYYY" required>
 					</div>
 				</div>
 
@@ -99,7 +99,7 @@
 					<div class="col-xs-12 formLabel">Renewal Date</div>
 
 					<div class="col-xs-12">
-						<input type="text" name="date_renewal" id="date_renewal" class="formInput" placeholder="DD/MM/YYYY" required>
+						<input type="text" name="date_renewal" id="date_renewal" class="formInput" placeholder="MM/DD/YYYY" required>
 					</div>
 				</div>
 
