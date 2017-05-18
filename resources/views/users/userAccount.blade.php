@@ -31,6 +31,9 @@
 				<div class="col-xs-12 formLabelAccount">Email Address</div>
 				<div class="col-xs-12">
 					<input class="formInputAccount" type="email" name="email" value="{{ $user->email }}" placeholder="Email Address" required>
+					@if ($errors->has('email'))
+						{{$errors->first('email')}}
+					@endif
 				</div>
 			</div>		
 
@@ -45,13 +48,19 @@
 				<div class="col-xs-12 formLabelAccount">Password</div>
 				<div class="col-xs-12">
 					<input class="formInputAccount" type="password" name="password" placeholder="**************" required>
+					@if ($errors->has('password'))
+            			{{$errors->first('password')}}
+        			@endif
 				</div>
 			</div>		
 
 			<div class="col-xs-12 col-md-6">
 				<div class="col-xs-12 formLabelAccount">Confirm Password</div>
 				<div class="col-xs-12">
-					<input class="formInputAccount" type="password" name="confirmPassword" placeholder="**************" required>
+					<input class="formInputAccount" type="password" name="password_confirmation" placeholder="**************" required>
+					@if ($errors->has('password_confirmation'))
+			            {{$errors->first('password_confirmation')}}
+			        @endif
 				</div>
 			</div>
 
