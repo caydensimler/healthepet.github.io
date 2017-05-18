@@ -15,6 +15,9 @@
 		<!-- Personalized Stylesheet -->
         <link rel="stylesheet" href="/css/main.css">
 
+        <link rel="shortcut icon" href="/paw.ico" type="image/x-icon">
+        <link rel="icon" href="/paw.ico" type="image/x-icon">
+
     </head>
     <body>
 
