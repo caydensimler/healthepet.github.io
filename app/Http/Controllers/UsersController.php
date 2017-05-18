@@ -25,24 +25,7 @@ class UsersController extends Controller
 
     public function store(Request $request)
     {
-
-        // $email = $request->email;
-
-        // $user = User::where('email', $email);
-
-        // if (!is_null($user)) {
-        //     $user->password = $request->password;
-        // } else {
-        //     // create a new user
-        //     $user = new User;
-        //     $user->name = $request->name;
-        //     $user->email = $request->email;
-        //     $user->address = $request->address;
-        //     $user->phoneNumber = $request->phoneNumber;
-        //     $user->password = Hash::make($request->password);
-        //     $user->user_type = $request->user_type;
-        //     $user->save();
-        // }
+        
     }
 
     public function show(Request $request, $id)
@@ -74,11 +57,19 @@ class UsersController extends Controller
 
     public function update(Request $request, $id)
     {
+        $rules = array(
+        'password'=>'required|confirmed|min:6',
+        'email'=>'required|email|unique:users,email,'.$id 
+        );
+
+        $this->validate($request, $rules);
+
         $user = User::find($id);
         if(!$user) {
             Log::info('Cannot Edit Account');
             $request->session()->flash('errorMessage', 'Account Cannot Be Found');
         }
+
 
         $user->name = $request->name;
         $user->email = $request->email;
@@ -88,6 +79,8 @@ class UsersController extends Controller
         $user->save();
         $request->session()->flash('successMessage', 'Account Updated Successfully');
         return redirect()->action('UsersController@show', [$user->id]);
+
+
     }
 
     public function destroy($id)
