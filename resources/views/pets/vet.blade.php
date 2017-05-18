@@ -130,8 +130,8 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12">
-                    <div class="col-xs-12 col-md-6 radioForm">
+                <div class="col-xs-12 col-md-6">
+                    <div class="col-xs-12 radioForm">
                         <div class="col-xs-12 formLabel">Species</div>
                         <div class="col-xs-12">
                             <div class="col-xs-6 formRadioInput">
@@ -144,8 +144,8 @@
                     </div> 
                 </div>                     
 
-                <div class="col-xs-12">
-                    <div class="col-xs-12 col-md-6 radioForm">
+                <div class="col-xs-12 col-md-6">
+                    <div class="col-xs-12 radioForm">
                         <div class="col-xs-12 formLabel">Sex</div>
                         <div class="col-xs-12">
                             <div class="col-xs-6 formRadioInput">
