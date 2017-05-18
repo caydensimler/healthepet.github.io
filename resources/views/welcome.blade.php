@@ -8,6 +8,10 @@
         <?php echo '<div class="invisible loginError"></div>'; ?>
     @elseif (session()->has('registerErrorMessage') || session()->has('passwordErrorMessage'))
         <?php echo '<div class="invisible registerError"></div>'; ?>
+    @elseif (session()->has('passwordTooShortErrorMessage'))
+        <?php echo '<div class="invisible passwordError"></div>'; ?>
+    @elseif (session()->has('accountCreated'))
+        <?php echo '<div class="invisible accountCreated"></div>'; ?>
     @endif
 
     <!-- New Homepage -->
@@ -134,6 +138,8 @@
                 <div class="col-xs-11 formHeader">
                     @if (session()->has('loginErrorMessage'))
                         <div class="error">Invalid username or password.</div>
+                    @elseif (session()->has('accountCreated'))
+                        <div class="success">Account successfully created.</div>
                     @else
                         Login with an existing account
                     @endif
@@ -145,7 +151,7 @@
                 <div class="col-xs-12">
                     <div class="col-xs-offset-1 col-xs-10 formLabel">Email</div>
                     <div class="col-xs-offset-1 col-xs-10">
-                        <input type="text" name="email" id="email" class="formInput" required>
+                        <input type="text" name="email" id="email" class="formInput" value="{{ session()->get('email') }}" required>
                     </div>
                 </div>              
 
@@ -179,7 +185,9 @@
                     @if (session()->has('registerErrorMessage'))
                         <div class="error">Email account already in use.</div>
                     @elseif (session()->has('passwordErrorMessage'))
-                        <div class="error">Passwords do not match.</div>
+                        <div class="error">Passwords do not match.</div>                    
+                    @elseif (session()->has('passwordTooShortErrorMessage'))
+                        <div class="error">Password is too short.</div>
                     @else
                         Register a new account
                     @endif
@@ -198,7 +206,7 @@
                 <div class="col-xs-12 col-md-6">
                     <div class="col-xs-12 formLabel">Email</div>
                     <div class="col-xs-12">
-                        <input type="email" name="email" id="email" class="formInput"  value="{{ session()->get('email') }}" required>
+                        <input type="email" name="email" id="email" class="formInput" value="{{ session()->get('email') }}" required>
                     </div>  
                 </div>                      
 
