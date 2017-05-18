@@ -72,35 +72,47 @@ class AuthController extends Controller
             'password' => 'required|confirmed|min:6',
         ]);
 
-        // $passwordsMatch = $request->password == $request->password_confirmation;
-
         $user = User::where('email', $request->email)->first();
         $emailExists = !is_null($user) && $user->email == $request->email;
         $passwordsMatch = $request->password === $request->password_confirmation;
+        $passwordLength = strlen($request->password) >= 6;
 
         // Validation passes and user doesn't already exist.
-        // Works but doesn't redirect.
-        if ($validator->passes() && !$user && $passwordsMatch) {
+        if ($validator->passes() && !$user && $passwordsMatch && $passwordLength) {
             $this->create($request->all());
-            return redirect('/pets');
+            Session::flash('accountCreated', 'Account successfully created.');
+            Session::flash('email', $request->email);
+            return redirect('/');
         }
         
         // Validation passes and user account exists w/o password.
-        // Works but doesn't redirect.
-        if ($validator->passes() && $user && !$user->password && $passwordsMatch) {
+        if ($validator->passes() && $user && !$user->password && $passwordsMatch && $passwordLength) {
             $this->create($request->all());
-            return redirect('/pets');
+            Session::flash('accountCreated', 'Account successfully created.');
+            Session::flash('email', $request->email);
+            return redirect('/');
+        }
+
+        // Validation fails because password was too short.
+        if (!$passwordLength && !$emailExists) {
+            Session::flash('passwordTooShortErrorMessage', 'Password must be at least six characters.');
+            Session::flash('name', $request->name);
+            Session::flash('email', $request->email);
+            Session::flash('phoneNumber', $request->phoneNumber);
+            Session::flash('address', $request->address);
+            return redirect('/');
         }
 
         // Validation fails because user already exists with a password.
-        // Works.
         if ($emailExists && $user && $user->password) {
             Session::flash('registerErrorMessage', 'Email address already exists');
+            Session::flash('name', $request->name);
+            Session::flash('phoneNumber', $request->phoneNumber);
+            Session::flash('address', $request->address);
             return redirect('/');
         }
 
         // Passwords do not match.
-        // Works
         if (!$passwordsMatch) {
             Session::flash('passwordErrorMessage', 'Passwords do not match.');
             Session::flash('name', $request->name);
@@ -110,7 +122,7 @@ class AuthController extends Controller
             return redirect('/');
         }
 
-        throw new Exception("This should never happen!");
+        abort(404);
 
     }
 

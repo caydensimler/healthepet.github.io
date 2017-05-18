@@ -3,7 +3,9 @@
     <head>
 
         <title>HealthEPet</title>
-        
+
+        <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -22,24 +24,20 @@
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
-                        <i class="fa fa-paw" aria-hidden="true"> Menu </i>
+                        <i class="fa fa-paw" aria-hidden="true"></i>
+                        <span class="navbarMenuSelection"> Menu </span>
+                        <i class="fa fa-paw" aria-hidden="true"></i>
                     </button>
                         
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        @if (!Auth::check())
-                            <li>
-                                <a href="#about" class="homepageLink">About</a>
-                            </li>
-                            <li>
-                                <a href="#contact" class="homepageLink">Contact</a>
-                            </li>
-
-                        @endif 
+                    <ul class="nav navbar-nav navbar-left">
 
                         @if (Auth::check())
                         <li><a href="{{ action('PetsController@index') }}">HealthEPet</a></li>
+                        <li class="hidden-md">
+                            <div class="col-xs-12"><hr></div>
+                        </li>
                         @endif
                         @if (Auth::check() && Auth::user()->user_type === 'vet')
                             <li>
@@ -76,8 +74,6 @@
 
 
     @yield('content')
-
-    <div class="col-xs-12 copyrightFooter">Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 HealthEPet. All Rights Reserved.</div>
 
 
     <!-- jQuery CDN -->

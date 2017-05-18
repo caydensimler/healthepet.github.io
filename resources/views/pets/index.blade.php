@@ -28,11 +28,11 @@
 
 			<div class="col-xs-12 col-sm-6 petInformation">
 
-                <div class="col-xs-offset-1 col-xs-6">
+                <div class="col-xs-12">
                     <img class="petHeaderPicture img img-responsive" src="/img/{{ $pet->img == null ? 'default.png' : $pet->img }}" alt="dog/cat picture">
                 </div>  
 
-                <div class="col-xs-5">
+                <div class="col-xs-offset-1 col-xs-10">
 
                     <div class="col-xs-12 petNameVet">{{ $pet->petName }}</div>
 
@@ -44,17 +44,14 @@
                         <input type="hidden" name="pet_id" value="{{ $pet->id }}">
 
                         <div class="col-xs-offset-2 col-xs-8">
-                            <label for="fileToUpload{{ $pet->id }}" id="chooseFile" class="chooseFile">
-                                <input type="file" name="fileToUpload" id="fileToUpload{{ $pet->id }}" class="hiddenInputFileUpload<?= $i ?>" required>Choose File
+                            <label for="fileToUpload{{ $pet->id }}" id="chooseFile" class="chooseFile" value="Choose File">
+                                <input type="file" name="fileToUpload" id="fileToUpload{{ $pet->id }}" class="hiddenInputFileUpload<?= $i ?>" required>
+                                <span class="fileUploadLink<?= $i ?> fileLink">Choose File</span>
                             </label>
                         </div>
 
-                        <div class="col-xs-12">
-                            <div class="col-xs-12 fileUploadLink fileUploadLink<?= $i ?>"></div>
-                        </div>
-
                         <div class="col-xs-offset-2 col-xs-8">
-                            <label for="submit{{ $pet->id }}" class="chooseFile">
+                            <label for="submit{{ $pet->id }}" class="chooseFile submitFile">
                                 <input type="submit" value="Upload Image" name="submit" id="submit{{ $pet->id }}" hidden>Upload Image
                             </label>
                         </div>

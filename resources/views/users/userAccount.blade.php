@@ -11,56 +11,62 @@
 		<form action="{{ action('UsersController@update', [$user->id]) }}" method="POST">
 		{!! csrf_field() !!}
 
-			<div class="col-xs-12 accountFormHeader">Edit Account Information</div>
+			<div class="col-xs-12 formHeader">Edit Account Information</div>
 
 			<div class="col-xs-12 col-md-6">
-				<div class="col-xs-12 formLabelAccount">Name</div>
+				<div class="col-xs-12 formLabel">Name</div>
 				<div class="col-xs-12">
-					<input class="formInputAccount" type="text" name="name" value="{{ $user->name }}" placeholder="Name" required>
+					<input class="formInput" type="text" name="name" value="{{ $user->name }}" placeholder="Name" required>
 				</div>
 			</div>		
 
 			<div class="col-xs-12 col-md-6">
-				<div class="col-xs-12 formLabelAccount">Phone Number</div>
+				<div class="col-xs-12 formLabel">Phone Number</div>
 				<div class="col-xs-12">
-					<input class="formInputAccount" type="text" name="phoneNumber" value="{{ $user->phoneNumber }}" placeholder="Phone Number" required>
+					<input class="formInput" type="text" name="phoneNumber" value="{{ $user->phoneNumber }}" placeholder="Phone Number" required>
 				</div>
 			</div>
 
 			<div class="col-xs-12">
-				<div class="col-xs-12 formLabelAccount">Email Address</div>
+				<div class="col-xs-12 formLabel">Email Address</div>
 				<div class="col-xs-12">
+
 					<input class="formInputAccount" type="email" name="email" value="{{ $user->email }}" placeholder="Email Address" required>
 					@if ($errors->has('email'))
 						{{$errors->first('email')}}
 					@endif
+
 				</div>
 			</div>		
 
 			<div class="col-xs-12">
-				<div class="col-xs-12 formLabelAccount">Physical Address</div>
+				<div class="col-xs-12 formLabel">Physical Address</div>
 				<div class="col-xs-12">
-					<input class="formInputAccount" type="text" name="address" value="{{ $user->address }}" placeholder="Physical Address" required>
+					<input class="formInput" type="text" name="address" value="{{ $user->address }}" placeholder="Physical Address" required>
 				</div>
 			</div>
 
 			<div class="col-xs-12 col-md-6">
-				<div class="col-xs-12 formLabelAccount">Password</div>
+				<div class="col-xs-12 formLabel">Password</div>
 				<div class="col-xs-12">
+
 					<input class="formInputAccount" type="password" name="password" placeholder="**************" required>
 					@if ($errors->has('password'))
             			{{$errors->first('password')}}
         			@endif
+
 				</div>
 			</div>		
 
 			<div class="col-xs-12 col-md-6">
-				<div class="col-xs-12 formLabelAccount">Confirm Password</div>
+				<div class="col-xs-12 formLabel">Confirm Password</div>
 				<div class="col-xs-12">
+
 					<input class="formInputAccount" type="password" name="password_confirmation" placeholder="**************" required>
 					@if ($errors->has('password_confirmation'))
 			            {{$errors->first('password_confirmation')}}
 			        @endif
+
 				</div>
 			</div>
 
