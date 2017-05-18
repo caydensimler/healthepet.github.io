@@ -4,6 +4,7 @@
 
         <title>HealthEPet</title>
 
+
         <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
 
         <!-- Latest compiled and minified CSS -->
@@ -12,7 +13,7 @@
         <!-- Google Font Open Sans -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
-		<!-- Personalized Stylesheet -->
+        <!-- Personalized Stylesheet -->
         <link rel="stylesheet" href="/css/main.css">
 
         <link rel="shortcut icon" href="/paw.ico" type="image/x-icon">
@@ -60,8 +61,8 @@
 
                     <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
-                        <li><a href="/auth/logout">Logout</a></li>
                         <li><a href="{{ action('UsersController@show') }}">Account</a></li>
+                        <li><a href="/auth/logout">Logout</a></li>
                     @endif
 
                     @if (!Auth::check())
