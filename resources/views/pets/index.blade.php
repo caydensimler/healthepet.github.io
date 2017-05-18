@@ -46,12 +46,12 @@
                         <div class="col-xs-offset-2 col-xs-8">
                             <label for="fileToUpload{{ $pet->id }}" id="chooseFile" class="chooseFile" value="Choose File">
                                 <input type="file" name="fileToUpload" id="fileToUpload{{ $pet->id }}" class="hiddenInputFileUpload<?= $i ?>" required>
-                                <span class="fileUploadLink<?= $i ?>">Choose File</span>
+                                <span class="fileUploadLink<?= $i ?> fileLink">Choose File</span>
                             </label>
                         </div>
 
                         <div class="col-xs-offset-2 col-xs-8">
-                            <label for="submit{{ $pet->id }}" class="chooseFile">
+                            <label for="submit{{ $pet->id }}" class="chooseFile submitFile">
                                 <input type="submit" value="Upload Image" name="submit" id="submit{{ $pet->id }}" hidden>Upload Image
                             </label>
                         </div>
