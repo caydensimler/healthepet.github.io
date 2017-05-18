@@ -97,7 +97,7 @@ $(document).ready(function(){
 			$('.allContent').toggleClass('blur');
 		});	
 
-		$('body > div.shotsForm > form > div > div.col-xs-4.closeButton > i').click(function(){
+		$('body > div.shotsForm > form > div > div.col-xs-1.closeButton > i').click(function(){
 			$('.allContent').toggleClass('blur');
 
 			$('.shotsForm').fadeToggle(500);

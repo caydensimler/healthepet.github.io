@@ -66,18 +66,19 @@
 		<form action="{{ action('PetsController@shotStore', [$pet->id])}}" method="POST">
 		{!! csrf_field() !!}
 			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
-	            <div class="col-xs-8 formHeader">Add New Vaccination Record</div>
-	            <div class="col-xs-4 closeButton">
-	                <i class="fa fa-window-close" aria-hidden="true"></i>
-	            </div>
+
+	            <div class="col-xs-11 formHeader">Add a new vaccination</div>
+                <div class="col-xs-1 closeButton">
+                    <i class="fa fa-window-close" aria-hidden="true"></i>
+                </div>
 
 	            <div class="col-xs-12">
-		            <div class="col-xs-12 formLabel">Shot Name</div>
+		            <div class="col-xs-12 formLabel">Name</div>
 
 		            <div class="col-xs-12">
 		                <select name="shot_id" id="shot_id" class="birthYearDropDown shotsDropdown" required>
 		                	
-		                		<option value="" disabled selected>Select a shot</option>
+		                		<option value="" disabled selected>Select a vaccination</option>
 		                		@foreach($shots as $shot)
 		                        	<option value="{{$shot->id}}">{{$shot->shotName}}</option>
 		                        @endforeach
