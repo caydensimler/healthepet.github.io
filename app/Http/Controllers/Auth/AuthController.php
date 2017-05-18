@@ -77,19 +77,30 @@ class AuthController extends Controller
         $user = User::where('email', $request->email)->first();
         $emailExists = !is_null($user) && $user->email == $request->email;
         $passwordsMatch = $request->password === $request->password_confirmation;
+        $passwordLength = strlen($request->password) >= 6;
 
         // Validation passes and user doesn't already exist.
         // Works but doesn't redirect.
-        if ($validator->passes() && !$user && $passwordsMatch) {
+        if ($validator->passes() && !$user && $passwordsMatch && $passwordLength) {
             $this->create($request->all());
-            return redirect('/pets');
+            Session::flash('accountCreated', 'Account successfully created.');
+            Session::flash('email', $request->email);
+            return redirect('/');
         }
         
         // Validation passes and user account exists w/o password.
         // Works but doesn't redirect.
-        if ($validator->passes() && $user && !$user->password && $passwordsMatch) {
+        if ($validator->passes() && $user && !$user->password && $passwordsMatch && $passwordLength) {
             $this->create($request->all());
-            return redirect('/pets');
+            Session::flash('accountCreated', 'Account successfully created.');
+            Session::flash('email', $request->email);
+            return redirect('/');
+        }
+
+        // Validation fails because password was too short.
+        if (!$passwordLength && !$emailExists) {
+            Session::flash('passwordTooShortErrorMessage', 'Password must be at least six characters.');
+            return redirect('/');
         }
 
         // Validation fails because user already exists with a password.

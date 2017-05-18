@@ -73,6 +73,18 @@ $(document).ready(function(){
 			$('.registerForm').fadeToggle(500);
 
 			$('.allContent').toggleClass('blur');
+		};	
+
+		if ($(".passwordError").length > 0) {
+			$('.registerForm').fadeToggle(500);
+
+			$('.allContent').toggleClass('blur');
+		};	
+
+		if ($(".accountCreated").length > 0) {
+			$('.loginForm').fadeToggle(500);
+
+			$('.allContent').toggleClass('blur');
 		};
 
 

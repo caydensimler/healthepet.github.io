@@ -2,7 +2,8 @@
 
 	html {
 	  	position: relative;
-	  	min-height: 100%;
+	  	height: 100%;
+	  	overflow: hidden;
 	}
 
 	html, body {
@@ -15,10 +16,17 @@
 	    background-color: #EFEFEF;
 	    background-image: url('/img/pawPrint.png');
 	    background-size: 50%;
+	    height: 100%;
+	    -webkit-overflow-scrolling: touch;
+    	overflow-y:auto;
 	}
 
 	.error {
 		color: #E03D38;
+	}
+
+	.success {
+		color: #3AE038;
 	}
 
 	.blur {
@@ -27,6 +35,8 @@
 		-o-filter: blur(3px);
 		-ms-filter: blur(3px);
 		filter: blur(3px);
+		height: 100%;
+  		overflow: hidden;
 	}
 
 	.fa-paw {
@@ -56,7 +66,7 @@
 		max-width: 100%;
 		height: auto;
 		padding-top: 50px;
-		border-radius: 0 0 90% 0;
+		border-radius: 0 0 50% 0;
 		border: .1vw solid #11151C;
 	}
 
@@ -88,10 +98,17 @@
 		color: #EFEFEF;
 	}
 
+	.registerRadio {
+		margin-top: 2%;
+		margin-bottom: 2%;
+	}
+
 	/* What is HealthEPet? */
 
 		.homeWhatIs {
-			font-size: 2.5em;
+			font-size: 2em;
+			text-align: center;
+			border-bottom: .05em solid #11151C;
 		}
 
 		.homeInfoBody {
@@ -101,13 +118,13 @@
 		.homeInfoPicture {
 			border-radius: 100%;
 			/*width: auto;*/
-			height: 275px;
-			width: 275px;
+/*			height: 275px;
+			width: 275px;*/
 			border: .1vw solid #11151C;
 			margin-top: 3%;
-		    display: block;
+/*		    display: block;
 		    margin-left: auto;
-		    margin-right: auto;
+		    margin-right: auto;*/
 		}
 
 		.homeWhatIsText {
@@ -290,6 +307,8 @@
 	.contactCreators {
 		margin-top: 2%;
 		font-size: 2em;
+		text-align: center;
+		border-bottom: .05em solid #11151C;
 	}
 
 	.siteCreators {
@@ -436,6 +455,13 @@
 			top: 50%;
 			transform: translateY(-50%);
 			opacity: .95;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			max-height: 70%;
+		}
+
+		body > div.addPetForm > div > form > div.col-xs-1.closeButton > i {
+			margin-right: 5%;
 		}
 
 		.formHeader {
@@ -602,7 +628,7 @@
 		}
 
 		.addPetButton {
-			font-size: 2vw;
+			font-size: 2em;
 			text-align: center;
 			border: .1vw solid #11151C;
 			padding-left: 4%;
@@ -648,7 +674,7 @@
 
 		.formRadioInput {
 			color: #EFEFEF;
-			font-size: 1.2em;
+			font-size: 1em;
 			padding: 4%;
 		}
 
@@ -670,8 +696,8 @@
 
 		.birthYearDropDown {
 			width: 100%;
-			height: 2.6vw;
-			font-size: 1vw;
+			height: 2em;
+			font-size: 1em;
 			background-color: #EFEFEF;
 			color: #11151C;
 		}
@@ -759,7 +785,7 @@
 	}
 
 	.petNameVet {
-		font-size: 3.5em;
+		font-size: 2.5em;
 		text-align: center;
 		color: #11151C;
 	}
@@ -769,19 +795,18 @@
 	}
 
 	.petRecordInformation {
-		font-size: 1.5vw;
+		font-size: 1em;
 	}
 
 	.petInformationBody {
 		background-color: #7B7B7F;
-		margin-bottom: 2%;
 		padding-top: 2%;
 		padding-bottom: 2%;
 		cursor: pointer;
+		border: 1em solid #EFEFEF;
 	}
 
 	.petInfoHolder {
-		/*position: absolute;*/
 		margin-top: 1%;
 	}
 
@@ -790,7 +815,7 @@
 	}
 
 	.petInformationHeader {
-		font-size: 2vw;
+		font-size: 1em;
 	}
 
 	.recordsLink {
@@ -811,12 +836,10 @@
 	}
 
 	.vetRecordsLink {
-		text-align: right;
-		font-size: 2vw;
-		margin-top: 2%;
+		font-size: 1.5em;
 		margin-bottom: 2%;
 		color: #11151C;
-		/*margin-left: 39%;*/
+		text-align: center;
 	}
 
 	.vetRecordsLink a {
@@ -829,8 +852,8 @@
 
 	.expandInfo {
 		text-align: right;
-		margin-top: 1%;
-		font-size: 2vw;
+		/*margin-top: 1%;*/
+		font-size: 1.5em;
 		cursor: pointer;
 	}
 
@@ -840,12 +863,10 @@
 
 	.petInfo {
 		margin-top: 3%;
-		margin-bottom: 3%;
 	}	
 
 	.petOwnerInfo {
 		margin-top: 3%;
-		margin-bottom: 3%;
 	}
 
 	.petOwnerRecordsLink {

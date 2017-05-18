@@ -7,20 +7,17 @@
 		{{ Auth::user()->name }}'s Records
 	</div>
 
-	<div class="col-xs-offset-5 col-xs-2 loginRegisterButtonBody">
+	<div class="col-xs-12 col-md-offset-4 col-md-4 loginRegisterButtonBody">
 		<div class="addPetButton"><i class="fa fa-plus-square" aria-hidden="true"></i> Add New Pet</div>
 	</div>
 
     <?php $i = 1; ?>
 	<div class="col-xs-12 petInfoHolder">
 		@foreach($pets as $pet)
-			<div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8 petBody">
-				<div class="col-xs-5 petNameVet">{{ $pet->petName }}</div>
-				<div class="col-xs-7 vetRecordsLink">
-					<a href="/pets/{{ $pet->id }}">Click here to add a new vaccination <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
-				</div>
+			<div class="col-xs-offset-1 col-xs-10 petBody">
+				<div class="col-xs-12 petNameVet">{{ $pet->petName }}</div>
 
-				<div class="col-xs-12 petInformationBody petInfoBody<?= $i ?>">
+				<div class="col-xs-12 col-md-6 petInformationBody petInfoBody<?= $i ?>">
 
 					<div class="col-xs-10 petInformationHeader">Pet Information</div>  
                     <div class="col-xs-2 expandInfo expandInfoPet<?= $i ?>">
@@ -28,32 +25,32 @@
                     </div>
 
                     <div class="petInfo" style="display: none;">
-    					<div class="col-xs-6 petRecordInformation">
+    					<div class="col-xs-12 petRecordInformation">
     						<div class="col-xs-4 subHeader">Species:</div>
     						<div class="col-xs-8">{{ ucfirst($pet->species) }}</div>
     					</div>					
 
-    					<div class="col-xs-6 petRecordInformation">
+    					<div class="col-xs-12 petRecordInformation">
     						<div class="col-xs-4 subHeader">Breed:</div>
     						<div class="col-xs-8">{{ $pet->breed }}</div>
     					</div>					
 
-    					<div class="col-xs-6 petRecordInformation">
+    					<div class="col-xs-12 petRecordInformation">
     						<div class="col-xs-4 subHeader">Sex:</div>
     						<div class="col-xs-8">{{ ucfirst($pet->sex) }}</div>
     					</div>					
 
-    					<div class="col-xs-6 petRecordInformation">
+    					<div class="col-xs-12 petRecordInformation">
     						<div class="col-xs-4 subHeader">Weight:</div>
     						<div class="col-xs-8">{{ $pet->weight }} pounds</div>
     					</div>					
 
-    					<div class="col-xs-6 petRecordInformation">
+    					<div class="col-xs-12 petRecordInformation">
     						<div class="col-xs-4 subHeader">Color(s):</div>
     						<div class="col-xs-8">{{ $pet->color }}</div>
     					</div>					
 
-    					<div class="col-xs-6 petRecordInformation">
+    					<div class="col-xs-12 petRecordInformation">
     						<div class="col-xs-4 subHeader">Age:</div>
     						<div class="col-xs-8">{{ $pet->age }} years old</div>
     					</div>
@@ -62,7 +59,7 @@
 				</div>
 			
 
-				<div class="col-xs-12 petInformationBody petOwnerInfo<?= $i ?>">
+				<div class="col-xs-12 col-md-6 petInformationBody petOwnerInfo<?= $i ?>">
 
 					<div class="col-xs-10 petInformationHeader">Owner Information</div>
                     <div class="col-xs-2 expandInfo expandInfoOwner<?= $i ?>"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
@@ -74,7 +71,7 @@
     					</div>						
 
     					<div class="col-xs-12 petRecordInformation">
-    						<div class="col-xs-4 subHeader">Phone Number:</div>
+    						<div class="col-xs-4 subHeader">Phone:</div>
     						<div class="col-xs-8">{{ $pet->user->phoneNumber }}</div>
     					</div>						
 
@@ -85,6 +82,10 @@
                     </div>					
 
 				</div>
+
+                <div class="col-xs-12 vetRecordsLink">
+                    <a href="/pets/{{ $pet->id }}">Click here to add a new vaccination <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+                </div>
 
 			</div> 
 
@@ -98,69 +99,73 @@
 
 </div>
 
-	<div class="addPetForm" style="display: none;">
-        <div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 formBackground">
+	<div class="addPetForm " style="display: none;">
+        <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6 formBackground">
             <form action="{{ action('PetsController@store') }}" method="POST">
             {!! csrf_field() !!}
 
-                <div class="col-xs-12 closeButton">
-                    <div class="col-xs-8">Add New Pet</div>
+                <div class="col-xs-11 formHeader">Add a new pet</div>
+                <div class="col-xs-1 closeButton">
                     <i class="fa fa-window-close" aria-hidden="true"></i>
                 </div>
 
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-xs-12 col-md-4">
                     <div class="col-xs-12 formLabel">Name</div>
                     <div class="col-xs-12">
                         <input type="text" name="petName" id="petName" class="formInput" required>
                     </div>
                 </div>              
 
-                <div class="col-xs-6 col-sm-4">
+                <div class="col-xs-12 col-md-4">
                     <div class="col-xs-12 formLabel">Weight</div>
                     <div class="col-xs-12">
                         <input type="text" name="weight" id="weight" class="formInput" placeholder="pounds" required>
                     </div>
                 </div>              
 
-                <div class="col-xs-6 col-sm-4">
+                <div class="col-xs-12 col-md-4">
                     <div class="col-xs-12 formLabel">Color(s)</div>
                     <div class="col-xs-12">
                         <input type="text" name="color" id="color" class="formInput" required placeholder="Black/White">
                     </div>
                 </div>
 
-                <div class="col-xs-6 radioForm">
-                    <div class="col-xs-12 formLabel">Species</div>
-                    <div class="col-xs-12">
-                        <div class="col-xs-6 formRadioInput">
-                            <input type="radio" name="species" value="dog" class="formRadioInput" required> Dog
+                <div class="col-xs-12">
+                    <div class="col-xs-12 col-md-6 radioForm">
+                        <div class="col-xs-12 formLabel">Species</div>
+                        <div class="col-xs-12">
+                            <div class="col-xs-6 formRadioInput">
+                                <input type="radio" name="species" value="dog" class="formRadioInput" required> Dog
+                            </div>
+                            <div class="col-xs-6 formRadioInput">
+                                <input type="radio" name="species" value="cat" class="formRadioInput"> Cat
+                            </div>
                         </div>
-                        <div class="col-xs-6 formRadioInput">
-                            <input type="radio" name="species" value="cat" class="formRadioInput"> Cat
-                        </div>
-                    </div>
-                </div>                      
+                    </div> 
+                </div>                     
 
-                <div class="col-xs-6 radioForm">
-                    <div class="col-xs-12 formLabel">Sex</div>
-                    <div class="col-xs-12">
-                        <div class="col-xs-6 formRadioInput">
-                            <input type="radio" name="sex" value="male" class="formRadioInput" required> M
+                <div class="col-xs-12">
+                    <div class="col-xs-12 col-md-6 radioForm">
+                        <div class="col-xs-12 formLabel">Sex</div>
+                        <div class="col-xs-12">
+                            <div class="col-xs-6 formRadioInput">
+                                <input type="radio" name="sex" value="male" class="formRadioInput" required> M
+                            </div>
+                            <div class="col-xs-6 formRadioInput">
+                                <input type="radio" name="sex" value="female" class="formRadioInput"> F
+                            </div>
                         </div>
-                        <div class="col-xs-6 formRadioInput">
-                            <input type="radio" name="sex" value="female" class="formRadioInput"> F
-                        </div>
-                    </div>
-                </div>  
+                    </div> 
+                </div> 
 
-                <div class="col-xs-6">
+                <div class="col-xs-12 col-md-6">
                     <div class="col-xs-12 formLabel">Breed</div>
                     <div class="col-xs-12">
                         <input type="text" name="breed" id="breed" class="formInput" placeholder="Black Lab/Great Dane" required>
                     </div>
                 </div>                      
 
-                <div class="col-xs-6">
+                <div class="col-xs-12 col-md-6">
                     <div class="col-xs-12 formLabel">Birth Year</div>
                     <div class="col-xs-12">
                         <select name="age" id="age" class="birthYearDropDown" required>
@@ -194,14 +199,14 @@
                     </div>
                 </div>
 
-                <div class="col-xs-6">
+                <div class="col-xs-12 col-md-6">
                     <div class="col-xs-12 formLabel">Owner's Phone Number</div>
                     <div class="col-xs-12">
                         <input type="text" name="phoneNumber" id="phoneNumber" class="formInput" placeholder="2105559999" required>
                     </div>
                 </div>    
 
-                <div class="col-xs-6">
+                <div class="col-xs-12 col-md-6">
                     <div class="col-xs-12 formLabel">Owner's Email</div>
                     <div class="col-xs-12">
                         <input type="text" name="email" id="email" class="formInput" placeholder="hford@gmail.com" required>

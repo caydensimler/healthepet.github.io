@@ -32,15 +32,6 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-left">
-                        @if (!Auth::check())
-                            <li>
-                                <a href="#about" class="homepageLink">About</a>
-                            </li>
-                            <li>
-                                <a href="#contact" class="homepageLink">Contact</a>
-                            </li>
-
-                        @endif 
 
                         @if (Auth::check())
                         <li><a href="{{ action('PetsController@index') }}">HealthEPet</a></li>
@@ -83,8 +74,6 @@
 
 
     @yield('content')
-
-    <div class="col-xs-12 copyrightFooter">Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 HealthEPet. All Rights Reserved.</div>
 
 
     <!-- jQuery CDN -->
