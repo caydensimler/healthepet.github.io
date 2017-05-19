@@ -33,11 +33,11 @@
                 <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Keep track of your pet's vaccination records all in one place.
                 <br>
+                <i class="fa fa-paw" aria-hidden="true"></i> Localized records from all clinic visits.
+                <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Customizable page for pet owners. 
                 <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Completely paperless.
-                <br>
-                <i class="fa fa-paw" aria-hidden="true"></i> Localized records from all clinic visits.
             </div>
         </div>   
 
@@ -51,11 +51,11 @@
                 <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Fully structured list of all patients in your personal directory.
                 <br>
+                <i class="fa fa-paw" aria-hidden="true"></i> Comprehensive table of all vaccinations to an animal.
+                <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Ability to search through pet records.
                 <br>
                 <i class="fa fa-paw" aria-hidden="true"></i> Completely paperless.
-                <br>
-                <i class="fa fa-paw" aria-hidden="true"></i> Comprehensive table of all vaccinations to an animal.
             </div>
 
         </div>
