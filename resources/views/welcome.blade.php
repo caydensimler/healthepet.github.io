@@ -135,14 +135,17 @@
         <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6 formBackground">
             <form action="{{action('Auth\AuthController@postLogin')}}" method="POST">
                 {!! csrf_field() !!}
-                <div class="col-xs-11 formHeader">
-                    @if (session()->has('loginErrorMessage'))
-                        <div class="error">Invalid username or password.</div>
-                    @elseif (session()->has('accountCreated'))
-                        <div class="success">Account successfully created.</div>
-                    @else
-                        Login with an existing account
-                    @endif
+
+                <div class="col-xs-offset-1 col-xs-10 formHeader">
+                    <div class="col-xs-12">
+                        @if (session()->has('loginErrorMessage'))
+                            <div class="error">Invalid username or password.</div>
+                        @elseif (session()->has('accountCreated'))
+                            <div class="success">Account successfully created.</div>
+                        @else
+                            Login with an existing account
+                        @endif
+                    </div>
                 </div>
                 <div class="col-xs-1 closeButton">
                     <i class="fa fa-window-close" aria-hidden="true"></i>
@@ -182,15 +185,17 @@
             <form action="{{action('Auth\AuthController@postRegister')}}" method="POST">
                 {!! csrf_field() !!}
                  <div class="col-xs-11 formHeader">
-                    @if (session()->has('registerErrorMessage'))
-                        <div class="error">Email account already in use.</div>
-                    @elseif (session()->has('passwordErrorMessage'))
-                        <div class="error">Passwords do not match.</div>                    
-                    @elseif (session()->has('passwordTooShortErrorMessage'))
-                        <div class="error">Password is too short.</div>
-                    @else
-                        Register a new account
-                    @endif
+                    <div class="col-xs-12">
+                        @if (session()->has('registerErrorMessage'))
+                            <div class="error">Email account already in use.</div>
+                        @elseif (session()->has('passwordErrorMessage'))
+                            <div class="error">Passwords do not match.</div>                    
+                        @elseif (session()->has('passwordTooShortErrorMessage'))
+                            <div class="error">Password is too short.</div>
+                        @else
+                            Register a new account
+                        @endif
+                    </div>
                 </div>
                 <div class="col-xs-1 closeButton">
                     <i class="fa fa-window-close" aria-hidden="true"></i>

@@ -23,6 +23,7 @@
 
 	.error {
 		color: #E03D38;
+
 	}
 
 	.success {
@@ -467,7 +468,8 @@
 
 		.formHeader {
 			color: #EFEFEF;
-			padding: 5%;
+			padding-top: 5%;
+			padding-bottom: 5%;
 			font-size: 1.8em;
 		}
 
