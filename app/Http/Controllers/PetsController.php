@@ -25,7 +25,11 @@ class PetsController extends Controller
     {
 
         if(\Auth::user()->user_type == 'owner') {
-            $pets = Pet::with('user')->where('owner_id', '=', \Auth::id())->paginate(4);
+            $pets = Pet::with('user')
+            ->where('owner_id', '=', \Auth::id())
+            ->orderBy('pets.created_at', 'desc')
+            ->paginate(4);
+
             $data = [];
             $data['pets'] = $pets;
             return view('pets.index')->with($data);  
@@ -37,10 +41,13 @@ class PetsController extends Controller
                 ->orWhere('petName', 'like', "%".$request->q."%")
                 ->orWhere('users.name', 'like', "%".$request->q."%")
                 ->where('vet_id', '=', \Auth::id())
-                ->orderBy('pets.id', 'DESC')
+                ->orderBy('pets.id', 'ASC')
                 ->paginate(4);
-            } else {$pets = Pet::with('user')
+            } else {
+
+                $pets = Pet::with('user')
                 ->where('vet_id', '=', \Auth::id())
+                ->orderBy('pets.id', 'desc')
                 ->paginate(4);
             }
             $data = [];

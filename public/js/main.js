@@ -228,27 +228,19 @@ $(document).ready(function(){
 	// Show value of hidden file input for image upload
 	///////////////////////////////////////////////////
 		$("input.hiddenInputFileUpload1").bind("change", function() {
-	       	console.log($(this).parent().parent().next().children());
-	       	var hiddenValue = $(this).val();
-			$('.fileUploadLink1').html(hiddenValue); 
+			$('.fileUploadLink1').html('File Chosen!'); 
 	 	});	 
 
 		$("input.hiddenInputFileUpload2").bind("change", function() {
-	       	console.log($(this).parent().parent().next().children());
-	       	var hiddenValue = $(this).val();
-			$('.fileUploadLink2').html(hiddenValue); 
+			$('.fileUploadLink2').html('File Chosen!'); 
 	 	});	 
 
 		$("input.hiddenInputFileUpload3").bind("change", function() {
-	       	console.log($(this).parent().parent().next().children());
-	       	var hiddenValue = $(this).val();
-			$('.fileUploadLink3').html(hiddenValue); 
+			$('.fileUploadLink3').html('File Chosen!'); 
 	 	});	 
 
 		$("input.hiddenInputFileUpload4").bind("change", function() {
-	       	console.log($(this).parent().parent().next().children());
-	       	var hiddenValue = $(this).val();
-			$('.fileUploadLink4').html(hiddenValue); 
+			$('.fileUploadLink4').html('File Chosen!'); 
 	 	});
 
 	/////////////////////////////////////////////////
