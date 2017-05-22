@@ -3,19 +3,32 @@ $(document).ready(function(){
 	"use strict";
 
 
-	function HideAllHomepage(){
+	function HideAll(){
 		$('.allContent').removeClass('blur');
 
-		$('.loginForm').hide();
-		$('.registerForm').hide();
+		$('.loginForm').fadeOut(500);
+		$('.registerForm').fadeOut(500);
+		$('.registerForm').fadeOut(500);
+		$('.addPetForm').fadeOut(500);
+		$('.shotsForm').fadeOut(500);
 	}
+
+
+	/////////////////////////////////////
+	// Close forms when escape is pressed
+	/////////////////////////////////////
+		$(document).on('keyup',function(evt) {
+	    	if (evt.keyCode == 27) {
+	      		HideAll();
+	    	}
+		});
 
 
 	//////////////////
 	// Pet Owner Login
 	//////////////////
 		$('.login').click(function(){
-			HideAllHomepage();
+			HideAll();
 			$('.loginForm').fadeToggle(500);
 
 			$('.allContent').toggleClass('blur');
@@ -32,7 +45,7 @@ $(document).ready(function(){
 	// Registration
 	///////////////
 		$('.register').click(function(){
-			HideAllHomepage();
+			HideAll();
 			$('.registerForm').fadeToggle(500);
 
 			$('.allContent').toggleClass('blur');
