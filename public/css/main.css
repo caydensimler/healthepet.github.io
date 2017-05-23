@@ -118,14 +118,8 @@
 
 		.homeInfoPicture {
 			border-radius: 100%;
-			/*width: auto;*/
-/*			height: 275px;
-			width: 275px;*/
 			border: .1vw solid #11151C;
 			margin-top: 3%;
-/*		    display: block;
-		    margin-left: auto;
-		    margin-right: auto;*/
 		}
 
 		.homeWhatIsText {
@@ -202,9 +196,8 @@
 		background-color: #EFEFEF;
 	    background-image: url('/img/pawPrint.png');
 	    background-size: 50%;
-		min-height: 100%;
-		/* Equal to height of footer */
-		/* But also accounting for potential margin-bottom of last child */
+		/*min-height: 100%;*/
+		background-attachment: fixed;
 		margin-bottom: -50px;
 	}
 
